@@ -1,6 +1,6 @@
 # MASTER — COINBEAST
-Version: 1.0
-Last updated: 2026-03-15
+Version: 1.1
+Last updated: 2026-03-16
 Status: Pre-build. Planning complete. Demo phase next.
 
 ---
@@ -22,12 +22,10 @@ Strategic moats:
 
 **Phase: Demo build**
 
-Goal: Auto-populated demo with 10–20 products scraped from the web.
+Goal: Skip throwaway demo tools. Build real from day one using Cursor + Supabase.
 Purpose: Prove the data model. Get something real to show people.
-Tool: Base44 for demo only. Throwaway. Not the real build.
+Approach: Minimal admin + seeded product records. Everything built is production-ready.
 Timeline: This week.
-
-Real build follows immediately after demo validation.
 
 ---
 
@@ -49,25 +47,23 @@ Real build follows immediately after demo validation.
 
 ## CURRENT PRIORITIES
 
-1. Build demo this week — auto-populate from web scraper
-2. Resolve Trust Score weights using public data — this week
-3. Define first 50 products for launch dataset
-4. Set up Brainframe file system and Make automation
-5. Legal review on buy Bitcoin integration
+1. Build real product from day one — Cursor + Supabase, minimal admin, seeded records
+2. Trust Score weights — parked until after V1 launch
+3. Define first 50 products for launch dataset (ChatGPT researching)
+4. Make automation — parked until core build is underway
+5. Legal review on buy Bitcoin integration — in hand, not a blocker
 
 ---
 
 ## OPEN ACTION ITEMS
 
-- [ ] Trust Score weights — revisit using public data
-- [ ] First 50 products defined
+- [ ] First 50 products defined (ChatGPT researching)
 - [ ] Next 50 and next 100 products mapped
 - [ ] Product attribute taxonomy finalized
-- [ ] Make workflow set up for Brainframe automation
-- [ ] Legal review on buy Bitcoin integration
-- [ ] Confirm API availability with Bitcoin Well and Bull Bitcoin
+- [ ] Trust Score weights validated (post-V1)
+- [ ] Make workflow set up (parked)
+- [ ] Legal review on buy Bitcoin integration (in hand)
 - [ ] First batch of podcast creators identified for Dave approval
-- [ ] Conflict of interest disclosures documented for Dave, Knut, Luke
 
 ---
 
@@ -95,7 +91,7 @@ Real build follows immediately after demo validation.
 | Bitcoin Alignment | 10% |
 | Reputation | 10% |
 
-*Marked provisional — weights to be validated against public data*
+*Marked provisional — weights to be validated against public data post-V1*
 
 ---
 
@@ -107,17 +103,6 @@ Real build follows immediately after demo validation.
 - 6–8 topic hubs
 - 10–15 guides
 - Total: ~80–110 pages
-
----
-
-## TEAM
-
-- Dave Bradley — project lead, @BitcoinBrains
-- Knut Svanholm — reviewer, Bitcoin Infinity Show
-- Luke de Wolf — reviewer, Bitcoin Infinity Show
-- One AI-native collaborator — TBD
-
-Dave's disclosures: co-founder Bull Bitcoin, CRO Bitcoin Well — must appear on all relevant pages.
 
 ---
 
