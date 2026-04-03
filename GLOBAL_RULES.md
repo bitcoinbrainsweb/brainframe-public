@@ -276,3 +276,4 @@ Status transitions must always be explicitly stated. Decisions may not silently 
 129. At session start, read DECISIONS.md from your project's brainframe/ folder to load cross-project decisions made since last session.
 130. When appending to DECISIONS.md, always promote the updated file to brainframe-public immediately — do not defer to quitchat.
 131. When promoting a file that another project may also promote (e.g. GLOBAL_RULES.md, DECISIONS.md), treat the PROMOTION_LOG conflict check as a version check — if a same-day entry exists for that file, re-read the current version from brainframe-public before writing, to avoid last-write-wins overwrite.
+131. When a same-day conflict is detected on a target file in brainframe-public, re-read the file immediately before writing — never use a cached version. Merge your changes into the current content, then write.
