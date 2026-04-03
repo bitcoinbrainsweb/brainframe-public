@@ -37,3 +37,6 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-03 | coinbeast | coinbeast/CONFIG.md | Created three-layer state split (CONFIG)
 2026-04-03 | coinbeast | coinbeast/ENGINEERING_PRINCIPLES.md | Adopted from brainframe-public + coinbeast additions
 2026-04-03 | coinbeast | coinbeast/skills/quitchat.md | Installed quitchat skill
+2026-04-03 18:30 UTC | axiom | brainframe/ROLLBACK_PROTOCOL.md | Synced from brainframe-public
+2026-04-03 18:30 UTC | axiom | brainframe/PROMOTION_WORKFLOW.md | Synced from brainframe-public
+2026-04-03 18:30 UTC | axiom | DECISIONS.md | Three-layer split + verification gate adoption + message to Nightwatch
