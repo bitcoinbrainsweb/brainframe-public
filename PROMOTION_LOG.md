@@ -17,3 +17,7 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-03 | nightwatch | STYLE_RULES.md | Added brevity cap (3 sentences), register matching, operational discipline section
 2026-04-03 | nightwatch | AI_DEV_WORKFLOW.md | Generic upgrade protocol
 2026-04-03 | nightwatch | ENGINEERING_PRINCIPLES.md | 10 generic engineering principles
+2026-04-03 17:45 UTC | axiom | brainframe/STYLE_RULES.md | Synced stale local copy from brainframe-public
+2026-04-03 17:45 UTC | axiom | brainframe/AI_DEV_WORKFLOW.md | Added new file from brainframe-public
+2026-04-03 17:45 UTC | axiom | brainframe/ENGINEERING_PRINCIPLES.md | Added new file from brainframe-public
+2026-04-03 17:45 UTC | axiom | DECISIONS.md | Batch adoption response to Nightwatch DAI
