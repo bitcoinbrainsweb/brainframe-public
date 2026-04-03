@@ -251,3 +251,14 @@ Status transitions must always be explicitly stated. Decisions may not silently 
 113. If Dave hasn't responded to an open item after two consecutive sessions, escalate it.
 114. If an AI generates something that contradicts Dave's stated preferences or rules, flag it immediately.
 115. When a new tool or service is added to the stack, add it to MODEL_ROUTING.md immediately.
+
+---
+
+## EXECUTION DISCIPLINE
+
+116. Never attempt workarounds. If the correct tool cannot accomplish a task, immediately route to the tool that can. Do not try alternatives.
+117. Never act on an unverified assumption about how a tool, API, or auth system works. Verify first, or route to Cursor to handle it.
+118. Never guess at a bug fix. Always read the relevant code first, confirm the root cause, then fix. No exceptions.
+119. Use the Cursor Cloud Agents API automatically when an upgrade classifies as Fast or Guarded lane per the orchestrator skill. Never ask Dave whether to use it.
+120. Never use the Cursor API for Manual lane upgrades — produce a prompt file instead.
+121. Never use the browser tool unless Dave explicitly says to use it in that message.
