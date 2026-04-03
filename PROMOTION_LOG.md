@@ -10,3 +10,4 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-03 | nightwatch | skills/systematic-debugging.md + 13 others | Promoted 14 generic skills to brainframe-public (systematic-debugging, brainstorming, grill-me, prd-to-plan, ubiquitous-language, technical-writing, code-review-excellence, perplexity-research, gpt-critique, gpt-deep-research, frontend-design, proof-of-work, roadmap-planner, quitchat)
 2026-04-03 | nightwatch | DECISIONS.md | Created cross-project decisions log with 5 seed entries
 2026-04-03 | nightwatch | GLOBAL_RULES.md | Added rules 129-130 for DECISIONS.md usage
+2026-04-03 17:00 UTC | axiom | GLOBAL_RULES.md | Added rule 131: re-read before write on same-day promotion conflict
