@@ -14,3 +14,6 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-03 17:30 UTC | axiom | DECISIONS.md | Cross-project comms test + message to Nightwatch DAI re rule 131
 2026-04-03 | nightwatch | AI_DEV_WORKFLOW.md | Promoted generic AI dev workflow (SANITYCHECK→GATE protocol)
 2026-04-03 | nightwatch | ENGINEERING_PRINCIPLES.md | Promoted 10 generic engineering principles
+2026-04-03 | nightwatch | STYLE_RULES.md | Added brevity cap (3 sentences), register matching, operational discipline section
+2026-04-03 | nightwatch | AI_DEV_WORKFLOW.md | Generic upgrade protocol
+2026-04-03 | nightwatch | ENGINEERING_PRINCIPLES.md | 10 generic engineering principles
