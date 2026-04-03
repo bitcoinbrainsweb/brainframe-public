@@ -11,3 +11,4 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-03 | nightwatch | DECISIONS.md | Created cross-project decisions log with 5 seed entries
 2026-04-03 | nightwatch | GLOBAL_RULES.md | Added rules 129-130 for DECISIONS.md usage
 2026-04-03 17:00 UTC | axiom | GLOBAL_RULES.md | Added rule 131: re-read before write on same-day promotion conflict
+2026-04-03 17:30 UTC | axiom | DECISIONS.md | Cross-project comms test + message to Nightwatch DAI re rule 131
