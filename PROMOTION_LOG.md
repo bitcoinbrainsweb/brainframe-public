@@ -1,4 +1,3 @@
-Append-only. One line per promotion. Never delete entries.
 Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 
 ---
@@ -41,3 +40,4 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-03 18:30 UTC | axiom | brainframe/PROMOTION_WORKFLOW.md | Synced from brainframe-public
 2026-04-03 18:30 UTC | axiom | DECISIONS.md | Three-layer split + verification gate adoption + message to Nightwatch
 2026-04-03 | coinbeast | coinbeast_brainfile.md | v2.0 — boot sequence, three-layer state, upgrade discipline, cross-project protocol
+2026-04-03 | bitcoin-brains | DECISIONS.md | Gap report to Nightwatch + request for missing practices
