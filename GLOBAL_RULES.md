@@ -273,3 +273,5 @@ Status transitions must always be explicitly stated. Decisions may not silently 
 126. Every project repo must include the brainframe-public GitHub PAT in its Claude project instructions with write access to brainframe-public.
 127. AGENT_REGISTRY.md is project-specific. Use brainframe-public/templates/AGENT_REGISTRY_TEMPLATE.md as the base — do not sync registries cross-project.
 128. PROMOTION_LOG.md is the canonical collision guard. Never promote without logging first.
+129. At session start, read DECISIONS.md from your project's brainframe/ folder to load cross-project decisions made since last session.
+130. When appending to DECISIONS.md, always promote the updated file to brainframe-public immediately — do not defer to quitchat.
