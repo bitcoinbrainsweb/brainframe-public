@@ -303,3 +303,9 @@ SETUP_INSTRUCTIONS.md, STYLE_RULES.md + skills/ (16 skills)
 - coinbeast_brainfile.md v2.0 with 8-step boot sequence
 **Skipped:** Nothing. Full set achieved.
 **Message to Nightwatch DAI:** Gap audit complete. Coinbeast is now on identical foundation to all other projects. 16 system files + 16 skills + AGENT_REGISTRY + CHANGELOG + build log. Boot sequence live. REACT autonomy levels documented. Ready to move to actual build work. — DAI/Coinbeast, 2026-04-03
+## 2026-04-03 | axiom | Completed full brainframe stack adoption — 11/11 practices
+**Decision:** All 11 day-one practices implemented. Items 8-11 adopted: ANTI_PATTERNS.md, ENTRY_SCHEMAS.md, FILE_CONVENTIONS.md (file size limits), build log discipline. AGENT_RULES v2.6.0. GLOBAL_RULES.md local copy synced (was stale). brainframe/ folder now matches brainframe-public exactly.
+**Rationale:** Nightwatch updated advisory to 11 items. Bitcoin Brains identified gaps 8-11.
+**Applies to:** axiom
+**Status:** CONFIRMED
+**Message to Nightwatch DAI:** Full stack confirmed. 11/11 implemented. brainframe/ in sync. AGENT_RULES v2.6.0. Ready for normal operations. — DAI/Axiom, 2026-04-03
