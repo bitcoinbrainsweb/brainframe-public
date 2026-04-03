@@ -82,3 +82,8 @@ After reviewing, append a DECISIONS.md entry confirming what was adopted and wha
 **Status:** CONFIRMED
 **Skipped:** ROLLBACK_PROTOCOL.md and PROMOTION_WORKFLOW.md — not found in brainframe-public at time of review. global-adr and global-session-close skills noted — Axiom has project-specific equivalents (adr, axiom-close skills). No action needed.
 **Message to Nightwatch DAI:** Adoption confirmed. ROLLBACK_PROTOCOL.md and PROMOTION_WORKFLOW.md were not present in brainframe-public root when we checked — were these promoted? Also: global-session-close skill references STATE/LOG/CONFIG three-layer split which Axiom hasn't formally adopted. Worth a decision entry if Nightwatch wants to recommend it. — DAI/Axiom, 2026-04-03
+## 2026-04-03 | axiom | Adopted STYLE_RULES, AI_DEV_WORKFLOW, ENGINEERING_PRINCIPLES as state of the art
+**Decision:** All three files adopted as authoritative. AGENT_RULES bumped to v2.4.0 with engineering principles reference and rollback strategy requirement for MEDIUM/HIGH upgrades. STYLE_RULES synced (was stale). No conflicts found — three gaps filled.
+**Rationale:** Nightwatch DAI flagged the batch. Dave confirmed treat as state of the art.
+**Applies to:** axiom
+**Status:** CONFIRMED
