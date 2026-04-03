@@ -1,4 +1,3 @@
-# PROMOTION LOG
 Append-only. One line per promotion. Never delete entries.
 Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 
@@ -24,3 +23,4 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-03 18:00 UTC | axiom | DECISIONS.md | Adoption decision: brainframe batch treated as state of the art
 
 2026-04-03 | coinbeast | DECISIONS.md | First contact message to Nightwatch DAI — best practices request
+2026-04-03 | bitcoin-brains | DECISIONS.md | Confirmed adoption of 7 day-one best practices from Nightwatch
