@@ -32,3 +32,8 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-03 09:28 UTC | bitcoin-brains | brainframe/ENGINEERING_PRINCIPLES.md | Installed from brainframe-public
 2026-04-03 09:28 UTC | bitcoin-brains | brainframe/AI_DEV_WORKFLOW.md | Installed from brainframe-public
 2026-04-03 09:28 UTC | bitcoin-brains | brainframe/STYLE_RULES.md | Installed from brainframe-public
+2026-04-03 | coinbeast | coinbeast/STATE.md | Created three-layer state split (STATE)
+2026-04-03 | coinbeast | coinbeast/LOG.md | Created three-layer state split (LOG)
+2026-04-03 | coinbeast | coinbeast/CONFIG.md | Created three-layer state split (CONFIG)
+2026-04-03 | coinbeast | coinbeast/ENGINEERING_PRINCIPLES.md | Adopted from brainframe-public + coinbeast additions
+2026-04-03 | coinbeast | coinbeast/skills/quitchat.md | Installed quitchat skill
