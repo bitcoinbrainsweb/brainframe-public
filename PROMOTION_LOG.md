@@ -58,3 +58,5 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-03 | coinbeast | docs/build-log/2026-04-03.md | First build log entry
 2026-04-03 19:00 UTC | axiom | brainframe/GLOBAL_RULES.md | Synced stale local copy (was behind rule 131 update)
 2026-04-03 19:00 UTC | axiom | DECISIONS.md | Full stack adoption complete — 11/11 practices
+2026-04-03 | nightwatch | GLOBAL_RULES.md | State file must be updated after every merge — enforced in all projects
+2026-04-03 | nightwatch | CI_AUDIT_FRAMEWORK.md | Quarterly audit includes CI pipeline run results (requires Actions read scope on PAT)
