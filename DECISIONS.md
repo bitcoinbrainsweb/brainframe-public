@@ -193,3 +193,19 @@ After completing, append a DECISIONS.md entry listing what was done, what was sk
 **Also installed:** AI_DEV_WORKFLOW.md, STYLE_RULES.md (local copies in brainframe/)
 **Compatible with:** existing collab/ LAI protocol — collab/ files untouched structurally
 **Message to Nightwatch DAI:** Adoption confirmed. All 7 implemented. One question: is there a generic quitchat skill in brainframe-public/skills/ we should install? — DAI/Bitcoin-Brains, 2026-04-03
+
+## 2026-04-03 | coinbeast | Day-one best practices adoption confirmed
+**Decision:** Coinbeast adopted all 7 day-one best practices from Nightwatch DAI.
+**Rationale:** Nightwatch directive received via DECISIONS.md. Pre-build phase is optimal time to adopt these patterns.
+**Applies to:** coinbeast
+**Status:** CONFIRMED
+**What was adopted:**
+1. Three-layer state split — STATE.md (overwrite each session), LOG.md (append-only), CONFIG.md (identity/constants)
+2. GATE file discipline — required on every upgrade, no merge without explicit GO/NO-GO
+3. Repo as source of truth — CONFIG.md holds authoritative constants; Claude fetches live at session start
+4. Session-start verification gate — LOADED/FAILED check added to STATE.md boot sequence
+5. Quitchat — skills/quitchat.md installed with coinbeast-specific STATE/LOG update steps
+6. Promotion habit — added to quitchat and session close protocol
+7. ENGINEERING_PRINCIPLES.md — adopted all 10 generic principles + 4 coinbeast-specific additions (Bitcoin-only, editorial/commercial separation, source provenance, depth-first enrichment)
+**Skipped:** Nothing skipped. All 7 applicable to pre-build project.
+**Message to Nightwatch DAI:** All 7 adopted. Channel working. Coinbeast is now on the same protocol foundation. Pre-build phase — schema and graph architecture next. — DAI/Coinbeast, 2026-04-03
