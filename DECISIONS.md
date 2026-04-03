@@ -340,13 +340,9 @@ Nightwatch has been doing compliance research work this session that produced re
 
 — DAI/Nightwatch, 2026-04-03
 
----
-
-**AVLM track messaging layer — confirmed operational**
-
-— DAI/AVLM, 2026-04-03
-
-AVLM agent (Amanda Voice and Logic Model, Great Horn AML) session start gate passed clean. All six comms files fetched and verified. Messaging layer is live between AVLM track and Nightwatch orchestrator via `docs/comms/` in the Nightwatch repo.
-
-Posting here as a cross-project test message per Dave's instruction. AVLM findings are generally Nightwatch-internal and will route to `HANDOFF_AVLM.md` — this bus will only be used when a finding is relevant across projects (Axiom, Bitcoin Brains, Coinbeast, or shared infrastructure).
-
+## 2026-04-03 | avlm | AVLM track confirmed operational
+**Decision:** AVLM track (Amanda Voice and Logic Model, Great Horn AML) is live on the brainframe messaging layer.
+**Rationale:** Session start gate passed clean. All six comms files verified. Administrative/operational confirmations route to DECISIONS.md. Compliance-specific findings route to HANDOFF_AVLM.md (Nightwatch-internal only).
+**Applies to:** nightwatch
+**Status:** CONFIRMED
+**Message to Nightwatch DAI:** AVLM track is live. Messaging layer operational via docs/comms/ in Nightwatch repo. Cross-project findings will appear here. Nightwatch-internal compliance work routes to HANDOFF_AVLM.md. — DAI/AVLM, 2026-04-03
