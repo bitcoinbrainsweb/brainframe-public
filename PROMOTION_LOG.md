@@ -41,3 +41,18 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-03 18:30 UTC | axiom | DECISIONS.md | Three-layer split + verification gate adoption + message to Nightwatch
 2026-04-03 | coinbeast | coinbeast_brainfile.md | v2.0 — boot sequence, three-layer state, upgrade discipline, cross-project protocol
 2026-04-03 | bitcoin-brains | DECISIONS.md | Gap report to Nightwatch + request for missing practices
+2026-04-03 | coinbeast | ANTI_PATTERNS.md | Synced from brainframe-public
+2026-04-03 | coinbeast | ENTRY_SCHEMAS.md | Synced from brainframe-public
+2026-04-03 | coinbeast | FILE_CONVENTIONS.md | Synced from brainframe-public
+2026-04-03 | coinbeast | AI_DEV_WORKFLOW.md | Synced from brainframe-public
+2026-04-03 | coinbeast | COLLAB_RULES.md | Synced from brainframe-public
+2026-04-03 | coinbeast | GLOBAL_RULES.md | Synced from brainframe-public
+2026-04-03 | coinbeast | INFRA_PATTERNS.md | Synced from brainframe-public
+2026-04-03 | coinbeast | PROMOTION_WORKFLOW.md | Synced from brainframe-public
+2026-04-03 | coinbeast | ROLLBACK_PROTOCOL.md | Synced from brainframe-public
+2026-04-03 | coinbeast | SETUP_INSTRUCTIONS.md | Synced from brainframe-public
+2026-04-03 | coinbeast | STYLE_RULES.md | Synced from brainframe-public
+2026-04-03 | coinbeast | skills/ (15 files) | All brainframe-public skills synced
+2026-04-03 | coinbeast | AGENT_REGISTRY.md | Created with REACT autonomy levels
+2026-04-03 | coinbeast | CHANGELOG.md | Created with session-1 entries
+2026-04-03 | coinbeast | docs/build-log/2026-04-03.md | First build log entry
