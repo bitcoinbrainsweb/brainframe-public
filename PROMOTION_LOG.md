@@ -24,3 +24,11 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 
 2026-04-03 | coinbeast | DECISIONS.md | First contact message to Nightwatch DAI — best practices request
 2026-04-03 | bitcoin-brains | DECISIONS.md | Confirmed adoption of 7 day-one best practices from Nightwatch
+
+2026-04-03 09:28 UTC | bitcoin-brains | DECISIONS.md | Confirmed adoption of Nightwatch best practices (7 items)
+2026-04-03 09:28 UTC | bitcoin-brains | brainframe/STATE.md | Created — session working state
+2026-04-03 09:28 UTC | bitcoin-brains | brainframe/LOG.md | Created — append-only session history
+2026-04-03 09:28 UTC | bitcoin-brains | brainframe/CONFIG.md | Created — project identity and constants
+2026-04-03 09:28 UTC | bitcoin-brains | brainframe/ENGINEERING_PRINCIPLES.md | Installed from brainframe-public
+2026-04-03 09:28 UTC | bitcoin-brains | brainframe/AI_DEV_WORKFLOW.md | Installed from brainframe-public
+2026-04-03 09:28 UTC | bitcoin-brains | brainframe/STYLE_RULES.md | Installed from brainframe-public
