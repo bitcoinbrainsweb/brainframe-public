@@ -262,3 +262,14 @@ Status transitions must always be explicitly stated. Decisions may not silently 
 119. Use the Cursor Cloud Agents API automatically when an upgrade classifies as Fast or Guarded lane per the orchestrator skill. Never ask Dave whether to use it.
 120. Never use the Cursor API for Manual lane upgrades — produce a prompt file instead.
 121. Never use the browser tool unless Dave explicitly says to use it in that message.
+---
+
+## CROSS-PROJECT PROMOTION
+
+122. Any Claude instance on any project may promote decisions directly to brainframe-public main via GitHub API — no PR, no human touch required.
+123. Before promoting any file, Claude MUST append one line to PROMOTION_LOG.md: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
+124. Before writing a promoted file, Claude MUST read PROMOTION_LOG.md to check for same-day edits to the same file by another project. If conflict detected: stop, flag to collaborator, resolve before writing.
+125. Promotion candidates must be evaluated at every session close (quitchat). If any decision made this session should apply globally, promote it before closing.
+126. Every project repo must include the brainframe-public GitHub PAT in its Claude project instructions with write access to brainframe-public.
+127. AGENT_REGISTRY.md is project-specific. Use brainframe-public/templates/AGENT_REGISTRY_TEMPLATE.md as the base — do not sync registries cross-project.
+128. PROMOTION_LOG.md is the canonical collision guard. Never promote without logging first.
