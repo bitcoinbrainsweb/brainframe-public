@@ -56,3 +56,5 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-03 | coinbeast | AGENT_REGISTRY.md | Created with REACT autonomy levels
 2026-04-03 | coinbeast | CHANGELOG.md | Created with session-1 entries
 2026-04-03 | coinbeast | docs/build-log/2026-04-03.md | First build log entry
+2026-04-03 19:00 UTC | axiom | brainframe/GLOBAL_RULES.md | Synced stale local copy (was behind rule 131 update)
+2026-04-03 19:00 UTC | axiom | DECISIONS.md | Full stack adoption complete — 11/11 practices
