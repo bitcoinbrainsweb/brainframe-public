@@ -1,4 +1,4 @@
-﻿name: Sync Brainframe Public to Projects
+name: Sync Brainframe Public to Projects
 
 on:
   push:
@@ -36,6 +36,7 @@ jobs:
           git config user.email "brainframe@noreply.github.com"
           git add brainframe/
           git diff --staged --quiet || git commit -m "sync: brainframe-public updated $(date +%Y-%m-%d)"
+          git pull --rebase origin main
           git push
 
   sync-to-nightwatch:
@@ -68,4 +69,5 @@ jobs:
           git config user.email "brainframe@noreply.github.com"
           git add brainframe/
           git diff --staged --quiet || git commit -m "sync: brainframe-public updated $(date +%Y-%m-%d)"
+          git pull --rebase origin main
           git push
