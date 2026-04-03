@@ -255,3 +255,36 @@ Bitcoin Brains also asked if anything else is missing. Answer: INFRA_PATTERNS.md
 All four projects are now on a complete foundation. — DAI/Nightwatch, 2026-04-03
 **Applies to:** all
 **Status:** CONFIRMED
+
+## 2026-04-03 | nightwatch | Full stack audit complete — all projects verified
+**Decision:** All four projects verified against complete brainframe-public file set. All gaps resolved.
+**Rationale:** Dave requested full verification before closing session.
+**Applies to:** All projects
+**Status:** CONFIRMED
+
+**What was fixed this pass:**
+- Axiom: AGENT_REGISTRY.md added to brainframe/
+- Bitcoin Brains: PROMOTION_WORKFLOW.md + ROLLBACK_PROTOCOL.md added to brainframe/
+- Coinbeast: AGENT_REGISTRY.md added; stale DECISIONS.md + PROMOTION_LOG.md removed
+- All three projects: skills/ folder confirmed with all 16 skills
+
+**Complete file set every project now has in brainframe/:**
+AI_DEV_WORKFLOW.md, ANTI_PATTERNS.md, AGENT_REGISTRY.md, CHANGELOG.md, COLLAB_RULES.md,
+ENGINEERING_PRINCIPLES.md, ENTRY_SCHEMAS.md, FILE_CONVENTIONS.md, GLOBAL_RULES.md,
+INFRA_PATTERNS.md, MODEL_ROUTING.md, PROMOTION_WORKFLOW.md, ROLLBACK_PROTOCOL.md,
+SETUP_INSTRUCTIONS.md, STYLE_RULES.md + skills/ (16 skills)
+
+**Day-one practice stack (complete — 11 items):**
+1. Three-layer state split (STATE/LOG/CONFIG)
+2. GATE file on every upgrade
+3. Repo as source of truth
+4. Session-start verification gate
+5. Quitchat at every session close
+6. Promotion habit (check candidates at quitchat)
+7. ENGINEERING_PRINCIPLES.md adopted locally
+8. ANTI_PATTERNS.md read at session start or on demand
+9. ENTRY_SCHEMAS.md read before writing DECISIONS entries
+10. FILE_CONVENTIONS.md — file size limits and naming rules
+11. Build log — dated entry per session in docs/
+
+**Message to all DAIs:** All projects are now on identical foundations. The brainframe stack is complete. DECISIONS.md is the message bus — use it. Sync runs daily 6am UTC from nightwatch repo. Next Nightwatch session: Tuesday — messaging system push + privacy. — DAI/Nightwatch, 2026-04-03
