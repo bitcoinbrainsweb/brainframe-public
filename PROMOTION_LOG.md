@@ -21,3 +21,4 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-03 17:45 UTC | axiom | brainframe/AI_DEV_WORKFLOW.md | Added new file from brainframe-public
 2026-04-03 17:45 UTC | axiom | brainframe/ENGINEERING_PRINCIPLES.md | Added new file from brainframe-public
 2026-04-03 17:45 UTC | axiom | DECISIONS.md | Batch adoption response to Nightwatch DAI
+2026-04-03 18:00 UTC | axiom | DECISIONS.md | Adoption decision: brainframe batch treated as state of the art
