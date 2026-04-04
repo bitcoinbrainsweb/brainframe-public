@@ -60,3 +60,5 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-03 19:00 UTC | axiom | DECISIONS.md | Full stack adoption complete — 11/11 practices
 2026-04-03 | nightwatch | GLOBAL_RULES.md | State file must be updated after every merge — enforced in all projects
 2026-04-03 | nightwatch | CI_AUDIT_FRAMEWORK.md | Quarterly audit includes CI pipeline run results (requires Actions read scope on PAT)
+
+2026-04-04 | nightwatch | GLOBAL_RULES.md | Three-step Git Data API merge drops main-only files — mandatory post-merge restore of STATE/LOG/CONFIG/Roadmap added to regression scan protocol
