@@ -62,3 +62,10 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-03 | nightwatch | CI_AUDIT_FRAMEWORK.md | Quarterly audit includes CI pipeline run results (requires Actions read scope on PAT)
 
 2026-04-04 | nightwatch | GLOBAL_RULES.md | Three-step Git Data API merge drops main-only files — mandatory post-merge restore of STATE/LOG/CONFIG/Roadmap added to regression scan protocol
+2026-04-05 | admin | skills/ai-pulse.md | AI Pulse skill — bleeding edge AI intelligence tracker
+2026-04-05 | admin | skills/ai-pulse-sources.md | AI Pulse source list — 64+ sources, 7 categories
+2026-04-05 | admin | CLAUDE.md | General chat operational reference file
+2026-04-05 | admin | docs/admin/ADMIN_STATE.md | Admin session state file
+2026-04-05 | admin | docs/admin/ADMIN_LOG.md | Admin append-only log
+2026-04-05 | admin | docs/admin/ADMIN_CONFIG.md | Admin config/identity file
+2026-04-05 | admin | docs/admin/build-log/2026-04-05.md | Session 1 build log
