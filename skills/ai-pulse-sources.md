@@ -1,6 +1,6 @@
 # AI Pulse — Master Source List
-> Last updated: 2026-04-05
-> 60+ sources across 7 categories. Signal: 🔴 Critical | 🟠 High | 🟡 Medium
+> Last updated: 2026-04-05 (updated after first pulse run)
+> 64+ sources across 7 categories. Signal: 🔴 Critical | 🟠 High | 🟡 Medium
 
 ---
 
@@ -20,6 +20,7 @@
 | xAI / Grok Blog | https://x.ai/blog | 🟡 Medium | Monthly | Grok model updates |
 | Cohere Blog | https://cohere.com/blog | 🟡 Medium | Weekly | Enterprise LLMs, Command, Embed |
 | Perplexity Blog | https://perplexity.ai/hub/blog | 🟡 Medium | Monthly | AI search, Sonar models |
+| Releasebot | https://releasebot.io/updates/anthropic | 🟠 High | Daily | Automated changelog aggregator for Anthropic, OpenAI, and others. Catches granular Claude Code and API updates. *Found: 2026-04-05* |
 
 ---
 
@@ -37,6 +38,7 @@
 | AI_Distilled | https://ai-distilled.substack.com | 🟡 Medium | Weekly | 40K AI professionals. LLMs, agents, cutting-edge algorithms |
 | Ben's Bites | https://bensbites.com | 🟡 Medium | Daily | Startup + product news. Good for early-stage AI tools |
 | Superhuman AI | https://superhuman.ai | 🟡 Medium | Daily | 1.5M readers. Productivity-forward. Tool discovery |
+| The Inference Report | https://inference.report | 🔴 Critical | Daily | 5AM ET daily briefing. Frontier labs, papers, benchmarks, curated GitHub repos. High signal-to-noise. *Found: 2026-04-05* |
 
 ---
 
@@ -87,6 +89,8 @@
 | CrewAI | https://github.com/crewAIInc/crewAI | 🟠 High | Multi-agent framework. Most accessible entry point |
 | AutoGen (Microsoft) | https://github.com/microsoft/autogen | 🟠 High | Multi-agent orchestration from Microsoft Research |
 | DSPy (Stanford) | https://github.com/stanfordnlp/dspy | 🟠 High | Programmatic LLM pipelines. Growing fast |
+| everything-claude-code | https://github.com/affaan-m/everything-claude-code | 🟠 High | 30 agents, 136 skills, 60 slash commands. Most comprehensive Claude Code resource. 128k stars. *Found: 2026-04-05* |
+| Trendshift | https://trendshift.io | 🟠 High | Daily | Alternative to GitHub Trending with consistent daily scoring algorithm. Surfaces breakout repos faster. *Found: 2026-04-05* |
 
 ---
 
