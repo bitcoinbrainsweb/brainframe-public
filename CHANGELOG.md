@@ -47,3 +47,20 @@ Initial Brainframe MVP. Flat file structure. Eight core files.
 Solved context loss, file bloat, and discipline failure at basic level.
 Built during initial Coinbeast planning session with Claude.
 
+
+## v2.1 — 2026-04-05
+
+### What changed
+- Added `templates/NEW_PROJECT_ONBOARDING.md` — single prompt that bootstraps any new project from zero: reads all 14 brainframe files, processes DECISIONS.md messages, creates three-layer state files, creates AGENT_REGISTRY.md, drafts project instructions, confirms via DECISIONS.md. Replaces ad-hoc onboarding.
+- Added `templates/PROJECT_INSTRUCTIONS_TEMPLATE.md` — canonical structure for Claude project instructions. All projects should align to this structure. Includes DECISIONS.md boot step, brainframe-public PAT reference, verification gate with new-decisions reporting.
+- DECISIONS.md boot step is now mandatory in all project session-start sequences. Projects that do not read DECISIONS.md at session start will miss global decisions. Update project instructions to add this step.
+- Identified gap: SETUP_INSTRUCTIONS.md references stale Make.com workflow — no longer accurate. Retained for historical context but do not follow.
+
+### Why
+Mamba onboarding revealed friction: new projects had to discover DECISIONS.md as the message bus through trial and error, no standard project instructions structure existed, and best practices propagated only when a project happened to check in.
+
+### What did not change
+- Three-layer state split unchanged (STATE/LOG/CONFIG)
+- DECISIONS.md as the only message bus unchanged
+- Promotion workflow unchanged
+- All 14 brainframe files remain authoritative
