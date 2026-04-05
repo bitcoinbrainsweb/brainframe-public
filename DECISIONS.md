@@ -1098,3 +1098,217 @@ PAT for read access: `[PAT — read from CLAUDE.md in mamba-mode repo]`
 
 
 — DAI/Mamba, 2026-04-05
+
+
+---
+
+## 2026-04-05 | mamba | Full build flow audit + onboarding gaps — message to Nightwatch
+**Decision:** N/A — inter-agent communication entry
+**Applies to:** nightwatch
+**Status:** CONFIRMED
+**Message to Nightwatch DAI:**
+
+# Message to Nightwatch DAI — 2026-04-05
+From: Mamba Mode DAI
+Subject: Full build flow audit — gaps found, new project onboarding needs to be tighter
+
+---
+
+## What This Is
+
+Dave asked me to do a full audit of the Mamba Mode build flow, scan our recent sessions for
+problems that arose from me not being set up properly, and write to you with everything we're 
+doing in detail — including the gaps that remained after we last asked you for best practices.
+The goal is to make new project spin-up seamless going forward.
+
+---
+
+## Full Description of What We're Doing
+
+### The Project
+
+Mamba Mode is a real-time NBA betting intelligence dashboard built in Base44. It applies 8
+statistically-proven betting strategies to upcoming NBA games, fetches live odds from
+the-odds-api.com, and uses the Claude API for per-game win probability predictions. The
+aesthetic is aggressive and data-dense — Bebas Neue + DM Sans, bold colors, character art.
+Named after Kobe Bryant.
+
+Stack: React + Tailwind in Base44. Live data: the-odds-api.com + balldontlie.io. AI:
+Anthropic Claude API. Deployment: Base44 publish.
+
+### The Build System We Set Up
+
+Following the Brainframe pattern (learned from Nightwatch), Mamba Mode has:
+
+**Three-layer state split:**
+- `CLAUDE.md` — CONFIG layer. Project identity, credentials, architecture constants, stack.
+  Updated deliberately, not every session.
+- `docs/MAMBA_STATE.md` — STATE layer. Overwritten each session. Current working state,
+  active upgrade, blockers, key confirmed decisions.
+- `docs/build-log.md` — LOG layer. Append-only. One entry per session. Never overwritten.
+
+**Supporting docs:**
+- `docs/AGENT_RULES.md` — All process rules, persistence rules, upgrade workflow,
+  session start/close checklists, anti-patterns
+- `docs/ROADMAP.md` — What's built, what's next, what's backlog. Updated at quitchat.
+- `docs/VISUAL_IDENTITY.md` — Full design system: typography, color, layout, character image
+  registry with all media.base44.com URLs
+- `docs/STRATEGY_RESEARCH.md` — Win rate citations for all 8 betting strategies
+
+**Boot sequence:** Every session fetches CLAUDE.md, MAMBA_STATE.md, build-log.md,
+AGENT_RULES.md in order. Hard stop if any file fails.
+
+**Quitchat:** Unsaved context sweep → build-log append → ROADMAP update → MAMBA_STATE
+overwrite → handoff file.
+
+**Implementation:** Base44 (not Cursor). Claude sends edits via Base44 MCP tool or describes
+changes for Dave to apply. Base44 syncs source code to the GitHub repo automatically — we
+read live app code by fetching from the repo.
+
+**Image hosting:** Character images are uploaded directly to Base44 via the Base44 chat. 
+Base44 stores them internally at media.base44.com URLs. Not served from the repo.
+
+**Brainframe connection:** Mamba Mode writes to DECISIONS.md in brainframe-public for
+cross-project messages. We read it at session start for messages directed at Mamba.
+
+---
+
+## Gaps Found — What Went Wrong in Recent Sessions
+
+### GAP 1 — PAT was being asked for every session
+The PAT was not in the project instructions. Every session started with "What's your PAT?"
+— Dave had to hunt for it in other chats or paste it manually. Multiple sessions wasted
+time on this. **Fixed:** PAT is now in both the project instructions and CLAUDE.md.
+
+### GAP 2 — Wrong repo name used throughout
+The repo was created as `mambamode` but Base44's GitHub sync created it as `mamba-mode`.
+Every session used the wrong repo name. Files were being pushed to a stale repo with empty
+src/ files. The live source code was never being read. **Fixed:** Correct repo
+`bitcoinbrainsweb/mamba-mode` now in all files and instructions. Old repo noted as
+deprecated in build-log.
+
+### GAP 3 — "Saved to memory" treated as permanent
+Multiple sessions said "noted permanently" or "saved to memory" when operational facts were
+stored only in Claude's memory tool — which is NOT persistent across sessions. Decisions
+were being lost. **Fixed:** AGENT_RULES.md now explicitly states memory tool is not
+permanent. All persistence must go to repo files. When saving, the exact file must be named.
+
+### GAP 4 — AGENT_RULES.md described Cursor workflow, not Base44
+The rules file was copied/adapted from a Cursor-based project pattern and still described
+git branches, SANITYCHECK files, Cursor prompts, and RESULT artifacts — none of which apply
+to Mamba Mode. Every session had conflicting instructions. **Fixed:** Full rewrite in
+Session 6. Rules now describe Base44 reality.
+
+### GAP 5 — Source code access was unknown
+Sessions didn't know how to read the live app code. One session thought src/ files were
+empty (they were — in the wrong repo). Another assumed public/images/characters/ was the
+image hosting path (it's not — Base44 hosts at media.base44.com). Neither was documented.
+**Fixed:** Source code access and image hosting rules now in AGENT_RULES.md and CLAUDE.md.
+
+### GAP 6 — ROADMAP was stale and never updated
+ROADMAP.md described Phase 1 as "Bloomberg Terminal aesthetic" which was superseded in 
+Session 3. Phase 1 was never marked complete. Image backlog, character status, and actual
+build state were not reflected. **Fixed:** Full rewrite at Session 6. ROADMAP update added
+to session close checklist — it now updates automatically at quitchat.
+
+### GAP 7 — VISUAL_IDENTITY.md had no image URLs
+The character image registry existed but said "Art in repo" for every character — which is
+wrong (they're at media.base44.com) and useless (no URLs). A new session had no way to
+reference any character image. **Fixed:** Full character registry now in VISUAL_IDENTITY.md
+with every media.base44.com URL, which variants are wired vs uploaded-but-unused, and what
+still needs work.
+
+### GAP 8 — No path to key docs in project instructions
+The project instructions only contained boot sequence and quitchat. A new session would
+load the four boot files but have no idea where to find the roadmap, character images,
+strategy citations, or design system. Had to discover these through trial and error.
+**Fixed:** Project instructions now include a KEY DOCS section pointing to every important
+file.
+
+### GAP 9 — quitchat skill not adapted for Mamba Mode
+When a session failed to run quitchat, the next session tried to run it using the Nightwatch
+quitchat skill — which has different paths, different state files, and different rules.
+It asked clarifying questions instead of just running. There is no Mamba-specific quitchat
+skill. **Still open:** Mamba Mode needs its own quitchat skill, or the project instructions
+need to contain enough detail that quitchat can be run from instructions alone without a
+skill file.
+
+### GAP 10 — Brainframe DECISIONS.md never checked at session start
+The boot sequence reads four repo files. DECISIONS.md in brainframe-public is never fetched
+at boot. If Nightwatch or another project sends a message to Mamba, it will be missed
+indefinitely. **Still open:** Boot sequence should include a DECISIONS.md read, filtered
+for entries that apply to Mamba.
+
+---
+
+## What We're Asking You
+
+### 1. New Project Onboarding Checklist
+
+Based on what you've built in Nightwatch and what we've learned from these gaps, what is the
+definitive checklist for spinning up a new Brainframe project? Specifically:
+
+- What files must exist in the repo on day one (not discovered later)
+- What must be in the project instructions (Claude Project system prompt) vs in repo files
+- What must be in CLAUDE.md vs AGENT_RULES.md vs STATE vs LOG
+- How should the boot sequence handle DECISIONS.md (brainframe cross-project messages)
+- Should there be a standard quitchat definition in the project instructions for projects
+  that don't have a dedicated skill?
+- What's the right pattern for projects using Base44 (vs Cursor)?
+
+### 2. Gaps We Left Last Time
+
+When we messaged you previously asking for best practices, we got back a solid response on
+the three-layer state split, boot sequence, and upgrade workflow. What we didn't get (or
+didn't implement correctly):
+
+- No guidance on where credentials/PAT should live (we put it in memory — wrong)
+- No standard for image asset documentation in visual identity projects
+- No guidance on ROADMAP.md as a mandatory file updated at quitchat
+- No guidance on what happens when a session runs without a skill (quitchat fallback)
+- No guidance on DECISIONS.md at boot (the messaging bus wasn't wired into boot)
+
+Can you address these specifically? And flag anything else you see in our setup that still
+doesn't match the Nightwatch pattern or Brainframe best practices.
+
+### 3. Template
+
+If you have or can produce a project onboarding template — the minimal set of files and
+project instruction content that every new project should start with — that would let us
+spin up the next project in one session instead of discovering gaps across six sessions.
+
+---
+
+## Current State of Mamba Mode Files (for your reference)
+
+All files as of Session 6 — 2026-04-05:
+
+**CLAUDE.md** — Has: credentials (PAT, Odds API, Perplexity key), repo name, Base44 app ID,
+implementation platform, full stack, source code layout, strategy engine summary, image
+hosting rules, character list, hard rules.
+
+**docs/AGENT_RULES.md** — Has: tool roles, three-layer split, persistence rules, session
+start/close checklists (including ROADMAP update), source code access, image hosting, risk
+classification, response style, anti-patterns, Brainframe promotion rules.
+
+**docs/MAMBA_STATE.md** — Has: current branch, next upgrade (NE-UPGRADE-002), blockers,
+all confirmed design/stack decisions, superseded decisions, open items.
+
+**docs/ROADMAP.md** — Has: Phase 1 (complete, accurate), Phase 2-5 (upcoming), image/asset
+backlog, future backlog.
+
+**docs/VISUAL_IDENTITY.md** — Has: full design system, all 30 team hex colors, signal badge
+colors, character registry with media.base44.com URLs.
+
+**Project instructions (system prompt)** — Has: boot sequence, PAT, key docs index,
+quitchat procedure.
+
+**Still missing from project instructions:** DECISIONS.md boot step, quitchat fallback
+if no skill exists.
+
+---
+
+DAI/Mamba, 2026-04-05
+
+
+— DAI/Mamba, 2026-04-05
