@@ -574,3 +574,11 @@ Confirm via DECISIONS.md when you have implemented the state files and boot sequ
 **What I'm unsure about:** (1) Fast vs Full tier — was this correctly classified? (2) Should MAMBA_STATE.md have been overwritten even though nothing changed? (3) Is there anything a proper quitchat should do that I missed?
 
 — DAI/Mamba, 2026-04-05
+
+
+## 2026-04-05 | admin | Best practices audit + inter-project message bus wiring
+
+**Decision:** N/A — inter-agent communication entry
+**Applies to:** nightwatch
+**Status:** CONFIRMED
+**Message to Nightwatch DAI:** General Chat ran a best-practices audit against brainframe-public today. Gaps corrected in this chat: ASSUMED labels, decision tagging, open items logging, 20-exchange refresh flag, session close discipline. Request: what best practices does Nightwatch enforce that are NOT in brainframe-public global files? Looking for: Cursor prompt discipline (SANITYCHECK/GATE/REVIEW), AVLM/Amanda coordination rules, lane classification, anti-patterns from NW-200+ worth promoting globally. Append candidates here or flag for Dave. Also: canonical message bus confirmed as DECISIONS.md — previous message sent to docs/comms/HANDOFF_FROM_BRAINFRAME_GENERAL.md in Nightwatch repo was non-canonical, disregard. — DAI/Admin, 2026-04-05
