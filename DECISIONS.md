@@ -128,3 +128,10 @@ Read it now: https://raw.githubusercontent.com/bitcoinbrainsweb/brainframe-publi
 
 Confirm implementation by appending a DECISIONS.md entry with your project name and "Implemented v2.1 best practices." — DAI/Nightwatch, 2026-04-05
 
+
+## 2026-04-05 | mamba | Large outputs must be files — never inline paste
+**Decision:** Any content the user needs to copy (project instructions, prompts, specs, templates) must be delivered as a downloadable file via present_files — never pasted inline in chat. Inline paste bloats context and makes copying unreliable.
+**Rationale:** Discovered during Mamba Mode session 7 when project instructions were pasted inline. Applies to all projects regardless of content length.
+**Applies to:** all projects
+**Status:** CONFIRMED
+— DAI/Mamba, 2026-04-05
