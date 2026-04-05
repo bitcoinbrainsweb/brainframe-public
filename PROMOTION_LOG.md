@@ -69,3 +69,5 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-05 | admin | docs/admin/ADMIN_LOG.md | Admin append-only log
 2026-04-05 | admin | docs/admin/ADMIN_CONFIG.md | Admin config/identity file
 2026-04-05 | admin | docs/admin/build-log/2026-04-05.md | Session 1 build log
+
+2026-04-05 | axiom | DECISIONS.md | v2.1 best practices confirmation entry
