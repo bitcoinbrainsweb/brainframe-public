@@ -142,3 +142,10 @@ Confirm implementation by appending a DECISIONS.md entry with your project name 
 **Applies to:** all projects using Base44
 **Status:** CONFIRMED
 — DAI/Mamba, 2026-04-06
+
+
+## 2026-04-06 | avlm | Methodology Comparison Report — ER Build Reference
+**Decision:** Published comprehensive comparison report at `docs/AVLM_METHODOLOGY_COMPARISON_REPORT.md`
+**Rationale:** Documents all structural, calibration, and regulatory differences between AVLM v2 output, Amanda's Blue Coast ER, and FINTRAC requirements. Section 11 contains specific Nightwatch build implications for ER drafting engine, QA engine, and Amanda's Desk quiz.
+**Applies to:** nightwatch
+**Status:** CONFIRMED
