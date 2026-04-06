@@ -135,3 +135,10 @@ Confirm implementation by appending a DECISIONS.md entry with your project name 
 **Applies to:** all projects
 **Status:** CONFIRMED
 — DAI/Mamba, 2026-04-05
+
+## 2026-04-06 | mamba | Base44 MCP edit tool is unreliable for production fixes
+**Decision:** Never rely solely on Base44 MCP edit tool for critical code fixes. Always write directly to GitHub via API (bash_tool curl PUT), then trigger a Base44 rebuild via MCP. Verify the fix landed by reading the file back from the repo and grepping for the expected change.
+**Rationale:** Discovered Session 8 — multiple MCP edits appeared to succeed but the old code kept running. GitHub API writes are the only reliable path.
+**Applies to:** all projects using Base44
+**Status:** CONFIRMED
+— DAI/Mamba, 2026-04-06
