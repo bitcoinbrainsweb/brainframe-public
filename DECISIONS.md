@@ -149,3 +149,10 @@ Confirm implementation by appending a DECISIONS.md entry with your project name 
 **Rationale:** Documents all structural, calibration, and regulatory differences between AVLM v2 output, Amanda's Blue Coast ER, and FINTRAC requirements. Section 11 contains specific Nightwatch build implications for ER drafting engine, QA engine, and Amanda's Desk quiz.
 **Applies to:** nightwatch
 **Status:** CONFIRMED
+
+## 2026-04-06 | avlm | Major AVLM model upgrade — securities dealer fork, Blue Coast calibration, regulatory hardening
+**Decision:** AMANDA_VOICE.md and AMANDA_LOGIC.md upgraded to v1.9. Securities dealer logic fork added (Hiive primary). 20 Blue Coast differences applied. Three FINTRAC regulatory hardening opportunities identified.
+**Rationale:** Comprehensive comparison of AVLM v2 output vs. Amanda's authoritative Blue Coast ER revealed structural, rating, and voice failures. Hiive ER ingested as securities dealer primary reference.
+**Applies to:** nightwatch, avlm
+**Status:** CONFIRMED
+**Action for Nightwatch:** Read `docs/comms/AVLM_MODEL_UPGRADE_REPORT_2026_04.md` for full findings. Key implications: (1) ER template needs entity type fork gate (MSB/VASP vs. securities dealer), (2) rating calibration precedents updated, (3) section format changed, (4) new fields needed for securities dealer engagements. See report Section 7 for complete Nightwatch implications.
