@@ -4,7 +4,7 @@ description: "Use when writing prompts for Claude Code CLI to implement code upg
 ---
 
 # Claude Code Prompt Writing Skill
-Version: 1.1 | 2026-04-07
+Version: 1.2 | 2026-04-07
 
 Write prompts that Claude Code CLI executes autonomously in a terminal. Claude (this chat) writes the prompt as a file. The user pastes it into the Claude Code terminal session.
 
@@ -70,7 +70,7 @@ Copy this verbatim into every prompt — never omit:
 1. Verification before commit:
    - Run build/lint/tests if available (e.g. npm run build, npm run lint)
    - If errors exist, fix them before committing
-   - If no build system exists, do a final review of all modified files for obvious errors
+   - If no build system exists, check line counts: `wc -l` on every modified file vs the original. If any file is >20% shorter than before and the spec didn't require deletions, STOP — output may be truncated. Do not commit.
 
 2. Commit and push:
    git add .
@@ -119,6 +119,7 @@ Claude Code's context degrades past ~70% fill. For large task queues:
 | Duplicates logic | Didn't check if already exists | Pre-flight check #4 |
 | Silent bail on task 4+ | Context window too full | Split into separate prompts (max 3 tasks) |
 | Full rewrite breaks existing logic | No minimal-edit instruction | Spec says "modify only necessary sections" |
+| File truncated mid-write, committed broken | Context window cutoff during large rewrite | Line count check in closing block; never rewrite files >100 lines from scratch |
 | "File not found" error | Wrong path assumed | Add ls discovery step to Read First |
 
 ---
@@ -159,5 +160,8 @@ Output path: `/mnt/user-data/outputs/CLAUDE_CODE_[name].md`
 - **Spec files must exist before the prompt runs** — cannot find a file that isn't there
 - **Check before write** — if a component/function already exists, update it; don't create a duplicate
 - **Minimal edits win** — full file rewrites introduce regressions; patch only what changes
+- **Truncation detection** — after writing any file, check its line count against the original: `wc -l new_file original_file`. If the new file is more than 20% shorter and the spec didn't require removal of content, STOP — the output was likely cut off mid-generation. Do not commit a truncated file.
+- **Never rewrite large files (>100 lines) from scratch** — always read the existing file, make targeted edits using str_replace or patch approach, and preserve all untouched sections verbatim. Full rewrites of large files risk context-window truncation silently cutting off the end of the file.
+- **Context window truncation is silent** — if generation is cut off mid-string or mid-block, the resulting file will be syntactically invalid but git will still accept it. The only protection is the line count check and the build verification step.
 - **`--dangerously-skip-permissions` is required** for unattended runs — only use in controlled local environments, never on shared machines
 - **Desktop app bypass permissions is broken** — always use CLI for agentic runs
