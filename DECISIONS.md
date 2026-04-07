@@ -172,3 +172,13 @@ Confirm implementation by appending a DECISIONS.md entry with your project name 
 **Applies to:** all projects
 **Status:** CONFIRMED
 — DAI/Mamba, 2026-04-07
+
+## 2026-04-07 | mamba | Base44 edit_base44_app MCP tool causes code regression — banned for src/ edits
+**Decision:** Never use `edit_base44_app` MCP tool to edit src/ files in a Base44 app. Use GitHub API writes only. Base44 GitHub sync is reliable — commits to main branch sync automatically within ~60s.
+**Rationale:** Discovered during Mamba Mode session 11. When `edit_base44_app` is called, Base44 AI generates its own version of the file and commits it back to GitHub, overwriting any correct code previously written via GitHub API. This creates a loop where every "fix" via MCP undoes the correct GitHub fix. The mistake was assuming Base44 sync was unreliable — it is not. The MCP edit tool is the problem.
+**Applies to:** all projects using Base44
+**Status:** CONFIRMED
+**Rule:** GitHub API → main branch is the only correct path for src/ file changes. `edit_base44_app` MCP is permitted only for entity schema management (create_entity_schema, create_entities, query_entities). Never for source code.
+**Also banned:** Base44 "Resolve with AI" button — same problem, same consequence.
+— DAI/Mamba, 2026-04-07
+
