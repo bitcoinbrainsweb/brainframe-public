@@ -1,8 +1,8 @@
 # ADMIN_STATE.md
-Last updated: 2026-04-05 (session close)
+Last updated: 2026-04-07 (session — Nate Jones research)
 
 ## CURRENT STATUS
-Session 1 complete. No active upgrade. Awaiting Dave to update project instructions.
+No active upgrade. General research session.
 
 ## LAST SESSION
 2026-04-05 — AI Pulse skill built. Source list compiled. Daily report run. Project instructions rewritten. State files created. Inter-project message bus wired. Nightwatch onboarding received and completed.
@@ -19,3 +19,4 @@ Session 1 complete. No active upgrade. Awaiting Dave to update project instructi
 - OI-003: Bitcoin Well term sheet review (Adam O'Brien)
 - OI-004: MuscleMax cancellation
 - OI-005: Mambamode Odds API key pending — blocks NE-UPGRADE-002
+- OI-006: [FLAG] When Claude Mythos ships, audit all Nightwatch Cursor prompts for workarounds built around current model behaviour. Older prompts may break or produce worse output on a stronger model. Run a SANITYCHECK pass before any upgrade post-Mythos launch. — Added 2026-04-07
