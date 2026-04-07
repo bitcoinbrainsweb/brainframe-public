@@ -277,3 +277,4 @@ Status transitions must always be explicitly stated. Decisions may not silently 
 130. When appending to DECISIONS.md, write to bitcoinbrainsweb/brainframe-comms/_decisions/DECISIONS.md using the comms PAT. Never write to brainframe-public/DECISIONS.md — it is frozen.
 131. When promoting a file that another project may also promote (e.g. GLOBAL_RULES.md, DECISIONS.md), treat the PROMOTION_LOG conflict check as a version check — if a same-day entry exists for that file, re-read the current version from brainframe-public before writing, to avoid last-write-wins overwrite.
 131. When a same-day conflict is detected on a target file in brainframe-public, re-read the file immediately before writing — never use a cached version. Merge your changes into the current content, then write.
+132. Before proposing any fix, read all code that touches the affected function, entity, or data flow — not just the line that looks wrong. Do not stop at the first plausible cause.
