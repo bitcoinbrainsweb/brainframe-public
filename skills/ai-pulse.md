@@ -96,3 +96,23 @@ See `skills/ai-pulse-sources.md` for full list. Summary:
 - Signal tiers: 🔴 Critical → always check | 🟠 High → check weekly | 🟡 Medium → when relevant
 - When a new source is found during a report, flag it and suggest adding to `ai-pulse-sources.md`
 - The React dashboard artifact (`ai-sources-dashboard.jsx`) is the visual version of the source list
+
+## Standing Weekly Research Items
+
+In addition to the standard AI news sweep, always check the following on weekly runs:
+
+### 🪙 TOKEN OPTIMIZATION WATCH
+*Research cadence: weekly + triggered on any new model release*
+*Purpose: inform OI-008 token optimization plan (must not slow work or degrade quality)*
+
+Search queries to run weekly:
+- `Claude token optimization best practices 2026`
+- `LLM context window efficiency techniques`
+- `AI agent token cost reduction production`
+- `Claude MCP token usage overhead`
+
+Report format — add a section to the weekly AI Pulse output:
+
+#### Token Optimization Signal
+- [Finding]: [What changed or was discovered] — [Impact on Dave's workflow]
+- Flag any new model releases immediately — these trigger a prompt audit (OI-006)
