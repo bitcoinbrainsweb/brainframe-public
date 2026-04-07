@@ -104,15 +104,35 @@ In addition to the standard AI news sweep, always check the following on weekly 
 ### 🪙 TOKEN OPTIMIZATION WATCH
 *Research cadence: weekly + triggered on any new model release*
 *Purpose: inform OI-008 token optimization plan (must not slow work or degrade quality)*
+*Methodology: self-improving — each run builds on prior findings, adds sources, refines queries*
 
-Search queries to run weekly:
+#### How this section works
+- On each weekly run, fetch `docs/token-optimization/TOKEN_RESEARCH.md` from brainframe-public
+- Read prior findings and identified knowledge gaps before searching
+- Search to fill gaps first, then do a general sweep for new developments
+- After the run, update `TOKEN_RESEARCH.md` with new findings, new sources, and updated knowledge gaps
+- Never start from scratch — always build on what was learned before
+
+#### Seed search queries (expand over time based on findings)
 - `Claude token optimization best practices 2026`
-- `LLM context window efficiency techniques`
-- `AI agent token cost reduction production`
-- `Claude MCP token usage overhead`
+- `LLM context window efficiency production`
+- `AI agent token cost reduction techniques`
+- `Claude MCP overhead token usage`
+- `prompt engineering token efficiency`
 
-Report format — add a section to the weekly AI Pulse output:
+#### What to track
+- Techniques that reduce token usage without degrading output quality
+- MCP/plugin token overhead findings
+- Model-specific behaviours (especially on new releases)
+- Community-discovered patterns (Reddit, GitHub, newsletters)
+- New sources to add to ongoing research
 
-#### Token Optimization Signal
-- [Finding]: [What changed or was discovered] — [Impact on Dave's workflow]
-- Flag any new model releases immediately — these trigger a prompt audit (OI-006)
+#### Report format — add to weekly AI Pulse output:
+
+**Token Optimization Signal — [DATE]**
+- New findings: [list]
+- Knowledge gaps identified: [list]  
+- Sources added: [list]
+- Next week priority: [what to dig into]
+
+Flag any new model releases immediately — these trigger a prompt audit (OI-006).
