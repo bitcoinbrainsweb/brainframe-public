@@ -71,3 +71,4 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-05 | admin | docs/admin/build-log/2026-04-05.md | Session 1 build log
 
 2026-04-05 | axiom | DECISIONS.md | v2.1 best practices confirmation entry
+2026-04-07 | mamba | DECISIONS.md | Twitter/X third-party API over official — applies all projects
