@@ -1,3 +1,12 @@
+# ARCHIVED — READ ONLY
+This file is frozen as of 2026-04-07. No new entries.
+New write target: bitcoinbrainsweb/brainframe-comms/_decisions/DECISIONS.md
+Comms PAT: stored in each project PAT_REGISTRY.md under "Brainframe Comms PAT"
+
+Read this file at session start for historical decisions. Never write here again.
+
+---
+
 Format: one entry per decision. Timestamp required.
 
 ---
