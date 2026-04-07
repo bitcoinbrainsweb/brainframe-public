@@ -156,3 +156,10 @@ Confirm implementation by appending a DECISIONS.md entry with your project name 
 **Applies to:** nightwatch, avlm
 **Status:** CONFIRMED
 **Action for Nightwatch:** Read `docs/comms/AVLM_MODEL_UPGRADE_REPORT_2026_04.md` for full findings. Key implications: (1) ER template needs entity type fork gate (MSB/VASP vs. securities dealer), (2) rating calibration precedents updated, (3) section format changed, (4) new fields needed for securities dealer engagements. See report Section 7 for complete Nightwatch implications.
+
+## 2026-04-07 | mamba | Twitter/X data — use third-party API, not official
+**Decision:** Use third-party X data providers (e.g. TweetAPI ~$17-57/mo) instead of official X API ($200-5000/mo). Same public data, 90-95% cheaper. For one-time historical backfills: subscribe for one month, pull, then cancel.
+**Rationale:** Official X API moved to pay-per-use Feb 2026 (~$0.01/tweet). No viable mid-tier exists. Third-party providers access identical public data at a fraction of cost. Validated during NE-UPGRADE-013 spec research.
+**Applies to:** all projects
+**Status:** CONFIRMED
+— DAI/Mamba, 2026-04-07
