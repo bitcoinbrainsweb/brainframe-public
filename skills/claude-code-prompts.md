@@ -1,5 +1,5 @@
 ---
-name: claude-code-prompts
+name: agentic-code-prompts
 description: "Use when writing prompts for Claude Code CLI to implement code upgrades autonomously. Covers mandatory prompt structure, pre-flight checks, push/log requirements, context management, and failure modes. ONLY for Claude Code CLI prompts — not for Cursor, GPT, Perplexity, or any other tool."
 ---
 
@@ -153,11 +153,11 @@ Output path: `/mnt/user-data/outputs/CLAUDE_CODE_[name].md`
 
 ## GOTCHAS
 
-- **Claude Code commits locally by default** — says "committed" but won't push without explicit instruction
+- **Commits locally by default** — says "committed" but won't push without explicit instruction
 - **`git push origin main` is wrong** — use `git push origin HEAD` to push whatever branch is active
 - **"All done" ≠ pushed** — verify via repo commit history after every run
-- **Spec files must exist before the prompt runs** — Claude Code cannot find a file that isn't there
+- **Spec files must exist before the prompt runs** — cannot find a file that isn't there
 - **Check before write** — if a component/function already exists, update it; don't create a duplicate
 - **Minimal edits win** — full file rewrites introduce regressions; patch only what changes
-- **`--dangerously-skip-permissions` is required** for unattended runs: `claude --dangerously-skip-permissions` — only use in controlled local environments, never on shared machines
+- **`--dangerously-skip-permissions` is required** for unattended runs — only use in controlled local environments, never on shared machines
 - **Desktop app bypass permissions is broken** — always use CLI for agentic runs
