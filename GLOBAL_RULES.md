@@ -273,7 +273,7 @@ Status transitions must always be explicitly stated. Decisions may not silently 
 126. Every project repo must include the brainframe-public GitHub PAT in its Claude project instructions with write access to brainframe-public.
 127. AGENT_REGISTRY.md is project-specific. Use brainframe-public/templates/AGENT_REGISTRY_TEMPLATE.md as the base — do not sync registries cross-project.
 128. PROMOTION_LOG.md is the canonical collision guard. Never promote without logging first.
-129. At session start, read DECISIONS.md from your project's brainframe/ folder to load cross-project decisions made since last session.
-130. When appending to DECISIONS.md, always promote the updated file to brainframe-public immediately — do not defer to quitchat.
+129. At session start, read DECISIONS.md from bitcoinbrainsweb/brainframe-comms/_decisions/DECISIONS.md using the comms PAT in your PAT_REGISTRY.md. brainframe-public/DECISIONS.md is frozen archive — read-only historical reference only.
+130. When appending to DECISIONS.md, write to bitcoinbrainsweb/brainframe-comms/_decisions/DECISIONS.md using the comms PAT. Never write to brainframe-public/DECISIONS.md — it is frozen.
 131. When promoting a file that another project may also promote (e.g. GLOBAL_RULES.md, DECISIONS.md), treat the PROMOTION_LOG conflict check as a version check — if a same-day entry exists for that file, re-read the current version from brainframe-public before writing, to avoid last-write-wins overwrite.
 131. When a same-day conflict is detected on a target file in brainframe-public, re-read the file immediately before writing — never use a cached version. Merge your changes into the current content, then write.
