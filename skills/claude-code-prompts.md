@@ -4,7 +4,7 @@ description: "Use when writing prompts for Claude Code CLI to implement code upg
 ---
 
 # Claude Code Prompt Writing Skill
-Version: 1.2 | 2026-04-07
+Version: 1.3 | 2026-04-07
 
 Write prompts that Claude Code CLI executes autonomously in a terminal. Claude (this chat) writes the prompt as a file. The user pastes it into the Claude Code terminal session.
 
@@ -46,11 +46,14 @@ For each file being modified, describe what currently exists. Pull from live rep
 ### 4. Pre-Flight Checks (MANDATORY — runs before any implementation)
 ```
 Before writing any code:
-1. Run: git branch --show-current  — confirm you are on the expected branch
-2. Run: git status  — confirm clean working tree (no uncommitted changes)
-3. Verify every spec file listed in Read First actually exists — if any is missing, STOP and report which files are missing
-4. Check if implementation already exists — search for key function/component names before creating them. If found, update rather than duplicate.
+1. Run: git pull origin main  — sync any changes made via GitHub API or other agents since last local commit
+2. Run: git branch --show-current  — confirm you are on the expected branch (should be main)
+3. Run: git status  — confirm clean working tree after pull (no conflicts)
+4. Verify every spec file listed in Read First actually exists — if any is missing, STOP and report which files are missing
+5. Check if implementation already exists — search for key function/component names before creating them. If found, update rather than duplicate.
 ```
+
+Rationale for git pull: Claude (claude.ai) may write files directly to the repo via GitHub API between Claude Code sessions. Without a pull, Claude Code works from a stale local copy and will overwrite those changes on next push.
 
 ### 5. Implementation Instructions
 Per task:
@@ -114,6 +117,7 @@ Claude Code's context degrades past ~70% fill. For large task queues:
 | Commits local, doesn't push | No push instruction | Add closing block |
 | Doesn't write build log | No log instruction | Add closing block |
 | Pushes to wrong branch | Hardcoded `main` | Closing block uses `git push origin HEAD` |
+| Overwrites API-written fixes | No git pull before starting | Pre-flight step 1: always pull first |
 | Overwrites working code | Didn't read existing file | Add to Read First + discovery step |
 | Stops after first task | Spec file missing from repo | Verify all spec files exist before queuing |
 | Duplicates logic | Didn't check if already exists | Pre-flight check #4 |
