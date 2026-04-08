@@ -75,3 +75,5 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-07 | admin | references/brainframe-skill-standards.md | Brainframe skill authoring standards — YAML rules, description template, architecture
 2026-04-07 | admin | docs/token-optimization/TOKEN_OPTIMIZATION_PLAN.md | Token optimization plan v1.0 — 6 tiers, behavioral rules, project instructions audit
 2026-04-07 | admin | docs/token-optimization/SKILLS_RESEARCH.md | YAML frontmatter definitive reference appended
+
+2026-04-08 03:32 UTC | admin | BEST_PRACTICES.md | v3.0 comprehensive synthesis — 18 sections, 100+ entries, sourced from all global files, skills, and project docs
