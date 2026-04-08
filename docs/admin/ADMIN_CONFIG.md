@@ -44,3 +44,10 @@ AI role: Planning, architecture, critique, document generation, prompt design, r
 ---
 
 **Token optimization standard:** `brainframe-public/docs/TOKEN_OPTIMIZATION.md` — load on demand, not every session.
+
+## SESSION BOOT GATE ADDITION
+At session boot, after fetching STATE, run SYNC_CONTAMINATION_CHECK:
+- Scan for unexpected brainframe-public mirror files appearing in project repos (Nightwatch, Axiom, Mambamode, Coinbeast)
+- Flag immediately if docs/admin/ content found outside brainframe-public
+- Known risk: GitHub Actions sync pushes brainframe-public content into all project repos
+
