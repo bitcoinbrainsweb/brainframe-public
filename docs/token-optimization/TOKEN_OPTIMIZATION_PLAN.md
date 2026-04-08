@@ -1,6 +1,6 @@
 # TOKEN_OPTIMIZATION_PLAN.md
 Dave Bradley — Brainframe AI Workflow
-Version: 1.0 | 2026-04-07
+Version: 1.1 | 2026-04-07
 Status: ACTIVE
 
 Constraint: every rule must preserve or improve output quality and not slow work.
@@ -11,7 +11,7 @@ Grounded in: TOKEN_RESEARCH.md (docs/token-optimization/)
 ## WHAT WE KNOW (relevant to Dave's setup)
 
 - **30 skills × ~50 tokens metadata = ~1,500 tokens at startup** (if lazy loading working)
-- **Gmail + Drive MCPs: estimated 1,400–15,000 tokens** loaded before you type — now restricted to admin sessions (GLOBAL_RULES 132–134)
+- **Gmail + Drive MCPs: estimated 1,400–15,000 tokens** — guardrailed to admin sessions only (GLOBAL_RULES 132–134). Never disconnected. Enforced by session type.
 - **Base44 MCP: unknown token cost** — measure when possible
 - **Full session history re-sent every message** — caching gives 90% discount within 5-min window
 - **Skill bodies now trimmed 53–82%** — reference files load on demand from GitHub API
@@ -24,177 +24,140 @@ Grounded in: TOKEN_RESEARCH.md (docs/token-optimization/)
 
 ### TIER 1 — ALREADY DONE (implemented this session)
 
-These are complete. No action needed.
-
 | Change | Impact |
 |--------|--------|
 | Skill bodies trimmed 53–82% | Bodies load on demand; smaller = less context when triggered |
 | Project-specific content in reference files | Loads only when working on that project |
-| Gmail/Drive MCP restricted to admin sessions | Eliminates ~1,400–15,000 tokens in non-admin sessions |
+| Gmail/Drive MCP guardrailed to admin sessions | Eliminates ~1,400–15,000 tokens in non-admin sessions |
 | All 30 skill descriptions fixed | Correct triggering = right skills load, wrong ones don't |
-| `disable-model-invocation` on 4 destructive skills | Prevents accidental loads, saves ~50 tokens each |
-| quitchat refactored to fetch close procedures | Body down from 170 → 81 lines |
+| `disable-model-invocation` on 4 destructive skills | Prevents accidental loads |
+| quitchat refactored to fetch close procedures | Body 170 → 81 lines |
 
 ---
 
 ### TIER 2 — SESSION DISCIPLINE (behavioral rules, zero implementation)
 
-These require no code changes. Add to GLOBAL_RULES and practice.
+Rules 135–137 now in GLOBAL_RULES. Repeated here for visibility.
 
-**Rule: MCP session matching**
-Before starting any session, disconnect MCPs not needed for that session's primary task.
-- Nightwatch session: disconnect Gmail, Drive. Keep Base44.
-- Axiom session: disconnect Gmail, Drive, Base44.
-- Admin session: Gmail + Drive permitted.
-- Add this to project instructions for each project.
+**RULE: Never use /compact (GLOBAL_RULES 135)**
+/compact busts the prompt cache and loses fidelity unpredictably.
+If context is getting long: ask Claude to save context to a file, then use a handoff to start fresh.
+This is something Claude can already do well — no skill needed. The instruction is: 
+"Save your current context to SESSION_HANDOFF.md — include session summary, decisions made, next task, and any open items. Be comprehensive." Then quitchat.
 
-**Rule: No manual file edits during a session**
+**RULE: No manual file edits during a session (GLOBAL_RULES 136)**
 Editing files outside Claude during an active session busts the prompt cache.
-Cache expiry on 200K tokens = 12.5× cost spike on next message.
-If you need to edit externally: finish the Claude session first, restart after.
+Finish the session first, edit externally, then restart.
 
-**Rule: Batch related questions**
+**RULE: MCP tools are guardrailed, never disconnected (GLOBAL_RULES 137)**
+Gmail and Drive: admin sessions only (rules 132–134).
+Base44: Nightwatch sessions only.
+Never add new MCP connections without evaluating token overhead.
+The right model: guardrail by session type, not manual connect/disconnect.
+
+**Batch related questions**
 Send multiple related questions in one message — not as follow-ups.
 Each follow-up re-sends full history. Three questions in one message costs same as one.
 
-**Rule: Keep sessions alive during work**
-Cache TTL is 5 minutes. If you step away mid-session, cache expires.
-Resume within 5 minutes or expect a cost spike on the next message.
-For long breaks: use quitchat, start fresh with handoff file.
+**Keep sessions alive during work**
+Cache TTL is 5 minutes. If you step away, cache expires.
+For long breaks: quitchat + handoff, start fresh.
 
-**Rule: Use "save context to file" not /compact**
-If context is getting long, ask Claude to save context to a file rather than using /compact.
-/compact busts the cache. Manual save preserves it and gives you control over what's retained.
-
-**Rule: Ultrathink deliberately**
-"ultrathink" = 31,999 output tokens. "think hard" = 10,000. Both billed at output rate (5× input).
-Only use for: novel architecture decisions, complex debugging where multiple hypotheses exist.
-Never use for: routine prompts, spec writing, description fixes, document generation.
+**Ultrathink deliberately**
+"ultrathink" = 31,999 output tokens billed at 5× input rate.
+Only use for: novel architecture decisions, complex multi-hypothesis debugging.
+Never for: routine prompts, spec writing, description fixes, document generation.
 
 ---
 
-### TIER 3 — PROJECT INSTRUCTIONS AUDIT (one-time work, high impact)
+### TIER 3 — PROJECT INSTRUCTIONS COMPRESSION (one-time work, high impact)
 
-**What:** Project instructions load in full every session and are cached after the first message.
-Anything over 50 lines costs tokens every session forever. Conditional logic in instructions
-fires even when irrelevant.
+**Why:** Project instructions load in full every session, cached after first message.
+Over 50 lines = bloated startup cost every session forever.
 
-**Action per project:**
-1. Measure current project instructions length (count lines)
-2. Extract any conditional logic ("when X do Y") into skills
-3. Compress remaining instructions for token density
-4. Target: under 50 lines per project
+**Key constraint:** Each project writes its own instructions only.
+No cross-project instructions. No shared directives in project files.
+Global directives live in GLOBAL_RULES.md — project instructions just pointer to it.
 
-**Priority order:** Nightwatch (most sessions) → Admin → Axiom → Coinbeast
+**Action — Nightwatch first (most sessions, highest ROI):**
+1. Read current Nightwatch project instructions
+2. Strip anything that belongs in GLOBAL_RULES instead
+3. Strip anything duplicated from skill descriptions
+4. Compress what remains: "Rewrite for maximum token density without losing directive content. Use imperative form. No explanations."
+5. Target: under 50 lines
 
-**How to compress:** Paste current instructions into Claude with prompt:
-"Rewrite these instructions for maximum token density without losing any directive content.
-Remove redundancy, use imperative form, eliminate explanations that Claude already knows."
+**Same for Admin project instructions.**
 
----
+**Axiom and Coinbeast:** Do when starting active work on those projects.
+Don't compress Axiom instructions speculatively — do it at the start of an Axiom session when the context is fresh.
 
-### TIER 4 — CURSOR PROMPT STRUCTURE (KERNEL principles)
-
-**What:** KERNEL framework measured 58% token reduction, 72% first-try success.
-Your Nightwatch prompt standard already enforces most of it.
-Gaps to close:
-
-| KERNEL principle | Current state | Gap |
-|-----------------|---------------|-----|
-| Single objective per prompt | ✓ enforced | None |
-| Explicit constraints | ✓ (Do Not Modify) | None |
-| Narrow scope | ✓ (exact file list) | None |
-| No multi-task combining | Occasionally violated | Flag when violated |
-| Explicit success criteria | ✓ (acceptance criteria) | None |
-| Avoid verbose output in prompts | Partially — some prompts have long context blocks | Trim context blocks |
-
-**Action:** When writing any Cursor prompt, trim the Context section to minimum viable information.
-Context blocks over 5 lines should be challenged — does Cursor actually need this?
+**Status:** Not yet done. Next Nightwatch session should start with this.
 
 ---
 
-### TIER 5 — DEPENDENCY MAP FOR COINBEAST (future, when codebase grows)
+### TIER 4 — CURSOR PROMPT CONTEXT BLOCKS (ongoing discipline)
 
-**What:** Dependency map pattern replaces 500K tokens of raw source with ~5KB XML.
-96% token reduction for codebase exploration tasks.
+KERNEL framework measured 58% token reduction. Your prompt standard already enforces most of it.
+One gap: Context blocks in Cursor prompts are sometimes over 5 lines.
 
-**Trigger:** Implement when Coinbeast codebase exceeds ~50 files or when Cursor
-starts making cross-file mistakes from incomplete context.
-
-**How:** Build a lightweight tool that generates:
-```xml
-<depmap>
-  <file path="src/products.ts" exports="ProductCard, useProducts" imports="api, types"/>
-  <file path="src/api.ts" exports="fetchProducts, fetchPrices" imports="config"/>
-</depmap>
-```
-Pass map instead of raw files. Claude deduces "src/products.ts imports src/api.ts" without reading either.
+Rule: If a context block exceeds 5 lines, challenge whether Cursor actually needs it.
+Cursor reads the repo. It doesn't need a recap of what you've already built unless the change is in a non-obvious location.
 
 ---
 
-### TIER 6 — UNKNOWNS TO RESOLVE (research actions)
+### TIER 5 — DEPENDENCY MAP FOR COINBEAST (future trigger)
 
-These are the highest-impact unknowns from TOKEN_RESEARCH.md.
-Each one could change the plan significantly.
+When Coinbeast codebase exceeds ~50 files or Cursor starts making cross-file mistakes:
+Build a lightweight dependency map (~5KB XML) instead of passing raw source.
+96% token reduction for codebase exploration. Research pattern confirmed in TOKEN_RESEARCH.md.
 
-**Unknown 1 (CRITICAL): Does claude.ai use deferred MCP loading?**
-If YES: Base44 MCP overhead is minimal (deferred). Current setup is fine.
-If NO: Base44 is loading full tool definitions every session — significant waste.
-How to test: check /context in a Claude Code session to see MCP overhead. Compare with claude.ai.
+---
 
-**Unknown 2: Is skill eager-loading bug (#16160) present in claude.ai?**
-If YES: 30 skills could be loading 96K–165K tokens at startup instead of ~1,500.
-How to test: claude.ai doesn't expose /context. Indirect: measure session token count in API.
+### TIER 6 — UNKNOWNS TO RESOLVE
 
-**Unknown 3: Does 5-min cache TTL apply to claude.ai web sessions?**
-Affects whether session discipline rules (Tier 2) actually matter in practice.
-How to test: Anthropic support or API response headers analysis.
+These could change the plan significantly:
+
+| Unknown | Impact if YES | Impact if NO | How to test |
+|---------|--------------|--------------|-------------|
+| Does claude.ai use deferred MCP loading? | Base44 overhead minimal | Base44 is expensive every session | Check /context in Claude Code, compare |
+| Is skill eager-loading bug (#16160) present in claude.ai? | 30 skills = 96K–165K tokens at startup | 30 skills = ~1,500 tokens | API token count measurement |
+| Does 5-min cache TTL apply to claude.ai web sessions? | Session discipline rules matter a lot | Cache mechanics differ from API | Anthropic support |
+
+AI Pulse token section will surface answers as they emerge.
 
 ---
 
 ## IMPLEMENTATION ORDER
 
-| Priority | Action | Effort | Impact |
+| Priority | Action | Effort | Status |
 |----------|--------|--------|--------|
-| 1 | MCP session matching (Tier 2) | 5 min | High — eliminates Gmail/Drive overhead |
-| 2 | No manual edits during session (Tier 2) | Behavior change | High — preserves cache |
-| 3 | Batch questions (Tier 2) | Behavior change | Medium |
-| 4 | Compress Nightwatch project instructions (Tier 3) | 30 min | High — paid every session |
-| 5 | Compress Admin project instructions (Tier 3) | 30 min | Medium |
-| 6 | Trim Cursor prompt context blocks (Tier 4) | Ongoing | Medium |
-| 7 | Resolve Unknown 1 — MCP deferred loading (Tier 6) | 1 research session | Potentially very high |
-| 8 | Deliberate ultrathink usage (Tier 2) | Behavior change | Medium |
-| 9 | Dependency map for Coinbeast (Tier 5) | Future | High when triggered |
+| 1 | /compact rule in GLOBAL_RULES | Done | ✓ |
+| 2 | MCP guardrail rules in GLOBAL_RULES | Done | ✓ |
+| 3 | Compress Nightwatch project instructions | 30 min | Next Nightwatch session |
+| 4 | Compress Admin project instructions | 30 min | This session or next |
+| 5 | Trim Cursor prompt context blocks | Ongoing | Enforce per-prompt |
+| 6 | Resolve Unknown 1 — MCP deferred loading | 1 research session | Queued |
+| 7 | Batch questions, keep sessions alive | Behavioral | Ongoing |
+| 8 | Dependency map for Coinbeast | Future | When triggered |
 
 ---
 
 ## WHAT NOT TO DO
 
-- **Don't start fresh sessions aggressively.** One long session is cheaper than two short ones
-  (re-caching costs full price). Only start fresh when task is genuinely unrelated or context has rotted.
-- **Don't strip skill bodies below their functional minimum.** We've trimmed to the right level.
-  Further trimming would require Claude to refetch reference files on every invocation, negating savings.
-- **Don't use /compact.** Busts cache, loses fidelity unpredictably. Use manual context save instead.
-- **Don't use ultrathink routinely.** 31,999 output tokens at 5× input rate = expensive for routine work.
-- **Don't add more MCPs.** Every MCP server adds 1,400–26,000+ tokens at startup.
-  New capability should be a skill or reference file first, MCP only if it needs live data.
-
----
-
-## METRICS TO TRACK
-
-When the weekly AI Pulse token research runs, watch for:
-- Any change in MCP deferred loading behavior in claude.ai
-- New community measurements of claude.ai session token costs
-- Any Anthropic guidance on cache TTL for web sessions
-- Emerging techniques for project instruction compression
+- **Never /compact** — busts cache, loses fidelity. Save context to file instead.
+- **Never edit files externally during a session** — busts cache.
+- **Never disconnect MCPs manually** — guardrail by session type instead.
+- **Never add MCPs without token audit** — each one adds 1,400–26,000+ tokens.
+- **Don't start fresh sessions aggressively** — one long session is cheaper than two short ones.
+- **Don't use ultrathink routinely** — 31,999 output tokens at 5× rate for routine work is waste.
+- **Don't over-trim skill bodies** — we're at the right level. Further trimming causes reference file fetches on every invocation, negating savings.
 
 ---
 
 ## REVIEW TRIGGER
 
-Revisit this plan when:
-- Any of the 3 critical unknowns (Tier 6) are resolved
-- A new model release changes token pricing or behavior
-- A project instruction audit is completed (Tier 3)
+Revisit when:
+- Any Tier 6 unknown is resolved
+- New model release changes token pricing or behavior
+- Project instructions compression completed (Tier 3)
 - AI Pulse token section surfaces a material new finding
