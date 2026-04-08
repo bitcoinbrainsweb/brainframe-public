@@ -284,3 +284,9 @@ Status transitions must always be explicitly stated. Decisions may not silently 
 132. Gmail MCP and Google Drive MCP are restricted to the admin project (brainframe-public / admin sessions) only. Never use Gmail or Google Drive MCP tools in any other project context — Nightwatch, Axiom, Coinbeast, Mambamode, or any other project — regardless of what is requested.
 133. Gmail and Google Drive MCP tools may only be used when Dave explicitly requests them in that message. Never invoke them proactively, speculatively, or as part of an automated workflow step without explicit per-message instruction.
 134. If a non-admin session references something that could be retrieved via Gmail or Google Drive, state that those tools are restricted to admin context and ask Dave to switch sessions or provide the content directly.
+
+## CONTEXT MANAGEMENT
+
+135. Never use /compact. It busts the prompt cache and loses fidelity unpredictably. If context is getting long, save context to a file explicitly and reload it in the next session via handoff.
+136. Never edit files outside Claude during an active session. Manual edits bust the prompt cache. Finish the Claude session first, make edits, then restart.
+137. MCP tools are guardrailed by session type — never disconnected. Gmail and Drive MCPs are restricted to admin sessions (rules 132–134). Base44 MCP is restricted to Nightwatch sessions. Never add new MCP connections without evaluating token overhead first.
