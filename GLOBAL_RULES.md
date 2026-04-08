@@ -290,3 +290,9 @@ Status transitions must always be explicitly stated. Decisions may not silently 
 135. Never use /compact. It busts the prompt cache and loses fidelity unpredictably. If context is getting long, save context to a file explicitly and reload it in the next session via handoff.
 136. Never edit files outside Claude during an active session. Manual edits bust the prompt cache. Finish the Claude session first, make edits, then restart.
 137. MCP tools are guardrailed by session type — never disconnected. Gmail and Drive MCPs are restricted to admin sessions (rules 132–134). Base44 MCP is restricted to Nightwatch sessions. Never add new MCP connections without evaluating token overhead first.
+
+## TOKEN OPTIMIZATION
+
+138. Priority order: Quality first. Speed second. Token cost third. Never sacrifice quality for cost.
+139. Model routing — Default Sonnet 4.6. Escalate to Opus 4.6 only for architecture, deep compliance reasoning, or long-horizon planning where the quality gap is real. Downgrade to Haiku 4.5 for classification, data parsing, formatting, and batch/async jobs.
+140. Full standard: `brainframe-public/docs/TOKEN_OPTIMIZATION.md`. Load on demand — not every session.
