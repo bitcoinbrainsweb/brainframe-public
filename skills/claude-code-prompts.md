@@ -169,3 +169,8 @@ Output path: `/mnt/user-data/outputs/CLAUDE_CODE_[name].md`
 - **Context window truncation is silent** — if generation is cut off mid-string or mid-block, the resulting file will be syntactically invalid but git will still accept it. The only protection is the line count check and the build verification step.
 - **`--dangerously-skip-permissions` is required** for unattended runs — only use in controlled local environments, never on shared machines
 - **Desktop app bypass permissions is broken** — always use CLI for agentic runs
+
+
+---
+
+> **Token optimization gate:** Before selecting a model or designing an API call, check `brainframe-public/docs/TOKEN_OPTIMIZATION.md`. Default Sonnet 4.6. Escalate to Opus only when justified. Downgrade to Haiku for structured/data ops.
