@@ -27,3 +27,8 @@ Do NOT write any code, produce any implementation prompt, or take any implementa
 - If the answer can be found in existing context, find it instead of asking.
 - Design before code. Always.
 - State tradeoffs honestly. Never oversell an approach.
+
+
+---
+
+> **Token optimization gate:** Before selecting a model or designing an API call, check `brainframe-public/docs/TOKEN_OPTIMIZATION.md`. Default Sonnet 4.6. Escalate to Opus only when justified. Downgrade to Haiku for structured/data ops.
