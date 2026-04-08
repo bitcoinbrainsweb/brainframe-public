@@ -97,3 +97,16 @@ Source: Admin DAI session — agentic design patterns discussion
 Idea: A persistent agent whose sole job is roadmap integrity across all projects. Watches for new upgrade IDs being sequenced, checks dependency conflicts with existing roadmap items, flags sequencing violations before they land. Per-project or global (brainframe-public). Authority TBD — flag-only vs block promotion. Trigger TBD — every DECISIONS.md write, every new upgrade ID, or manual call. Needs proper brainstorm session before building — risk of fighting existing promotion workflow.
 
 Re-evaluate when: roadmap conflicts become a recurring pain point, or when promotion workflow is next touched.
+
+## Claude Code SEO Skill (AgriciDaniel/claude-seo + geo-seo-claude fork) — 2026-04-08
+
+Source: Instagram/TikTok reel (Type B — Straight Info)
+Summary: Claude Code skills for full-stack SEO — 13 subskills, 6 subagents, technical SEO, on-page, local, schema, GEO/AEO, and llms.txt generation. Two repos: AgriciDaniel/claude-seo (general SEO) and zubair-trabzada/geo-seo-claude (GEO/AI search-first). Free core; DataForSEO/Ahrefs MCP for live data costs money.
+Why Interesting: llms.txt generation is already flagged as pending across Bitcoin Brains, Bitcoin Rodeo, Liberty Labs, and Nightwatch. GEO/AEO angle matters specifically for Bitcoin content where AI search (ChatGPT, Perplexity, Google AI Overviews) is eating organic traffic. Could run as a Claude Code session — no extra infra.
+Revisit Trigger: When llms.txt deployment is next touched, or when any Bitcoin Brains/Rodeo/Nightwatch marketing session prioritizes SEO/AI search visibility.
+Status: WATCHING
+Tags: #seo #geo #aeo #llms-txt #bitcoin-brains #bitcoin-rodeo #liberty-labs #nightwatch #claude-code
+Context At Time: llms.txt templates drafted (llms-txt-note.md, 2026-04-08) but not deployed on any site. No active SEO tooling on any property. Claude Code skill ecosystem maturing fast — this skill is real and functional, not vaporware.
+Key Tools To Re-Evaluate: github.com/AgriciDaniel/claude-seo, github.com/zubair-trabzada/geo-seo-claude, DataForSEO MCP (live SERP data).
+
+---
