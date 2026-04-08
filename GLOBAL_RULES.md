@@ -278,3 +278,9 @@ Status transitions must always be explicitly stated. Decisions may not silently 
 131. When promoting a file that another project may also promote (e.g. GLOBAL_RULES.md, DECISIONS.md), treat the PROMOTION_LOG conflict check as a version check — if a same-day entry exists for that file, re-read the current version from brainframe-public before writing, to avoid last-write-wins overwrite.
 131. When a same-day conflict is detected on a target file in brainframe-public, re-read the file immediately before writing — never use a cached version. Merge your changes into the current content, then write.
 132. Before proposing any fix, read all code that touches the affected function, entity, or data flow — not just the line that looks wrong. Do not stop at the first plausible cause.
+
+## MCP TOOL RESTRICTIONS
+
+132. Gmail MCP and Google Drive MCP are restricted to the admin project (brainframe-public / admin sessions) only. Never use Gmail or Google Drive MCP tools in any other project context — Nightwatch, Axiom, Coinbeast, Mambamode, or any other project — regardless of what is requested.
+133. Gmail and Google Drive MCP tools may only be used when Dave explicitly requests them in that message. Never invoke them proactively, speculatively, or as part of an automated workflow step without explicit per-message instruction.
+134. If a non-admin session references something that could be retrieved via Gmail or Google Drive, state that those tools are restricted to admin context and ask Dave to switch sessions or provide the content directly.
