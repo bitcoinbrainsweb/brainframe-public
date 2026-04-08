@@ -41,3 +41,8 @@ Key difference from ChatGPT: vague prompts produce vague searches. Domain-specif
 - Specify output format explicitly. Default is prose — ask for tables or lists if needed.
 - For regulatory or legal research: specify jurisdiction.
 - For competitive research: name the specific competitors to compare.
+
+
+---
+
+> **Token optimization gate:** Before selecting a model or designing an API call, check `brainframe-public/docs/TOKEN_OPTIMIZATION.md`. Default Sonnet 4.6. Escalate to Opus only when justified. Downgrade to Haiku for structured/data ops.
