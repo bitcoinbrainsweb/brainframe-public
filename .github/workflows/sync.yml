@@ -27,6 +27,7 @@ jobs:
             --exclude='.git' \
             --exclude='.github' \
             --exclude='templates/' \
+            --exclude='docs/admin/' \
             brainframe-public/ coinbeast/brainframe/
 
       - name: Commit and push to coinbeast
@@ -60,6 +61,7 @@ jobs:
             --exclude='.git' \
             --exclude='.github' \
             --exclude='templates/' \
+            --exclude='docs/admin/' \
             brainframe-public/ nightwatch/brainframe/
 
       - name: Commit and push to nightwatch
