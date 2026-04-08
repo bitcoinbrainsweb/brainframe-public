@@ -92,3 +92,5 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 
 2026-04-08 | admin | skills/security-hardening.md | New skill — project-agnostic security gate for Cursor (OWASP, auth boundary, ask-first list)
 2026-04-08 | admin | skills/test-driven-development.md | New skill — project-agnostic TDD enforcement for Cursor (Prove-It Pattern, test pyramid, red-green-refactor)
+2026-04-08 | admin | skills/perplexity-research.md | Added copyable prompt delivery rule + research findings from April 2026 best practices study
+2026-04-08 | admin | project-instructions | Added GitHub PAT to credentials section; added full write-access repo list
