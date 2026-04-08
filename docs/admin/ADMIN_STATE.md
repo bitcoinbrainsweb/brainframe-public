@@ -7,15 +7,13 @@ Last Updated: 2026-04-08
 - Mambamode -- NBA betting intelligence dashboard
 - Coinbeast -- Bitcoin product intelligence platform (pre-build)
 
-## Work Completed This Session
-- Reel-intel on 6 reels: SEO skill, graphify x2, claude-obsidian, Cursor spec tool (bait), weekly self-improvement (bait)
-- graphify flagged to FUTURE_INTEL; Graph-Layer AI Memory entry updated with graphify as concrete tool
-- Claude Code SEO skill (AgriciDaniel + geo-seo-claude fork) flagged to FUTURE_INTEL
-- Weekly self-improvement GitHub Action built and deployed -- first run successful
-- IMPROVEMENT_SUGGESTIONS.md created, 5 suggestions generated
-- Actioned improvements #1 (SYNC_CONTAMINATION_CHECK), #3 (NEXT_ACTION.md), #4 (CREDENTIAL_STATUS.md)
-- #2 closed as superseded (generic quitchat canonical); #5 deferred
-- Claude API key stored as GitHub secret CLAUDE_API_KEY in brainframe-public
+## Work Completed This Session (2026-04-08 — Session 2)
+- AI Pulse report run: Anthropic Mythos/Project Glasswing, $30B ARR, Google/Broadcom compute deal, Gemma 4, OpenAI $122B raise, CLI vs MCP debate
+- Claude Managed Agents announced (public beta) — research preview waitlist submitted (Outcomes + Multiagent + Memory, TypeScript SDK)
+- Gemini CLI evaluated: free on personal Gmail, 1M context, 1000 req/day
+- Gemini CLI flagged to FUTURE_INTEL — Nightwatch + Coinbeast large context data curation
+- GitHub CLI vs API tradeoff assessed: keep API for SHA/JSON workflows, CLI viable for simple ops
+- CLI vs MCP debate noted: CLIs 10-32x cheaper on tokens, ~100% reliability vs MCP 72%
 
 ## Open Items
 - [ ] Block Rewards DocuSign board resolution (Travis MacDonald) -- FLAG IMMEDIATELY
@@ -28,6 +26,8 @@ Last Updated: 2026-04-08
 - [ ] Mambamode NE-UPGRADE-002 -- blocked on Odds API key
 - [ ] Stripe payout pause on Bitcoin Brains -- unresolved
 - [ ] Improvement suggestion #5 deferred -- skill-installer automation into PROMOTION_LOG workflow
+- [ ] Gemini CLI -- install on Windows dev machine (personal Gmail auth)
+- [ ] Claude Managed Agents -- await waitlist approval (TypeScript, all 3 research preview features)
 
 ## Next Session First Action
 See docs/admin/NEXT_ACTION.md
@@ -39,3 +39,4 @@ See docs/admin/NEXT_ACTION.md
 - Specs: brainframe-comms/specs/ (source of truth)
 - Next action: docs/admin/NEXT_ACTION.md
 - Improvement suggestions: docs/admin/IMPROVEMENT_SUGGESTIONS.md
+
