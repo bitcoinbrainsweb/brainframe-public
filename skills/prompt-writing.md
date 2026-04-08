@@ -4,7 +4,7 @@ description: >-
   Writes Cursor upgrade prompts for any project. MUST be loaded before writing any Cursor prompt or upgrade spec. Detects project, fetches project config from repo, applies universal prompt standards. Replaces prompt-writing and prompt-writing.
 ---
 # Prompt Writing Skill
-Version: 1.0 | 2026-04-07
+Version: 1.2 | 2026-04-08
 
 Writes Cursor prompts for any project. Detects project context, fetches project-specific
 config, applies universal prompt standards.
@@ -51,6 +51,14 @@ git pull --rebase origin main
 git checkout -b [UPGRADE-ID]
 [Branch hard-stop check — see project config]
 
+PLAN [MEDIUM and HIGH risk prompts only — omit for LOW]
+Before writing any code, output a numbered step list with dependency tags:
+  1. [step description] — depends on: none
+  2. [step description] — depends on: step 1
+  3. [step description] — depends on: steps 1, 2
+Do not proceed to implementation until the PLAN block is complete.
+If a dependency is unresolvable, stop and surface to Dave.
+
 [Implementation steps]
 
 BEFORE FINISHING
@@ -77,30 +85,6 @@ Branch: [UPGRADE-ID]
 - Branch check is a hard stop — wrong branch = do not proceed
 - Risk rating: LOW / MEDIUM / HIGH
 - Rollback strategy required for MEDIUM and HIGH
-
-**GPT CRITIQUE GATE — HIGH risk prompts only**
-
-Fires automatically when SANITYCHECK risk rating = HIGH. Do not fire for LOW or MEDIUM.
-
-Steps:
-1. Extract the completed prompt text
-2. Call OpenAI API:
-   - Endpoint: `https://api.openai.com/v1/chat/completions`
-   - Model: `o3`
-   - Auth: Bearer token from project instructions (sk-proj-jLzqFcrX8gXCm1z-...)
-   - System prompt:
-     ```
-     You are a senior engineer reviewing a Cursor AI coding prompt before execution.
-     Evaluate the prompt for: ambiguous objective, missing constraints, scope drift risk,
-     dependency gaps, and anything that could cause an AI agent to take an unintended action.
-     Be terse. Return a bullet list of issues found. If none, say APPROVED.
-     ```
-   - User message: full prompt text
-3. Surface critique to Dave before delivering the prompt file
-4. If APPROVED → deliver prompt via present_files as normal
-5. If issues found → show findings, ask Dave to confirm or revise before delivering
-
-Never skip this gate for HIGH risk. Never fire it for LOW or MEDIUM.
 
 **RESULT file — every prompt**
 - Produced after git push completes — never before
