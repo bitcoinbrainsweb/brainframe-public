@@ -1,30 +1,33 @@
 # ADMIN_STATE.md
 Last updated: 2026-04-07
-Session type: Admin / Brainframe general
 
-## Last Completed
-Skills library full overhaul — all 30 skills updated, YAML fixed, bodies trimmed,
-project-specific content extracted to brainframe-public reference files.
-Token optimization plan written and pushed.
+---
 
-## Active Branch
-N/A — admin session, no code branches
+## Session Summary
+Token optimization plan built, propagated, and fully embedded across all projects.
 
-## Next Task
-- Install updated skill files (30 SKILL.md files + 6 reference file sets delivered)
-- Install new `ux` skill, remove `nightwatch-ux`
-- Install `skill-creator` skill (extends Anthropic's with Brainframe standards)
-- Compress project instructions — Nightwatch first (Tier 3 token optimization)
-- Resolve Token Plan Tier 6 unknowns (MCP deferred loading, skill eager-loading, cache TTL)
+## Status of Key Items
 
-## Active Blockers
-None
+| Item | Status |
+|------|--------|
+| TOKEN_OPTIMIZATION.md | ✅ CONFIRMED — live at brainframe-public/docs/ |
+| TOOL_ROLES.md | ✅ CONFIRMED — replaces MODEL_ROUTING.md |
+| MODEL_ROUTING.md | ✅ CONFIRMED — deprecated, redirect stub in place |
+| GLOBAL_RULES.md rules 138-140 | ✅ CONFIRMED — token optimization rules added |
+| 6 skills patched with token gate | ✅ CONFIRMED |
+| CLAUDE.md in all 10 repos | ✅ CONFIRMED |
+| ADMIN_CONFIG.md pointer | ✅ CONFIRMED |
+| Block Rewards DocuSign (Travis MacDonald) | ⚠️ OPEN — flag immediately when received |
+| Stripe payout pause (Bitcoin Brains) | ⚠️ OPEN — unresolved |
+| Bitcoin Well term sheet (Adam O'Brien) | ⚠️ OPEN |
+| MuscleMax cancellation | ⚠️ OPEN — reminder drafted |
+| Mambamode NE-UPGRADE-002 | ⚠️ BLOCKED — Odds API key pending |
+| Larine newsletter | ⏸ PARKED — revisit May 8, 2026 |
+| CLAUDE.md cross-project contamination risk | ⚠️ OPEN — brainframe-public CLAUDE.md contains admin content; GitHub Actions sync risk |
+| DECISIONS.md non-canonical header format | ⚠️ OPEN — correct next session |
 
-## Open Items
-- OI-001: Stripe account pause on Bitcoin Brains blocking payouts
-- OI-002: Block Rewards Directors Resolution — sign via DocuSign (Travis MacDonald)
-- OI-003: Bitcoin Well term sheet review (Adam O'Brien)
-- OI-004: MuscleMax cancellation
-- OI-005: Mambamode Odds API key pending — blocks NE-UPGRADE-002
-- OI-006: [FLAG] When Mythos ships — audit all Nightwatch Cursor prompts, run SANITYCHECK pass before any upgrade post-Mythos
-- OI-007: Token Plan Tier 6 unknowns — research when possible (MCP deferred loading in claude.ai, skill eager-loading bug, cache TTL)
+## Open Decisions
+None from this session requiring Dave confirmation.
+
+## Next Session First Action
+Resume any active project work. No mandatory boot items beyond standard session gate.
