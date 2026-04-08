@@ -89,3 +89,36 @@ nwo-stages, nwp-detail, nwsa-phases, axiom-health-checks
 - PROVISIONAL: Auto-critique on spec promotion — agreed, not built yet
 
 **Promoted:** prompt-writing.skill v1.2, skill-installer.skill, graphify-research.md, FUTURE_INTEL.md entry
+
+## Session 2026-04-08-002
+Date: 2026-04-08
+Tier: FULL
+Exchanges: 30+
+Projects touched: Admin
+
+### Summary
+Built and critiqued all 6 admin specs (ai-pulse, critique-pipeline, decisions-bus, firecrawl, github-actions-sync, session-discipline). Ran 3-source critique pipeline (GPT-4o API + Claude adversarial + DECISIONS.md cross-check). Fixed all critical findings. Resolved docs/admin/ sync contamination across coinbeast and nightwatch. Added OpenAI key to REGISTRY. Updated quitchat, gpt-critique, prompt-writing skills.
+
+### Files Written
+- brainframe-comms/specs/admin/ — 6 specs v2
+- brainframe-comms/specs/admin/critiques/ — 6 critique files
+- brainframe-comms/skills/critique-spec/prompts/ — 2 prompt templates
+- brainframe-comms/_docs/REGISTRY.md — OpenAI key added
+- brainframe-public/.github/workflows/sync.yml — docs/admin/ excluded
+- brainframe-public/SYNC_POLICY.md — created
+- brainframe-public/specs/admin/ — 6 spec mirrors
+- brainframe-public/skills/quitchat.md — v1.1
+- brainframe-public/skills/gpt-critique.md — retired
+- brainframe-public/skills/prompt-writing.md — SPEC GATE added
+- brainframe-public/docs/admin/ADMIN_STATE.md — updated
+- brainframe-public/PROMOTION_LOG.md — 9 entries appended
+- coinbeast/brainframe/docs/admin/ — deleted (6 files, contamination)
+- nightwatch/brainframe/docs/admin/ — deleted (6 files, contamination)
+
+### Open Items Carried
+- Firecrawl OQ-001: check rate limits (Dave)
+- Firecrawl OQ-002: Paperclip for Coinbeast (Dave)
+- gpt-critique-skill deletion from skills provisioning (Dave)
+- Mambamode Odds API key / NE-UPGRADE-002 blocked
+- Stripe payout pause — Bitcoin Brains
+- Block Rewards DocuSign board resolution (Travis MacDonald) — IMMEDIATE FLAG
