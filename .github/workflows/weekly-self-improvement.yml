@@ -2,129 +2,21 @@ name: Weekly Brainframe Self-Improvement Review
 
 on:
   schedule:
-    - cron: '0 23 * * 0'  # Sunday 4pm MT (UTC-7) = 23:00 UTC
-  workflow_dispatch:       # Manual trigger for testing
+    - cron: '0 23 * * 0'
+  workflow_dispatch:
 
 jobs:
   self-improvement-review:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Run weekly review
         env:
+          GH_PAT: ${{ secrets.GITHUB_TOKEN }}
           CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
-          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # Fetch ADMIN_LOG.md
-          ADMIN_LOG=$(curl -s \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/bitcoinbrainsweb/brainframe-public/contents/docs/admin/ADMIN_LOG.md" \
-            | python3 -c "import sys,json,base64; d=json.load(sys.stdin); print(base64.b64decode(d['content']).decode())")
-
-          # Fetch ADMIN_STATE.md
-          ADMIN_STATE=$(curl -s \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/bitcoinbrainsweb/brainframe-public/contents/docs/admin/ADMIN_STATE.md" \
-            | python3 -c "import sys,json,base64; d=json.load(sys.stdin); print(base64.b64decode(d['content']).decode())")
-
-          # Call Claude API
-          RESPONSE=$(python3 << PYEOF
-import json, urllib.request, os, datetime
-
-log = """$ADMIN_LOG"""
-state = """$ADMIN_STATE"""
-today = datetime.date.today().isoformat()
-
-prompt = f"""You are running the weekly Brainframe self-improvement review for Dave Bradley.
-
-Today is {today}. Review the last 7 days of ADMIN_LOG.md entries.
-
-ADMIN_LOG.md:
-{log[:6000]}
-
-ADMIN_STATE.md:
-{state[:2000]}
-
-Scan for friction patterns:
-- Rules skipped or re-stated mid-session
-- Tasks requiring multiple attempts or corrections
-- Fallback-to-memory incidents (SHA errors, stale reads, 409 conflicts)
-- Repeated re-explanations of context Dave already provided
-- Quitchat skipped or incomplete
-- ASSUMED labels later corrected
-- Skills triggered late or missed
-
-Produce maximum 5 improvement suggestions ranked by impact. Each must:
-- Name the specific pattern observed with the log entry date if possible
-- Target a named rule, skill, file, or workflow — no generic advice
-- Propose a concrete specific change
-- Estimate effort: Low / Medium / High
-
-Return ONLY this markdown, no preamble:
-
-## Week of {today} — Sunday Review
-
-| # | Pattern Observed | Proposed Change | Effort |
-|---|-----------------|-----------------|--------|
-| 1 | ... | ... | Low |
-
-Generated: {today}
-"""
-
-payload = json.dumps({{
-    "model": "claude-sonnet-4-20250514",
-    "max_tokens": 1500,
-    "messages": [{{"role": "user", "content": prompt}}]
-}}).encode()
-
-req = urllib.request.Request(
-    "https://api.anthropic.com/v1/messages",
-    data=payload,
-    headers={{
-        "x-api-key": os.environ["CLAUDE_API_KEY"],
-        "anthropic-version": "2023-06-01",
-        "content-type": "application/json"
-    }}
-)
-with urllib.request.urlopen(req) as r:
-    data = json.loads(r.read())
-    print(data["content"][0]["text"])
-PYEOF
-          )
-
-          # Append to IMPROVEMENT_SUGGESTIONS.md
-          python3 << PYEOF
-import json, base64, urllib.request, os
-
-PAT = os.environ["GITHUB_TOKEN"] if "GITHUB_TOKEN" in os.environ else "${{ secrets.GITHUB_TOKEN }}"
-# Use the actions token via env
-import subprocess
-PAT = subprocess.check_output(['sh', '-c', 'echo $GITHUB_TOKEN'], env=os.environ).decode().strip()
-
-REPO = "bitcoinbrainsweb/brainframe-public"
-PATH = "docs/admin/IMPROVEMENT_SUGGESTIONS.md"
-NEW_CONTENT = """$RESPONSE"""
-
-url = f"https://api.github.com/repos/{REPO}/contents/{PATH}"
-headers = {"Authorization": f"token {PAT}", "Accept": "application/vnd.github+json"}
-
-try:
-    with urllib.request.urlopen(urllib.request.Request(url, headers=headers)) as r:
-        existing = json.loads(r.read())
-        current = base64.b64decode(existing["content"]).decode()
-        sha = existing["sha"]
-except:
-    current = "# Brainframe Improvement Suggestions\nWeekly self-improvement review log.\n\n---\n"
-    sha = None
-
-updated = current.rstrip() + "\n\n" + NEW_CONTENT + "\n\n---\n"
-payload = {"message": "chore: weekly self-improvement review", "content": base64.b64encode(updated.encode()).decode()}
-if sha:
-    payload["sha"] = sha
-
-req = urllib.request.Request(url, data=json.dumps(payload).encode(), method="PUT",
-    headers={**headers, "Content-Type": "application/json"})
-with urllib.request.urlopen(req) as r:
-    print("Written, status:", r.status)
-PYEOF
+        run: python3 .github/scripts/weekly_review.py
