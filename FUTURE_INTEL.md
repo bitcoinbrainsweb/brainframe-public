@@ -73,3 +73,16 @@ and Bitcoin Brains content pipelines (event promos, carousel generation).
 
 ### Next Action (if pursued)
 Build the 5 SKILL.md files; wire Meta + Google Ads APIs; evaluate Remotion for carousel output.
+
+## Claude Code Marketing Skills (coreyhaines31/marketingskills) — 2026-04-08
+
+Source: Instagram/TikTok reel (Type B — Straight Info)
+Summary: Real GitHub library with 32 marketing skills across 7 pods: SEO, CRO, Content/Copy, Paid/Measurement, Growth/Retention, Sales/GTM, Strategy. Works with Claude Code, Cursor, Codex, Windsurf. The "7 AI employees" framing is just the 7 existing pods renamed. Solid, low-hype tool.
+Why Interesting: Could bootstrap marketing execution for Coinbeast, Bitcoin Brains, or Bitcoin Rodeo without hiring. Cursor-compatible — fits existing dev workflow.
+Revisit Trigger: When building a marketing automation layer for any Dave property OR when Coinbeast content pipeline design begins.
+Status: WATCHING
+Tags: #marketing #claude-code #skills #coinbeast #bitcoin-brains #bitcoin-rodeo #cursor-compatible
+Context At Time: No active marketing automation in any project. Coinbeast pre-build/concept stage. Bitcoin Rodeo next event planning underway. All dev work in Cursor. Library confirmed real and active (32 skills, 52 CLI tools, cross-agent spec).
+Key Tools To Re-Evaluate: github.com/coreyhaines31/marketingskills, alirezarezvani/claude-skills (220+ broader library), OpenClaudia/openclaudia-skills (62+ skills).
+
+---
