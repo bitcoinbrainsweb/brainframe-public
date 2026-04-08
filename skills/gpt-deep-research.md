@@ -43,3 +43,8 @@ Structured report with: executive summary, findings per question, source quality
 - Include what you already know — saves time and improves depth
 - Specify the decision it supports — anchors the research to something actionable
 - Attach any relevant documents before submitting
+
+
+---
+
+> **Token optimization gate:** Before selecting a model or designing an API call, check `brainframe-public/docs/TOKEN_OPTIMIZATION.md`. Default Sonnet 4.6. Escalate to Opus only when justified. Downgrade to Haiku for structured/data ops.
