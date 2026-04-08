@@ -124,3 +124,9 @@ AI proposes update → Make stages to branch → Dave reviews → Dave merges to
 | ChatGPT | brainfile + master.md | Task-specific files |
 | Cursor | Cursor prompt only | Referenced spec files |
 | Make | Workflow config only | — |
+
+---
+
+## MODEL SELECTION WITHIN CLAUDE API
+
+For guidance on which Claude model tier to use (Opus / Sonnet / Haiku), prompt caching, output discipline, and token cost standards — see `docs/TOKEN_OPTIMIZATION.md`. That document is the single source of truth for model selection and token efficiency. This file governs tool routing (Claude vs Cursor vs ChatGPT etc.).
