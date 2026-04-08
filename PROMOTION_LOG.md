@@ -89,3 +89,6 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-07 | admin | skills/perplexity-research.md | Token optimization gate appended
 2026-04-07 | admin | docs/admin/ADMIN_CONFIG.md | Token optimization pointer added
 2026-04-07 | admin | CLAUDE.md (all 10 repos) | Token optimization section added; stubs created for 7 repos missing CLAUDE.md
+
+2026-04-08 | admin | skills/security-hardening.md | New skill — project-agnostic security gate for Cursor (OWASP, auth boundary, ask-first list)
+2026-04-08 | admin | skills/test-driven-development.md | New skill — project-agnostic TDD enforcement for Cursor (Prove-It Pattern, test pyramid, red-green-refactor)
