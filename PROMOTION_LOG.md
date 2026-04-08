@@ -128,3 +128,5 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-08 | admin | docs/admin/ADMIN_CONFIG.md | SYNC_CONTAMINATION_CHECK added to boot gate (#1)
 2026-04-08 | admin | FUTURE_INTEL.md | 3 entries: Claude Code SEO skill, graphify (new + Graph-Layer AI Memory update)
 2026-04-08 | admin | specs/admin/admin-weekly-self-improvement-v1.md | New spec: weekly self-improvement review
+2026-04-08 | admin | FUTURE_INTEL.md | Gemini CLI flagged — Nightwatch + Coinbeast large context data curation use case
+2026-04-08 | admin | docs/admin/ADMIN_STATE.md | Session 2 state overwrite — Claude Managed Agents waitlist, Gemini CLI eval, open items updated
