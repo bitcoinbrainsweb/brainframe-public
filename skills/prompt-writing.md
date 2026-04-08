@@ -3,6 +3,23 @@ name: prompt-writing
 description: >-
   Writes Cursor upgrade prompts for any project. MUST be loaded before writing any Cursor prompt or upgrade spec. Detects project, fetches project config from repo, applies universal prompt standards. Replaces prompt-writing and prompt-writing.
 ---
+
+
+## SPEC GATE
+
+Before writing any Cursor prompt for an upgrade:
+1. Check `brainframe-comms/specs/{project}/` for a spec matching this upgrade ref.
+2. If no spec exists → flag to Dave, offer to stub one. Do not proceed without spec unless Dave explicitly overrides.
+3. If spec exists → include this block in the prompt:
+
+```
+## Spec Reference
+File: specs/{filename}
+Version: v{N}
+Key constraints: [pull Requirements + Non-Goals + Constraints — 3-5 bullets]
+Open questions (do not resolve — flag in RESULT): [OQ-XXX list]
+```
+
 # Prompt Writing Skill
 Version: 1.2 | 2026-04-08
 
