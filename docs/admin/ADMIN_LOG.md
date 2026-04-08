@@ -122,3 +122,12 @@ Built and critiqued all 6 admin specs (ai-pulse, critique-pipeline, decisions-bu
 - Mambamode Odds API key / NE-UPGRADE-002 blocked
 - Stripe payout pause — Bitcoin Brains
 - Block Rewards DocuSign board resolution (Travis MacDonald) — IMMEDIATE FLAG
+
+## Session 2026-04-08 (Admin — Reel Intel + Self-Improvement)
+- Reel-intel skill fired on 6 reels
+- Tools confirmed real: graphify, AgriciDaniel/claude-seo, geo-seo-claude, coreyhaines31/marketingskills
+- FUTURE_INTEL.md: 2 new entries + 1 update (graphify added to Graph-Layer AI Memory)
+- Weekly self-improvement GitHub Action deployed and tested successfully
+- IMPROVEMENT_SUGGESTIONS.md created; 5 suggestions generated and actioned (#1, #3, #4 done; #2 superseded; #5 deferred)
+- New files: NEXT_ACTION.md, CREDENTIAL_STATUS.md, .github/workflows/weekly-self-improvement.yml, .github/scripts/weekly_review.py
+- Claude API key stored as GitHub secret
