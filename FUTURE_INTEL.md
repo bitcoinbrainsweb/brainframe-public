@@ -45,3 +45,31 @@ Status: WATCHING
 Tags: #coinbeast #paperclip #multi-agent #knowledge-graph #bitcoin-intel #freshness
 Context At Time: Coinbeast is concept stage only — no stack or architecture defined. Paperclip assessed as stronger fit than Bitcoin Rodeo due to deeper product alignment. Coordination failures at 50 agents noted as real risk — recommend scoping to 4 focused agents max for initial test.
 Key Tools To Re-Evaluate: paperclipai (npx paperclipai onboard), Clipmart marketplace (coming), CrewAI as alternative orchestration layer.
+
+---
+
+## SIGNAL: Claude Code CMO Skill Stack
+**Date:** 2026-04-08
+**Source:** Instagram Reel (Type A — Engagement Bait)
+**Signal Rating:** Medium-High
+
+### What Was Flagged
+A 5-skill Claude Code stack positioned as a "vibe marketing" CMO setup:
+1. Design skill — landing pages + conversion
+2. Remotion — programmatic video/carousel/print generation
+3. Meta Ads skill — full campaign creation via Meta API (campaign → ad set → landing page → UTMs)
+4. Google Ads skill — keyword research + campaign build + launch via Google Ads API
+5. Ads Analyst — extract + analyze ad data, provide improvement recommendations
+
+### Why It Matters
+The underlying tech is real. Meta API + Google Ads API + Claude is a legitimate automation stack.
+Remotion (programmatic React video) is the novel inclusion — worth evaluating for Bitcoin Rodeo
+and Bitcoin Brains content pipelines (event promos, carousel generation).
+
+### Re-evaluate When
+- Building a marketing automation layer for Bitcoin Brains or Bitcoin Rodeo
+- Evaluating Remotion for templated video/carousel content
+- Standing up any paid ads workflow that could benefit from Claude-driven campaign management
+
+### Next Action (if pursued)
+Build the 5 SKILL.md files; wire Meta + Google Ads APIs; evaluate Remotion for carousel output.
