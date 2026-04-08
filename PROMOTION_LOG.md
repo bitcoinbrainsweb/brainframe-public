@@ -102,4 +102,7 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-08 | mamba | references/mambamode-prompts-config.md | Repo URL corrected (was mambamode, now mamba-mode). Prompt-writing config is the authority for project-specific rules — global brevity rule lives in system prompt/user prefs, not config files.
 2026-04-08 | mamba | decisions | balldontlie free tier killed as of 2026-04-08. ESPN roster API (site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/{id}/roster) is free, no key, returns headshots. Use for any project needing NBA player rosters.
 2026-04-08 | mamba | decisions | NBA.com stats API (stats.nba.com/stats/leagueleaders) is CORS-blocked from browsers. Works from server/bash. Always implement fail-closed for this source.
-
+2026-04-08 | admin | skills/prompt-writing.md | v1.2: GPT o3 critique gate on HIGH risk prompts + PLAN block for MEDIUM/HIGH prompts
+2026-04-08 | admin | skills/prompt-writing.md | skill-installer skill created — packages .skill files for one-click install
+2026-04-08 | admin | brainframe-comms/_docs/graphify-research.md | Graphify knowledge graph tool research doc created, Nightwatch notified via DECISIONS.md
+2026-04-08 | admin | FUTURE_INTEL.md | Persistent roadmap agent idea flagged
