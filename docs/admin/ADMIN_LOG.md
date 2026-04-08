@@ -131,3 +131,28 @@ Built and critiqued all 6 admin specs (ai-pulse, critique-pipeline, decisions-bu
 - IMPROVEMENT_SUGGESTIONS.md created; 5 suggestions generated and actioned (#1, #3, #4 done; #2 superseded; #5 deferred)
 - New files: NEXT_ACTION.md, CREDENTIAL_STATUS.md, .github/workflows/weekly-self-improvement.yml, .github/scripts/weekly_review.py
 - Claude API key stored as GitHub secret
+## 2026-04-08 — Admin Session 2
+
+### Summary
+AI intelligence + tooling evaluation session. No code shipped.
+
+### Completed
+- AI Pulse: Anthropic Mythos/Project Glasswing, $30B ARR, Gemma 4, OpenAI $122B, CLI vs MCP signal
+- Claude Managed Agents waitlist submitted (Outcomes + Multiagent + Memory, TypeScript)
+- Gemini CLI evaluated and flagged to FUTURE_INTEL for Nightwatch + Coinbeast large context use
+- GitHub CLI vs API tradeoffs assessed — API kept for SHA/JSON workflows
+- Gemini CLI setup deferred — requires Dave to install on Windows with personal Gmail
+
+### Decisions
+- Gemini CLI: personal Gmail auth, free tier sufficient for target use cases
+- GitHub API: keep for programmatic workflows (SHA fetch, base64 encode/decode, PUT)
+- Claude Managed Agents: waitlist submitted, revisit when approved
+
+### Open Items Carried Forward
+- Block Rewards DocuSign (Travis) — IMMEDIATE FLAG
+- Gemini CLI install on Windows
+- Claude Managed Agents waitlist approval
+- All items from Session 1 carried forward unchanged
+
+---
+
