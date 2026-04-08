@@ -7,16 +7,17 @@ Flag any entry where the Revisit Trigger has been met or Status should change.
 
 ---
 
-## Graph-Layer AI Memory (GraphRAG / Zep / PlugMem) — 2026-04-08
+## Graph-Layer AI Memory (GraphRAG / Zep / PlugMem / Graphify) — 2026-04-08
+Updated: 2026-04-08 — Concrete tool identified (graphify)
 
-Source: Instagram/TikTok reel (engagement bait — "comment token")
-Summary: Graph knowledge databases replace flat markdown memory files with node/edge structures. Instead of loading entire MD files into context, the agent retrieves only relevant knowledge units via graph traversal. Real token savings benchmarked at up to 100x vs full-context loading.
-Why Interesting: Directly relevant to brainframe memory architecture. Current approach (ADMIN_STATE.md, DECISIONS.md, ADMIN_LOG.md) loads full files every session boot. Graph layer would enable selective retrieval at scale.
-Revisit Trigger: When Nightwatch DECISIONS.md exceeds 1000 entries OR session boot token cost becomes a measurable pain point.
+Source: Instagram/TikTok reel (engagement bait — "comment token") + follow-up reel (graphify demo)
+Summary: Graph knowledge databases replace flat markdown memory files with node/edge structures. Instead of loading entire MD files into context, the agent retrieves only relevant knowledge units via graph traversal. Benchmarked at 71.5x fewer tokens per query vs raw file reads. Graphify (safishamsi/graphify) is a live, open-source Claude Code skill that does exactly this — ships as a pip package, outputs interactive HTML graph, GRAPH_REPORT.md, graph.json, and optional Obsidian vault. Two-pass extraction: deterministic AST for code, Claude subagents for docs/images. No vector DB required.
+Why Interesting: Directly relevant to brainframe memory architecture. Current approach (ADMIN_STATE.md, DECISIONS.md, ADMIN_LOG.md) loads full files every session boot. Graphify could map brainframe-public as a knowledge graph — Claude navigates via GRAPH_REPORT.md instead of grepping raw files. Also relevant for Coinbeast knowledge graph architecture.
+Revisit Trigger: When Nightwatch DECISIONS.md exceeds 1000 entries OR session boot token cost becomes a measurable pain point OR Coinbeast knowledge graph architecture is being designed.
 Status: WATCHING
-Tags: #memory #graph #graphrag #token-efficiency #brainframe-architecture
-Context At Time: Nightwatch early-stage, DECISIONS.md ~50 entries. Brainframe uses flat MD files on GitHub. No MCP graph server in stack. Session boot reads 5 files sequentially. Graph layer assessed as overkill at current volume — complexity and infrastructure overhead outweigh gains.
-Key Tools To Re-Evaluate: Zep (getzep.com), Graphiti, PlugMem (Microsoft Research), claude-mem with graph backend.
+Tags: #memory #graph #graphrag #token-efficiency #brainframe-architecture #graphify #coinbeast #claude-code
+Context At Time: Nightwatch early-stage, DECISIONS.md ~50 entries. Brainframe uses flat MD files on GitHub. No MCP graph server in stack. Session boot reads 5 files sequentially. Graphify released ~2026-04-07, open source, MIT, pip install graphifyy. Graph layer assessed as overkill at current brainframe volume — but test candidate against brainframe-public as low-risk proof of concept.
+Key Tools To Re-Evaluate: graphify — pip install graphifyy && graphify install (github.com/safishamsi/graphify); claude-obsidian (AgriciDaniel) for persistent wiki layer; Zep (getzep.com); Graphiti. Install test: /graphify . inside brainframe-public clone.
 
 ---
 
