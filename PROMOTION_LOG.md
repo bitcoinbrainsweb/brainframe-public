@@ -129,4 +129,7 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-08 | admin | FUTURE_INTEL.md | 3 entries: Claude Code SEO skill, graphify (new + Graph-Layer AI Memory update)
 2026-04-08 | admin | specs/admin/admin-weekly-self-improvement-v1.md | New spec: weekly self-improvement review
 2026-04-08 | admin | FUTURE_INTEL.md | Gemini CLI flagged — Nightwatch + Coinbeast large context data curation use case
-2026-04-08 | admin | docs/admin/ADMIN_STATE.md | Session 2 state overwrite — Claude Managed Agents waitlist, Gemini CLI eval, open items updated
+2026-04-08 | admin | docs/admin/ADMIN_STATE.md | Session 2 state overwrite — Claude Managed Agents waitlist, Gemini CLI eval, open items updated2026-04-08 | nightwatch | GLOBAL_RULES.md | Rule 132 added: read all affected code before proposing any fix
+2026-04-08 | nightwatch | GLOBAL_RULES.md | Rules 129-130 updated: DECISIONS write target redirected to brainframe-comms
+2026-04-08 | nightwatch | DECISIONS.md | Frozen as read-only archive — new write target is brainframe-comms
+2026-04-08 | nightwatch | DIAGNOSTIC_PLAYBOOK.md | Created: 32-entry living playbook seeded from ANTI_PATTERNS, INFRA_PATTERNS, DISCARDED files
