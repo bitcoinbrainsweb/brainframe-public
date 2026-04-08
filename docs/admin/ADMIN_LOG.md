@@ -72,3 +72,20 @@ nwo-stages, nwp-detail, nwsa-phases, axiom-health-checks
 - PROVISIONAL: project-instructions skill to be built next session
 
 **Promoted:** perplexity-research.md skill, project-instructions.md
+
+---
+## 2026-04-08 — Agentic Patterns + Skill Upgrades
+
+**Summary:** Analyzed Gulli's Agentic Design Patterns book (fetched full PDF). Applied Routing, Reflection, Parallelization, Planning patterns to Dave's workflows. Researched and evaluated Graphify knowledge graph tool. Updated prompt-writing skill with two new gates. Created skill-installer skill.
+
+**Decisions:**
+- CONFIRMED: Routing pattern — no change to sessions, prompts already rigid enough
+- CONFIRMED: Parallelization in critique-spec — keep in series, latency only benefit not quality
+- CONFIRMED: Reflection/Critic — GPT o3 critique gate added to prompt-writing skill for HIGH risk prompts
+- CONFIRMED: Planning — PLAN block added to prompt-writing skill for MEDIUM/HIGH risk prompts
+- CONFIRMED: Graphify — research doc written to brainframe-comms, Nightwatch notified
+- CONFIRMED: Roadmap agent idea — flagged to FUTURE_INTEL.md, table for later
+- PROVISIONAL: RESULT file critic at session boot — not built, next session first action
+- PROVISIONAL: Auto-critique on spec promotion — agreed, not built yet
+
+**Promoted:** prompt-writing.skill v1.2, skill-installer.skill, graphify-research.md, FUTURE_INTEL.md entry
