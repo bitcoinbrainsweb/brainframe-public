@@ -48,3 +48,15 @@ nwo-stages, nwp-detail, nwsa-phases, axiom-health-checks
 - Install new ux skill, remove nightwatch-ux
 - Install skill-creator skill
 - Compress project instructions (Nightwatch first)
+
+## 2026-04-08 — Cross-project best practices audit
+- BEST_PRACTICES.md v3.0 synthesized from all global files + 30 skills, pushed to brainframe-public
+- Deleted: DIAGNOSTIC_PLAYBOOK.md, MODEL_ROUTING.md, docs/token-optimization/TOKEN_OPTIMIZATION_PLAN.md
+- Section 18 fixed (open items → pointer to ADMIN_STATE.md)
+- Nightwatch: brainframe sync refreshed, 215 pre-NW-200 artifacts archived, roadmap v13 deleted
+- Mambamode: brainframe/ bootstrapped (10 files), CLAUDE.md fixed, CI scaffold added
+- Axiom: MODEL_ROUTING removed, BEST_PRACTICES/TOOL_ROLES/DECISIONS/PROMOTION_LOG added, GATE added to .cursorrules, CI scaffold added, CLAUDE.md fixed
+- Coinbeast: .cursorrules created (CB-UPGRADE-XXX), CI scaffold added, CLAUDE.md fixed
+- Winston: brainframe/ bootstrapped (13 files), CLAUDE.md fixed + boot sequence, .cursorrules created (WN-UPGRADE-XXX), CI scaffold, AGENT_REGISTRY created
+- Web: deferred — dormant
+- Fintrac: skipped — static info repo, no dev infrastructure needed
