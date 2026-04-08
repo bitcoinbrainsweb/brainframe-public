@@ -19,3 +19,16 @@ Context At Time: Nightwatch early-stage, DECISIONS.md ~50 entries. Brainframe us
 Key Tools To Re-Evaluate: Zep (getzep.com), Graphiti, PlugMem (Microsoft Research), claude-mem with graph backend.
 
 ---
+
+---
+
+## Paperclip Multi-Agent — Coinbeast Knowledge Graph Freshness — 2026-04-08
+
+Source: TikTok reel (AI company simulation tool)
+Summary: Paperclip (npx paperclipai onboard) spins up role-based AI agent teams that coordinate via heartbeat scheduling. 14.2K stars in first week. Agents wake on schedule, act, log decisions with full audit trail.
+Why Interesting: Strong fit for Coinbeast's core problem — keeping a Bitcoin product knowledge graph fresh at scale without a human editorial team. Roles that map cleanly: product researcher (monitors new Bitcoin tools/releases), reviewer synthesizer (aggregates community sentiment into structured ratings), competitive analyst (tracks feature changes), content QA agent (checks for staleness/gaps). Heartbeat scheduling means knowledge graph stays current without manual triggering.
+Revisit Trigger: When Coinbeast knowledge graph architecture is defined and data freshness workflow is being designed.
+Status: WATCHING
+Tags: #coinbeast #paperclip #multi-agent #knowledge-graph #bitcoin-intel #freshness
+Context At Time: Coinbeast is pre-build, concept stage only. Stack/architecture undefined. Paperclip assessed as stronger fit than Bitcoin Rodeo marketing due to deeper product alignment. Recommend scoping to 4 focused agents max for initial test. Coordination failures at 50 agents noted as real risk.
+Key Tools To Re-Evaluate: paperclipai (npx paperclipai onboard), Clipmart marketplace (coming), CrewAI as alternative orchestration layer.
