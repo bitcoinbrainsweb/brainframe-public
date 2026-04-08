@@ -1,33 +1,35 @@
 # ADMIN_STATE.md
-Last updated: 2026-04-07
+Last updated: 2026-04-08
+Session type: Admin / Brainframe general
 
----
+## Last Completed
+Cross-project best practices audit and standardization.
+- BEST_PRACTICES.md v3.0 created and pushed to brainframe-public
+- DIAGNOSTIC_PLAYBOOK.md, MODEL_ROUTING.md, TOKEN_OPTIMIZATION_PLAN.md deleted
+- All active projects audited and brought to standards:
+  - Nightwatch: brainframe sync updated, 215 old artifacts archived, stale roadmap v13 deleted
+  - Mambamode: brainframe/ created, CLAUDE.md fixed, CI added
+  - Axiom: MODEL_ROUTING deleted, BEST_PRACTICES/TOOL_ROLES added, GATE added to .cursorrules, CI added
+  - Coinbeast: .cursorrules created, CI added, CLAUDE.md fixed
+  - Winston: brainframe/ created, CLAUDE.md fixed + boot sequence added, .cursorrules created, CI added, AGENT_REGISTRY added
+  - Web: deferred (dormant)
+  - Fintrac: N/A (static info repo)
 
-## Session Summary
-Token optimization plan built, propagated, and fully embedded across all projects.
+## Active Branch
+N/A — admin session, no code branches
 
-## Status of Key Items
+## Next Task
+- Update memory to reflect mamba-mode repo name (not mambamode)
+- Web repo — deferred, revisit when active
+- Axiom: backfill GATE files not possible retroactively — enforce going forward
 
-| Item | Status |
-|------|--------|
-| TOKEN_OPTIMIZATION.md | ✅ CONFIRMED — live at brainframe-public/docs/ |
-| TOOL_ROLES.md | ✅ CONFIRMED — replaces MODEL_ROUTING.md |
-| MODEL_ROUTING.md | ✅ CONFIRMED — deprecated, redirect stub in place |
-| GLOBAL_RULES.md rules 138-140 | ✅ CONFIRMED — token optimization rules added |
-| 6 skills patched with token gate | ✅ CONFIRMED |
-| CLAUDE.md in all 10 repos | ✅ CONFIRMED |
-| ADMIN_CONFIG.md pointer | ✅ CONFIRMED |
-| Block Rewards DocuSign (Travis MacDonald) | ⚠️ OPEN — flag immediately when received |
-| Stripe payout pause (Bitcoin Brains) | ⚠️ OPEN — unresolved |
-| Bitcoin Well term sheet (Adam O'Brien) | ⚠️ OPEN |
-| MuscleMax cancellation | ⚠️ OPEN — reminder drafted |
-| Mambamode NE-UPGRADE-002 | ⚠️ BLOCKED — Odds API key pending |
-| Larine newsletter | ⏸ PARKED — revisit May 8, 2026 |
-| CLAUDE.md cross-project contamination risk | ⚠️ OPEN — brainframe-public CLAUDE.md contains admin content; GitHub Actions sync risk |
-| DECISIONS.md non-canonical header format | ⚠️ OPEN — correct next session |
+## Active Blockers
+None
 
-## Open Decisions
-None from this session requiring Dave confirmation.
-
-## Next Session First Action
-Resume any active project work. No mandatory boot items beyond standard session gate.
+## Open Items
+- OI-001: Stripe account pause on Bitcoin Brains — unresolved
+- OI-002: Block Rewards Directors Resolution — sign via DocuSign (Travis MacDonald) — FLAG IMMEDIATELY
+- OI-003: Bitcoin Well term sheet review (Adam O'Brien)
+- OI-004: MuscleMax cancellation
+- OI-005: Mambamode Odds API key pending — blocks NE-UPGRADE-002 (ESPN odds fix pending)
+- OI-007: Token Plan Tier 6 unknowns — MCP deferred loading, skill eager-loading, cache TTL
