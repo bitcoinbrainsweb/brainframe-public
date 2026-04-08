@@ -106,3 +106,12 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-08 | admin | skills/prompt-writing.md | skill-installer skill created — packages .skill files for one-click install
 2026-04-08 | admin | brainframe-comms/_docs/graphify-research.md | Graphify knowledge graph tool research doc created, Nightwatch notified via DECISIONS.md
 2026-04-08 | admin | FUTURE_INTEL.md | Persistent roadmap agent idea flagged
+2026-04-08 | admin | .github/workflows/sync.yml | fixed: added docs/admin/ to rsync excludes — removes admin state contamination from project repos
+2026-04-08 | admin | SYNC_POLICY.md | created: documents sync inclusions, exclusions, and rollback procedure
+2026-04-08 | admin | specs/admin/admin-*.md | all 6 admin specs promoted from STUB to ACTIVE (v2) with critique findings resolved
+2026-04-08 | admin | specs/admin/critiques/ | 6 critique files saved (GPT-4o + adversarial + DECISIONS cross-check)
+2026-04-08 | admin | skills/quitchat.md | v1.1: admin state paths, brainframe-comms write target, PROMOTION_LOG mandatory both tiers
+2026-04-08 | admin | skills/gpt-critique.md | marked retired — redirects to critique-spec skill
+2026-04-08 | admin | skills/prompt-writing.md | SPEC GATE added — no Cursor prompt without spec
+2026-04-08 | admin | brainframe-comms/_docs/REGISTRY.md | OpenAI API key added
+2026-04-08 | admin | brainframe-comms/skills/critique-spec/prompts/ | GPT-4o and Perplexity critique prompt templates created
