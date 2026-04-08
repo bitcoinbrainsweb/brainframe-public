@@ -39,3 +39,8 @@ AI role: Planning, architecture, critique, document generation, prompt design, r
 | Claude | Plan, critique, generate docs, GitHub API ops, research | Implement code, autonomous irreversible actions | Level 1-3 |
 | Cursor | All code implementation, SANITYCHECK/RESULT/GATE artifacts | Architecture decisions, merges without GATE | Level 3 |
 | Dave | Everything | — | Final authority |
+
+
+---
+
+**Token optimization standard:** `brainframe-public/docs/TOKEN_OPTIMIZATION.md` — load on demand, not every session.
