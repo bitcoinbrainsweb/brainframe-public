@@ -278,3 +278,86 @@ Simple follow-up query (skill already loaded):
 | 2026-04-07 | Chunk 1: Description mechanics, undertriggering (RFC 2119), silent failures, trigger mechanics, file structure, invocation control matrix | Description best practices, trigger mechanics, file structure | Issue #14882 real impact |
 | 2026-04-07 | Chunk 3: Versioning (skill-semver), Claude 4.6 breaking changes, governance, scope hierarchy, decision framework, anti-patterns, failure modes, audit tools | Governance patterns, versioning, failure modes, anti-patterns | Solo-dev unified policy gap |
 | 2026-04-07 | Chunk 2: Scale token costs (30–50 tokens/skill confirmed), duplication bugs (#27721/#29520), CLAUDE.md vs skills vs rules hierarchy, memory loading schedule, skills+MCP decision framework, token efficiency comparison, combined session cost model | Scale mechanics, memory hierarchy, skills vs MCP, token efficiency | 8,000-char budget overflow behavior; skills don't survive compaction unclear |
+
+---
+
+## YAML FRONTMATTER RULES (Definitive Reference)
+
+*Added 2026-04-07. Use this section as the authoritative source when writing or auditing any SKILL.md.*
+
+### Allowed Fields (claude.ai + Claude Code)
+
+| Field | Required | Type | Constraints |
+|-------|----------|------|-------------|
+| `name` | Yes | string | Max 64 chars. Lowercase, numbers, hyphens only. No underscores, spaces, uppercase. No reserved words (claude, anthropic). |
+| `description` | Yes | string | Max 1024 chars. Non-empty. No XML angle brackets (`<` `>`). Use `>-` block scalar — never double-quoted string. |
+| `license` | No | string | SPDX identifier |
+| `allowed-tools` | No | list | Tool identifiers |
+| `metadata` | No | dict | Nested key-value |
+| `disable-model-invocation` | No | bool | Claude Code user skills only. Prevents auto-invocation. Skill hidden from model context entirely. |
+| `user-invocable` | No | bool | Claude Code only. `false` = Claude auto-only, not user-callable. |
+
+**`version` is NOT a valid field in claude.ai.** It triggers "unexpected key" errors in the quick validator. Do not include it.
+
+### Description Format — Always Use Block Scalar
+
+```yaml
+# CORRECT — block scalar, no quoting, no escape issues
+description: >-
+  Creates Architecture Decision Records when significant technical
+  decisions are made. MUST be used when Dave says we decided or
+  lets go with X. Do NOT use for routine decisions.
+
+# WRONG — inner quotes break YAML
+description: "MUST be used when Dave says 'we decided' or 'let's go with X'."
+
+# WRONG — colons after space break YAML without quoting
+description: Covers: entities, routes, integrations
+```
+
+### Complete Failure Mode Catalog
+
+| Failure | Cause | Fix |
+|---------|-------|-----|
+| `malformed YAML frontmatter` | Inner `"` inside double-quoted description | Use `>-` block scalar |
+| `unexpected key` | `version`, `author`, `category`, `tags` in frontmatter | Remove — not allowed in claude.ai |
+| `malformed YAML` | Colon + space in unquoted value | Use `>-` block scalar |
+| `malformed YAML` | `#` in unquoted value (parsed as comment) | Use `>-` block scalar |
+| `malformed YAML` | `&`, `*`, `!`, `|`, `>`, `{`, `}` unquoted | Use `>-` block scalar |
+| `malformed YAML` | Tab indentation | Use spaces only |
+| `malformed YAML` | Missing closing `---` | Add closing delimiter |
+| `invalid name` | Uppercase, underscore, space in name | Kebab-case only |
+| `invalid name` | Name > 64 chars | Shorten |
+| `invalid description` | `<` or `>` in description | Remove XML chars |
+| `invalid description` | Description > 1024 chars | Shorten |
+| `skill never triggers` | `disable-model-invocation: true` set | Remove or invoke with `/skill-name` |
+| `skill never triggers` | Description too vague for semantic match | Add MUST/SHOULD triggers |
+| `skill always triggers` | Description too broad | Add Do NOT guard |
+
+### Block Scalar (`>-`) Cheat Sheet
+
+```yaml
+description: >-
+  First line of description here.
+  Continuation lines are joined with a space.
+  Single quotes work fine: it's easy.
+  Double quotes work fine: say "hello" freely.
+  Colons work fine: key: value is fine here.
+  Only restriction: no XML angle brackets.
+```
+
+- `>` — folded (newlines → spaces), trailing newline preserved
+- `>-` — folded, trailing newline stripped ← **use this**
+- `|` — literal (newlines preserved) — don't use for descriptions
+
+### Skill-Creator Skill Requirement
+
+**The skill-creator skill MUST reference this YAML section and the full SKILLS_RESEARCH.md.**
+When creating or updating any skill, the skill-creator should:
+1. Read SKILLS_RESEARCH.md from brainframe-public for trigger/description best practices
+2. Apply the YAML failure mode catalog above to validate frontmatter before outputting
+3. Use `>-` block scalar for all descriptions
+4. Never include `version` field
+5. Include `disable-model-invocation: true` for any skill with side effects or destructive operations
+6. Verify description is under 250 chars (truncation point in listing) AND under 1024 chars (hard limit)
+7. Run the description through the MUST/SHOULD + Do NOT template
