@@ -8,14 +8,14 @@ Last Updated: 2026-04-08
 - Coinbeast -- Bitcoin product intelligence platform (pre-build)
 
 ## Work Completed This Session
-- Reel-intel skill used on 5 reels
-- coreyhaines31/marketingskills flagged to FUTURE_INTEL
-- Coinbeast YouTube extraction spec filed (brainframe-comms/specs/)
-- Brainframe Transcript Service spec: brainframe-transcript-v1.1-2026-04-08.md
-- PAT_REGISTRY.md created at brainframe-comms/_admin/
-- DECISIONS.md freeze confirmed: brainframe-public read-only, writes to brainframe-comms/_decisions/
-- Weekly self-improvement GitHub Action deployed (Sunday 4pm MT)
-- IMPROVEMENT_SUGGESTIONS.md created, first run successful
+- Reel-intel on 6 reels: SEO skill, graphify x2, claude-obsidian, Cursor spec tool (bait), weekly self-improvement (bait)
+- graphify flagged to FUTURE_INTEL; Graph-Layer AI Memory entry updated with graphify as concrete tool
+- Claude Code SEO skill (AgriciDaniel + geo-seo-claude fork) flagged to FUTURE_INTEL
+- Weekly self-improvement GitHub Action built and deployed -- first run successful
+- IMPROVEMENT_SUGGESTIONS.md created, 5 suggestions generated
+- Actioned improvements #1 (SYNC_CONTAMINATION_CHECK), #3 (NEXT_ACTION.md), #4 (CREDENTIAL_STATUS.md)
+- #2 closed as superseded (generic quitchat canonical); #5 deferred
+- Claude API key stored as GitHub secret CLAUDE_API_KEY in brainframe-public
 
 ## Open Items
 - [ ] Block Rewards DocuSign board resolution (Travis MacDonald) -- FLAG IMMEDIATELY
@@ -27,6 +27,7 @@ Last Updated: 2026-04-08
 - [ ] Firecrawl OQ-002: confirm Paperclip for Coinbeast knowledge graph (Dave)
 - [ ] Mambamode NE-UPGRADE-002 -- blocked on Odds API key
 - [ ] Stripe payout pause on Bitcoin Brains -- unresolved
+- [ ] Improvement suggestion #5 deferred -- skill-installer automation into PROMOTION_LOG workflow
 
 ## Next Session First Action
 See docs/admin/NEXT_ACTION.md
@@ -34,7 +35,7 @@ See docs/admin/NEXT_ACTION.md
 ## Key Paths Reference
 - DECISIONS.md write: brainframe-comms/_decisions/DECISIONS.md
 - DECISIONS.md read (archive): brainframe-public/DECISIONS.md (FROZEN)
-- Credentials: brainframe-comms/_admin/PAT_REGISTRY.md
+- Credentials: brainframe-comms/_admin/PAT_REGISTRY.md + docs/admin/CREDENTIAL_STATUS.md
 - Specs: brainframe-comms/specs/ (source of truth)
 - Next action: docs/admin/NEXT_ACTION.md
 - Improvement suggestions: docs/admin/IMPROVEMENT_SUGGESTIONS.md
