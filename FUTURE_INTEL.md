@@ -86,3 +86,14 @@ Context At Time: No active marketing automation in any project. Coinbeast pre-bu
 Key Tools To Re-Evaluate: github.com/coreyhaines31/marketingskills, alirezarezvani/claude-skills (220+ broader library), OpenClaudia/openclaudia-skills (62+ skills).
 
 ---
+
+---
+
+## FUTURE_INTEL — 2026-04-08
+Title: Persistent Roadmap Agent
+Tags: #nightwatch #axiom #mambamode #brainframe #roadmap #agents
+Source: Admin DAI session — agentic design patterns discussion
+
+Idea: A persistent agent whose sole job is roadmap integrity across all projects. Watches for new upgrade IDs being sequenced, checks dependency conflicts with existing roadmap items, flags sequencing violations before they land. Per-project or global (brainframe-public). Authority TBD — flag-only vs block promotion. Trigger TBD — every DECISIONS.md write, every new upgrade ID, or manual call. Needs proper brainstorm session before building — risk of fighting existing promotion workflow.
+
+Re-evaluate when: roadmap conflicts become a recurring pain point, or when promotion workflow is next touched.
