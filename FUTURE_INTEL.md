@@ -111,3 +111,16 @@ Context At Time: llms.txt templates drafted (llms-txt-note.md, 2026-04-08) but n
 Key Tools To Re-Evaluate: github.com/AgriciDaniel/claude-seo, github.com/zubair-trabzada/geo-seo-claude, DataForSEO MCP (live SERP data).
 
 ---
+## AI-Generated Code Security Blind Spots — 2026-04-08
+
+Source: Instagram Reel (https://www.instagram.com/reel/DW2HcxOj_9F/)
+Summary: Three critical security issues AI-generated code consistently misses: missing rate limiting on API endpoints, Supabase RLS off by default allowing cross-user data access, and insecure direct object references (IDOR) letting authenticated users access other users' resources by changing IDs in routes.
+Why Interesting: All three are real, production-breaking, and invisible during happy-path testing. Directly applicable to Nightwatch (compliance data, FINTRAC records — catastrophic if leaked) and Coinbeast (knowledge graph with user/contributor data).
+Revisit Trigger: Before any Nightwatch or Coinbeast feature that touches auth, user-scoped data, or external API endpoints — use as a pre-build security checklist.
+Status: WATCHING
+Tags: #security #nightwatch #coinbeast #cursor-prompts #aml #rls #rate-limiting #idor
+Context At Time: Nightwatch is pre-launch, building auth and role enforcement. Coinbeast stack/auth status unknown. transcript-service just shipped with rate limiting (slowapi) — confirmed working. security-hardening skill exists at /mnt/skills/user/security-hardening/SKILL.md.
+Key Tools To Re-Evaluate: security-hardening skill, Supabase RLS docs, slowapi, OWASP IDOR checklist
+
+---
+
