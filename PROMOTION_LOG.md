@@ -120,3 +120,11 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-08 | mamba | decisions | GPT-4o spec critique via OpenAI API (key in brainframe-comms/_docs/REGISTRY.md). Pattern: system prompt sets critique format (ACCEPT/REJECT/DECIDE + confidence), user message injects raw spec content, max_tokens 600. One call per spec. Applies to all projects running spec-writing workflow.
 2026-04-08 | mamba | decisions | Rotowire injury RSS does not exist (confirmed 404). For structured NBA injury feeds: check ESPN game objects first (injury data may be embedded), then CBS Sports RSS (cbssports.com/rss/headlines/nba/injuries), then rss2json proxy as last resort. Applies to all projects needing NBA injury data.
 2026-04-08 | mamba | decisions | Spec gap analysis pattern: cross-reference roadmap registry against specs/ directory listing, extract open OQs per spec, map dependency chain, flag sequencing issues. Produces GAP_ANALYSIS.md. Reusable across all projects.
+2026-04-08 | admin | .github/workflows/weekly-self-improvement.yml | Weekly self-improvement GitHub Action deployed (Sunday 4pm MT, calls Claude API, writes IMPROVEMENT_SUGGESTIONS.md)
+2026-04-08 | admin | .github/scripts/weekly_review.py | Python script for weekly review workflow
+2026-04-08 | admin | docs/admin/IMPROVEMENT_SUGGESTIONS.md | Created -- first run successful, 5 suggestions generated
+2026-04-08 | admin | docs/admin/NEXT_ACTION.md | Created -- next session first action moved out of ADMIN_STATE (#3)
+2026-04-08 | admin | docs/admin/CREDENTIAL_STATUS.md | Created -- consolidated credential health file (#4)
+2026-04-08 | admin | docs/admin/ADMIN_CONFIG.md | SYNC_CONTAMINATION_CHECK added to boot gate (#1)
+2026-04-08 | admin | FUTURE_INTEL.md | 3 entries: Claude Code SEO skill, graphify (new + Graph-Layer AI Memory update)
+2026-04-08 | admin | specs/admin/admin-weekly-self-improvement-v1.md | New spec: weekly self-improvement review
