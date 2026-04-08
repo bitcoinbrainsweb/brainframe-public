@@ -99,3 +99,7 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-08 | admin | brainframe-comms/specs/ | Spec registry established. 8 project-level specs in _specs/. 7 admin specs (1 ACTIVE, 6 STUB). 1 coinbeast spec ACTIVE. spec-writing skill built. prompt-writing skill updated with SPEC GATE.
 2026-04-08 | admin | skills/spec-writing | New skill — full spec pipeline (STUB/FULL/UPDATE/GAP modes, auto-critique, versioning, comms→mirror write order)
 2026-04-08 | admin | skills/prompt-writing | Updated — SPEC GATE added (no prompt without spec), Spec Reference block injected into every Cursor prompt
+2026-04-08 | mamba | references/mambamode-prompts-config.md | Repo URL corrected (was mambamode, now mamba-mode). Prompt-writing config is the authority for project-specific rules — global brevity rule lives in system prompt/user prefs, not config files.
+2026-04-08 | mamba | decisions | balldontlie free tier killed as of 2026-04-08. ESPN roster API (site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/{id}/roster) is free, no key, returns headshots. Use for any project needing NBA player rosters.
+2026-04-08 | mamba | decisions | NBA.com stats API (stats.nba.com/stats/leagueleaders) is CORS-blocked from browsers. Works from server/bash. Always implement fail-closed for this source.
+
