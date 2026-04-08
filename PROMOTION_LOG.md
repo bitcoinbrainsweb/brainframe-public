@@ -95,3 +95,7 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-08 | admin | skills/perplexity-research.md | Added copyable prompt delivery rule + research findings from April 2026 best practices study
 2026-04-08 | admin | project-instructions | Added GitHub PAT to credentials section; added full write-access repo list
 2026-04-08 | admin | FUTURE_INTEL.md | Flagged Claude Code CMO skill stack (Remotion, Meta/Google Ads API, Ads Analyst) for future evaluation
+
+2026-04-08 | admin | brainframe-comms/specs/ | Spec registry established. 8 project-level specs in _specs/. 7 admin specs (1 ACTIVE, 6 STUB). 1 coinbeast spec ACTIVE. spec-writing skill built. prompt-writing skill updated with SPEC GATE.
+2026-04-08 | admin | skills/spec-writing | New skill — full spec pipeline (STUB/FULL/UPDATE/GAP modes, auto-critique, versioning, comms→mirror write order)
+2026-04-08 | admin | skills/prompt-writing | Updated — SPEC GATE added (no prompt without spec), Spec Reference block injected into every Cursor prompt
