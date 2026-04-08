@@ -98,3 +98,10 @@ New sources found during reports → add to ai-pulse-sources.md immediately
 ---
 
 Write access to brainframe-public and all project repos.
+
+
+---
+
+## Token Optimization
+
+Standard: `brainframe-public/docs/TOKEN_OPTIMIZATION.md` — load on demand. Priority: quality > speed > cost. Default model: Sonnet 4.6. Escalate to Opus for architecture/deep reasoning. Downgrade to Haiku for structured/data ops.
