@@ -242,7 +242,7 @@ Status transitions must always be explicitly stated. Decisions may not silently 
 104. If the same item has been deferred multiple times, flag it — decide or formally drop it.
 105. If Dave is the only person who can unblock something, name it explicitly as a priority.
 106. Preserve context window and memory. Use what's needed, don't fill it with fluff.
-107. When a new tool is added to the stack, update MODEL_ROUTING.md immediately.
+107. When a new tool is added to the stack, update TOOL_ROLES.md immediately.
 108. If a task requires input from a specific person, name them explicitly.
 109. When something is described as temporary, set a review trigger.
 110. Never recommend adding a new tool to the stack without stating what problem it solves that the existing stack can't handle.
@@ -250,7 +250,7 @@ Status transitions must always be explicitly stated. Decisions may not silently 
 112. When a long task is delegated, define what a successful output looks like before starting.
 113. If Dave hasn't responded to an open item after two consecutive sessions, escalate it.
 114. If an AI generates something that contradicts Dave's stated preferences or rules, flag it immediately.
-115. When a new tool or service is added to the stack, add it to MODEL_ROUTING.md immediately.
+115. When a new tool or service is added to the stack, add it to TOOL_ROLES.md immediately.
 
 ---
 
