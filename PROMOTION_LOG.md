@@ -77,3 +77,15 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-07 | admin | docs/token-optimization/SKILLS_RESEARCH.md | YAML frontmatter definitive reference appended
 
 2026-04-08 03:32 UTC | admin | BEST_PRACTICES.md | v3.0 comprehensive synthesis — 18 sections, 100+ entries, sourced from all global files, skills, and project docs
+2026-04-07 | admin | docs/TOKEN_OPTIMIZATION.md | Global token optimization standard v2 — quality>speed>cost, model routing, caching, context engineering
+2026-04-07 | admin | GLOBAL_RULES.md | Rules 138-140 — token optimization priority order and model routing summary
+2026-04-07 | admin | TOOL_ROLES.md | New file — replaces MODEL_ROUTING.md. Added Perplexity, Cursor 3 parallel agents, updated context loading table
+2026-04-07 | admin | MODEL_ROUTING.md | Deprecated — redirect stub pointing to TOOL_ROLES.md
+2026-04-07 | admin | skills/brainstorming.md | Token optimization gate appended
+2026-04-07 | admin | skills/roadmap-planner.md | Token optimization gate appended
+2026-04-07 | admin | skills/claude-code-prompts.md | Token optimization gate appended
+2026-04-07 | admin | skills/gpt-critique.md | Token optimization gate appended
+2026-04-07 | admin | skills/gpt-deep-research.md | Token optimization gate appended
+2026-04-07 | admin | skills/perplexity-research.md | Token optimization gate appended
+2026-04-07 | admin | docs/admin/ADMIN_CONFIG.md | Token optimization pointer added
+2026-04-07 | admin | CLAUDE.md (all 10 repos) | Token optimization section added; stubs created for 7 repos missing CLAUDE.md
