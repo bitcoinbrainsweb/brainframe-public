@@ -135,3 +135,16 @@ Context At Time: Gemini CLI confirmed free on personal Google account (60 req/mi
 Key Tools To Re-Evaluate: google-gemini/gemini-cli (github), aistudio.google.com (API key), Firecrawl (scrape-to-markdown for competitor site freshness), Claude Managed Agents (platform.claude.com/docs/en/managed-agents/overview).
 
 ---
+## Codebase MCP / Knowledge Graph Tools — 2026-04-08
+
+Source: Instagram reel + research session (codebase-mcp-research.md)
+Summary: A new category of MCP servers that index codebases into persistent knowledge graphs — enabling AI agents (Cursor, Claude Code) to query structure semantically instead of reading files one by one. Key tools: codebase-memory-mcp (DeusData), claude-context (Zilliz), GitNexus, code-review-graph. Token reduction claims range from 40% to 99%. Space is moving extremely fast — multiple new repos appeared within days of each other.
+Why Interesting: Could significantly improve Cursor's architectural understanding on Nightwatch and Axiom — reducing hallucinated edits and missed dependencies. But tooling is immature and Windows support is inconsistent.
+Revisit Trigger: After 2026-04-13 (Monday) — re-evaluate which tools have stabilized, gained community validation, and confirmed Windows + Cursor compatibility before any install decision.
+Status: WATCHING
+Tags: #mcp #codebase-graph #cursor #nightwatch #axiom #token-reduction #tooling
+Context At Time: Nightwatch pre-launch, Axiom active build. Primary dev env is Windows + Cursor. codebase-memory-mcp has no Windows support (WSL2 only). claude-context requires Zilliz Cloud + OpenAI key (cost). GitNexus and code-review-graph are zero-dep but brand new. Research file saved at codebase-mcp-research.md (outputs).
+Key Tools To Re-Evaluate: github.com/DeusData/codebase-memory-mcp, github.com/zilliztech/claude-context, github.com/jlicerio/gitnexus, github.com/tirth8205/code-review-graph, github.com/colbymchenry/codegraph
+
+---
+
