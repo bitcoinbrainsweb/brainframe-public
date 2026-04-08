@@ -1,24 +1,30 @@
 # ADMIN_STATE.md
-Last updated: 2026-04-07 (session — Nate Jones research + token/skills planning)
+Last updated: 2026-04-07
+Session type: Admin / Brainframe general
 
-## CURRENT STATUS
-No active upgrade. General research session.
+## Last Completed
+Skills library full overhaul — all 30 skills updated, YAML fixed, bodies trimmed,
+project-specific content extracted to brainframe-public reference files.
+Token optimization plan written and pushed.
 
-## LAST SESSION
-2026-04-05 — AI Pulse skill built. Source list compiled. Daily report run. Project instructions rewritten. State files created. Inter-project message bus wired. Nightwatch onboarding received and completed.
+## Active Branch
+N/A — admin session, no code branches
 
-## NEXT ACTIONS
-1. Dave: paste project-instructions-v2.md into Claude project settings
-2. Next session: run boot sequence gate to verify it works
-3. Correct DECISIONS.md earlier entries to Schema 1.0 format (low priority)
-4. Evaluate whether CLAUDE.md in brainframe-public should be scoped to admin only
+## Next Task
+- Install updated skill files (30 SKILL.md files + 6 reference file sets delivered)
+- Install new `ux` skill, remove `nightwatch-ux`
+- Install `skill-creator` skill (extends Anthropic's with Brainframe standards)
+- Compress project instructions — Nightwatch first (Tier 3 token optimization)
+- Resolve Token Plan Tier 6 unknowns (MCP deferred loading, skill eager-loading, cache TTL)
 
-## OPEN ITEMS
+## Active Blockers
+None
+
+## Open Items
 - OI-001: Stripe account pause on Bitcoin Brains blocking payouts
 - OI-002: Block Rewards Directors Resolution — sign via DocuSign (Travis MacDonald)
 - OI-003: Bitcoin Well term sheet review (Adam O'Brien)
 - OI-004: MuscleMax cancellation
 - OI-005: Mambamode Odds API key pending — blocks NE-UPGRADE-002
-- OI-006: [FLAG] When Claude Mythos ships, audit all Nightwatch Cursor prompts for workarounds built around current model behaviour. Run a SANITYCHECK pass before any upgrade post-Mythos launch. — Added 2026-04-07
-- OI-007: [PARKED] Build unified skills policy — research best practices first before building. No start date yet. — Added 2026-04-07
-- OI-008: [PARKED] Build token optimization plan — research best practices first. CONSTRAINTS: must not slow work, must not degrade quality. Research cadence: weekly + triggered on any new model release. AI Pulse skill updated to include token optimization as a standing weekly research item. — Added 2026-04-07
+- OI-006: [FLAG] When Mythos ships — audit all Nightwatch Cursor prompts, run SANITYCHECK pass before any upgrade post-Mythos
+- OI-007: Token Plan Tier 6 unknowns — research when possible (MCP deferred loading in claude.ai, skill eager-loading bug, cache TTL)
