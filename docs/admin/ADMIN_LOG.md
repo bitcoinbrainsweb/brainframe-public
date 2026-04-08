@@ -60,3 +60,15 @@ nwo-stages, nwp-detail, nwsa-phases, axiom-health-checks
 - Winston: brainframe/ bootstrapped (13 files), CLAUDE.md fixed + boot sequence, .cursorrules created (WN-UPGRADE-XXX), CI scaffold, AGENT_REGISTRY created
 - Web: deferred — dormant
 - Fintrac: skipped — static info repo, no dev infrastructure needed
+
+---
+## 2026-04-08 — Perplexity skill research + instruction rebuild
+
+**Summary:** Researched best practices for Claude project instructions via Perplexity Computer. Updated perplexity-research.md skill with copyable prompt rule and key research findings. Rebuilt project instructions: PAT now in CREDENTIALS section, full repo list explicit, bloat removed.
+
+**Decisions:**
+- CONFIRMED: All Perplexity prompts must be delivered in one-click copyable widget
+- CONFIRMED: PAT lives in project instructions field, not chat history
+- PROVISIONAL: project-instructions skill to be built next session
+
+**Promoted:** perplexity-research.md skill, project-instructions.md
