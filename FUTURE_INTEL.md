@@ -123,4 +123,15 @@ Context At Time: Nightwatch is pre-launch, building auth and role enforcement. C
 Key Tools To Re-Evaluate: security-hardening skill, Supabase RLS docs, slowapi, OWASP IDOR checklist
 
 ---
+## Gemini CLI — Large Context Ingestion for Nightwatch + Coinbeast — 2026-04-08
 
+Source: Admin DAI session — AI Pulse + Gemini CLI setup discussion
+Summary: Gemini CLI (free tier, personal Google account, 1M token context, 1000 req/day) is a lightweight terminal agent suited for bulk data ingestion and large-context extraction tasks. Best fit: pre-session repo scans, bulk PDF/doc extraction, competitor site freshness checks. Not a Cursor replacement — a cheap upstream layer for token-heavy grunt work before Claude/Cursor takes over.
+Why Interesting: Nightwatch deals with large FINTRAC guidance docs and growing repo surface area. Coinbeast knowledge graph will require ongoing freshness checks across many sources. Both hit the 'large context ingestion' use case where Gemini CLI's 1M token window and near-zero cost create real ROI.
+Revisit Trigger: When Nightwatch pre-session repo scan becomes a recurring friction point OR when Coinbeast knowledge graph freshness workflow is being designed.
+Status: WATCHING
+Tags: #gemini-cli #nightwatch #coinbeast #large-context #data-curation #knowledge-graph #free-tier
+Context At Time: Gemini CLI confirmed free on personal Google account (60 req/min, 1000/day, Gemini 2.5 Pro). Dave has personal Gmail for auth. Workspace account not eligible for free tier. CLI not yet installed. Coinbeast pre-build/concept stage. Nightwatch pre-launch. Workflow pattern identified: Gemini CLI (bulk ingest) → output.md → Claude (planning/critique) → Cursor (build). Claude Managed Agents also just announced (public beta) — potential future overlap for long-running agent tasks.
+Key Tools To Re-Evaluate: google-gemini/gemini-cli (github), aistudio.google.com (API key), Firecrawl (scrape-to-markdown for competitor site freshness), Claude Managed Agents (platform.claude.com/docs/en/managed-agents/overview).
+
+---
