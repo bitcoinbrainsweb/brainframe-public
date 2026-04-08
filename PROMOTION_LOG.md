@@ -115,3 +115,5 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-08 | admin | skills/prompt-writing.md | SPEC GATE added — no Cursor prompt without spec
 2026-04-08 | admin | brainframe-comms/_docs/REGISTRY.md | OpenAI API key added
 2026-04-08 | admin | brainframe-comms/skills/critique-spec/prompts/ | GPT-4o and Perplexity critique prompt templates created
+2026-04-08 | admin | brainframe-comms/specs/brainframe-transcript-v1-2026-04-08.md | new shared service spec: transcript extraction REST API (v1.1 after GPT critique)
+2026-04-08 | admin | brainframe-comms/_admin/PAT_REGISTRY.md | created canonical credential store with all known keys
