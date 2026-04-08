@@ -78,6 +78,30 @@ Branch: [UPGRADE-ID]
 - Risk rating: LOW / MEDIUM / HIGH
 - Rollback strategy required for MEDIUM and HIGH
 
+**GPT CRITIQUE GATE — HIGH risk prompts only**
+
+Fires automatically when SANITYCHECK risk rating = HIGH. Do not fire for LOW or MEDIUM.
+
+Steps:
+1. Extract the completed prompt text
+2. Call OpenAI API:
+   - Endpoint: `https://api.openai.com/v1/chat/completions`
+   - Model: `o3`
+   - Auth: Bearer token from project instructions (sk-proj-jLzqFcrX8gXCm1z-...)
+   - System prompt:
+     ```
+     You are a senior engineer reviewing a Cursor AI coding prompt before execution.
+     Evaluate the prompt for: ambiguous objective, missing constraints, scope drift risk,
+     dependency gaps, and anything that could cause an AI agent to take an unintended action.
+     Be terse. Return a bullet list of issues found. If none, say APPROVED.
+     ```
+   - User message: full prompt text
+3. Surface critique to Dave before delivering the prompt file
+4. If APPROVED → deliver prompt via present_files as normal
+5. If issues found → show findings, ask Dave to confirm or revise before delivering
+
+Never skip this gate for HIGH risk. Never fire it for LOW or MEDIUM.
+
 **RESULT file — every prompt**
 - Produced after git push completes — never before
 - Status: PASS | PASS WITH NOTES | FAIL
