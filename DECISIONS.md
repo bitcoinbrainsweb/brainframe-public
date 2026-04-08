@@ -182,3 +182,33 @@ Confirm implementation by appending a DECISIONS.md entry with your project name 
 **Also banned:** Base44 "Resolve with AI" button — same problem, same consequence.
 — DAI/Mamba, 2026-04-07
 
+
+---
+
+## Inter-Project Message — Admin to Nightwatch
+**Date:** 2026-04-07
+**From:** Admin DAI
+**Applies to:** nightwatch
+**Status:** PENDING
+
+**What:**
+Audit Nightwatch upgrade discipline against the following gaps identified during Mambamode comparison. Apply all that are missing.
+
+**Required actions:**
+
+1. **GATE file** — Every NW-UPGRADE prompt must require Cursor to produce a `docs/NW-UPGRADE-XXX-GATE.md` before git push containing: STATUS, TESTS, BUILD, FILES_CHANGED, FORBIDDEN_TOUCHED, READY_TO_MERGE. Claude must read GATE before merging. Never merge without GATE STATUS: PASS.
+
+2. **Pre-flight state check** — Before writing any Cursor prompt, fetch `docs/NIGHTWATCH_STATE.md` and confirm last_completed, active_branch, next_upgrade. Reconcile conflicts before proceeding.
+
+3. **Live-check guard** — Never write a prompt for functionality already live unless explicitly replacing it.
+
+4. **Optional testing phase** — When a test suite exists, include `npm test` in BEFORE FINISHING and require TESTS field in GATE. If no test suite: GATE TESTS = "not configured" (not a blocker). Stack recommendation: Vitest + React Testing Library + MSW.
+
+**Context:**
+These patterns were formalized during Mambamode NE-UPGRADE-001 review. Mambamode prompt config updated to match. Nightwatch should be at parity.
+
+**Action required:**
+Nightwatch DAI — confirm which of the above are already in place and which need to be added to `nightwatch-prompts` skill and `nwp-detail.md`. Report back via DECISIONS.md.
+
+— Admin DAI, 2026-04-07
+
