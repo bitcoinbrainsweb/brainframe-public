@@ -604,12 +604,10 @@ On FAILED: revert branch → update STATE (mark FAILED with reason) → append L
 
 ## SECTION 18 — OPEN STANDING ITEMS (ALWAYS FLAG)
 
-- **OI-002**: Block Rewards Directors Resolution — sign via DocuSign (Travis MacDonald). Flag immediately in every session.
-- **OI-001**: Stripe account pause on Bitcoin Brains blocking payouts.
-- **OI-003**: Bitcoin Well term sheet review (Adam O'Brien).
-- **OI-004**: MuscleMax cancellation.
-- **OI-005**: Mambamode Odds API key pending — blocks NE-UPGRADE-002.
-- **OI-007**: Token Plan Tier 6 unknowns — MCP deferred loading, skill eager-loading bug, cache TTL.
+Open items are tracked in `brainframe-public/docs/admin/ADMIN_STATE.md` — not here.
+This file contains durable best practices only. Do not add project-specific open items to this file.
+
+Standing rule that belongs here: **Block Rewards board resolutions (DocuSign from Travis MacDonald) must always be flagged immediately at session start, every session.**
 
 ---
 
