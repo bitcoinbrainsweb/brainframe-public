@@ -133,3 +133,4 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-08 | nightwatch | GLOBAL_RULES.md | Rules 129-130 updated: DECISIONS write target redirected to brainframe-comms
 2026-04-08 | nightwatch | DECISIONS.md | Frozen as read-only archive — new write target is brainframe-comms
 2026-04-08 | nightwatch | DIAGNOSTIC_PLAYBOOK.md | Created: 32-entry living playbook seeded from ANTI_PATTERNS, INFRA_PATTERNS, DISCARDED files
+2026-04-09 | mamba | DECISIONS.md | NE-030 Supabase unified data store complete — 27 tables, 1.9M+ rows migrated
