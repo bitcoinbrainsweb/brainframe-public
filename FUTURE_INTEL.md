@@ -146,5 +146,16 @@ Tags: #mcp #codebase-graph #cursor #nightwatch #axiom #token-reduction #tooling
 Context At Time: Nightwatch pre-launch, Axiom active build. Primary dev env is Windows + Cursor. codebase-memory-mcp has no Windows support (WSL2 only). claude-context requires Zilliz Cloud + OpenAI key (cost). GitNexus and code-review-graph are zero-dep but brand new. Research file saved at codebase-mcp-research.md (outputs).
 Key Tools To Re-Evaluate: github.com/DeusData/codebase-memory-mcp, github.com/zilliztech/claude-context, github.com/jlicerio/gitnexus, github.com/tirth8205/code-review-graph, github.com/colbymchenry/codegraph
 
+---## Leaked AI System Prompts Repos — 2026-04-09
+
+Source: Instagram reel / GitHub discovery
+Summary: Multiple public GitHub repos contain extracted system prompts and tool schemas for 28+ AI tools including Cursor, Lovable, Perplexity, v0, Devin, Windsurf, and Replit. The most comprehensive repo (x1xhlol/system-prompts-and-models-of-ai-tools) has 489 commits across 28 contributors, actively updated as of March 2026, and includes JSON tool schemas — not just prompt text.
+Why Interesting: Direct competitive intel on how leading AI coding tools structure their agent prompts and tool permissions. Relevant for Nightwatch agent prompt architecture and Coinbeast knowledge graph agent design.
+Revisit Trigger: When writing any new agent system prompt for Nightwatch or Coinbeast, or when evaluating a new AI tool competitor.
+Status: WATCHING
+Tags: #prompts #agents #competitive-intel #nightwatch #coinbeast
+Context At Time: Nightwatch AML SaaS in active Cursor development. Coinbeast knowledge graph in early design. No agent system prompts written yet for either. Brainframe on v2.1.
+Key Tools To Re-Evaluate: github.com/x1xhlol/system-prompts-and-models-of-ai-tools, github.com/elder-plinius/CL4R1T4S, github.com/asgeirtj/system_prompts_leaks
+
 ---
 
