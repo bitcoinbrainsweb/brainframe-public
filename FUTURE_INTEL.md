@@ -168,5 +168,16 @@ Tags: #coinbeast #gtm #cold-outreach #landing-pages #bitcoin-rodeo
 Context At Time: Coinbeast in early design/knowledge graph architecture phase. No GTM planning underway. Bitcoin Rodeo 2026 planning ongoing. No cold outreach tooling in stack.
 Key Tools To Re-Evaluate: genpage.ai, personyze.com, instapage.com, unbounce.com
 
+---## Higgsfield AI — Cinematic Video for Coinbeast Tutorials — 2026-04-09
+
+Source: Conversation / Instagram reel analysis
+Summary: Higgsfield is an AI cinematic video platform with consistent character locking across shots — same on-screen presenter across multiple videos without a human. Differentiator vs Midjourney (image-only) and ChatGPT (no video): character continuity across scenes. Closest competitors are Runway and Kling but Higgsfield is optimized for storytelling continuity. Open-source alternative: github.com/Anil-matcha/Open-Higgsfield-AI (MIT, self-hosted).
+Why Interesting: Coinbeast will need product tutorial videos and explainer content walking users through Bitcoin tools. A consistent AI narrator/character across the series removes the need for a human presenter and enables scalable content production.
+Revisit Trigger: When Coinbeast reaches content/marketing phase, or when first tutorial video is planned.
+Status: WATCHING
+Tags: #coinbeast #video #tutorials #content-marketing #ai-video
+Context At Time: Coinbeast in early knowledge graph design. No content production underway. No video tooling in stack.
+Key Tools To Re-Evaluate: higgsfield.ai, github.com/Anil-matcha/Open-Higgsfield-AI, runwayml.com, kling.ai
+
 ---
 
