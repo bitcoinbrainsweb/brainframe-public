@@ -179,5 +179,16 @@ Tags: #coinbeast #video #tutorials #content-marketing #ai-video
 Context At Time: Coinbeast in early knowledge graph design. No content production underway. No video tooling in stack.
 Key Tools To Re-Evaluate: higgsfield.ai, github.com/Anil-matcha/Open-Higgsfield-AI, runwayml.com, kling.ai
 
+---## Fundraising Deck Visitor Tracking — Bitcoin Brains — 2026-04-09
+
+Source: Conversation / research
+Summary: Person-level identity resolution pixels (RB2B, Leadpipe, Identity Matrix) are US-only — Canadian traffic only resolves to company-level (name, industry, pages viewed). For targeted fundraising outreach to known Canadian funders, passive pixel tracking is the wrong tool. Better approach: unique URL per funder (yoursite.com/deck/investor-name) or email open/click tracking (Mailtrack, HubSpot) which gives full identity because you sent it to known people. Company-level tools (Dealfront, Leadfeeder, Clearbit) work globally for anonymous traffic but won't name individuals.
+Why Interesting: Bitcoin Brains active fundraising raise. Web-based deck already in use. Need to know which funders are engaging, re-reading, and forwarding the deck.
+Revisit Trigger: Before next round of funder outreach emails — implement unique URLs and email tracking at send time.
+Status: WATCHING
+Tags: #bitcoin-brains #fundraising #deck-tracking #investor-outreach
+Context At Time: Bitcoin Brains raise active. Web-based deck in use (not Docsend). Funders primarily Canadian. No tracking currently in place.
+Key Tools To Re-Evaluate: Mailtrack (email open/click tracking), HubSpot free tier (email tracking), Dealfront (company-level Canadian/global), unique URL per funder as zero-cost alternative
+
 ---
 
