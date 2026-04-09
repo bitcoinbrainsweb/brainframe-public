@@ -251,3 +251,9 @@ Nightwatch DAI — confirm which of the above are already in place and which nee
 **Key verdicts locked in:** (1) SKILL.md capped at ~200 lines — routing + decision rules only, all depth in references/. (2) Destructive DDL gate required for DROP/TRUNCATE/CASCADE. (3) CREATE INDEX CONCURRENTLY hard rule. (4) Postgres version default PG16, ask before version-sensitive features. (5) pg_stat_* query library always included in monitoring reference.
 **Applies to:** all projects
 **Status:** CONFIRMED
+
+## 2026-04-09 | mamba | NBA spread markets efficient — totals markets have edge
+**Decision:** Backtesting 14,894 NBA games (2010-2018) vs Pinnacle closing lines confirms: all situational spread signals (B2B, rest, bounce-back, blowout) test below break-even ATS. Totals markets show structural inefficiency around pace and FTA rate. Pace (bilateral possessions) and FTA×opponent foul rate are the primary predictive variables for NBA totals.
+**Rationale:** 43 signals tested across Layer 1 strategies and market microstructure. Zero spread-based signals actionable. 4 totals signals confirmed (Fast Pace Over 60.2%, Slow Pace Under 63.3%, FTA×PF Over 63.4%, Fast Pace + Low Total Over 73.1% — all OOS consistent). Market microstructure (Pinnacle vs soft book gaps, vig compression, price shading) produces no spread edge.
+**Applies to:** mamba
+**Status:** CONFIRMED
