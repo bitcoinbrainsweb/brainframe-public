@@ -219,3 +219,28 @@ Nightwatch DAI — confirm which of the above are already in place and which nee
 **Rationale:** GitHub repos aren't databases. Base44 entities aren't designed for bulk analytics queries (21K+ rows and growing). Future needs (historical odds, backtest suite NE-018, player props) will require millions of rows. Supabase free tier = 500MB Postgres, REST API, Python client, zero cost until scale. Deferred: actual Supabase provisioning — decision logged now, implementation when NE-008 or NE-018 is built.
 **Applies to:** mamba
 **Status:** CONFIRMED
+
+---
+
+## 2026-04-09 | mamba | NE-030 Supabase Unified Data Store — COMPLETE
+**Decision:** Supabase provisioned and fully populated as unified data store for Mamba Mode.
+**Tables created:** 27 total — 11 live app tables, 10 research/backtest tables, 1 bridge table (game_id_map), 6 Kaggle tables.
+**Data migrated:**
+- player_game_logs: 41,223 rows (NBA Stats API, 2017-2025)
+- kaggle_games: 125,624 rows
+- kaggle_betting_spread: 131,690 rows
+- kaggle_betting_moneyline: 125,286 rows
+- kaggle_betting_totals: 131,386 rows
+- kaggle_players: 4,885 rows
+- kaggle_player_game_stats: 1,268,211 rows (193MB — GitHub-bypassed, Supabase only)
+- environmental_signals: 2,754 rows (Kp index)
+- referee_assignments: 1,497 rows
+- player_profiles: 231 rows
+- signal_hypotheses: 10 rows (seed)
+**Key rules:**
+- nba_players_game_stats.csv is gitignored (>100MB) — lives in Supabase only
+- supabaseClient.js has inline credentials until NE-024 server-side proxy
+- game_id_map is bridge table — must exist before any cross-source join works
+- RLS off until NE-024 public launch
+**Applies to:** mamba
+**Status:** CONFIRMED
