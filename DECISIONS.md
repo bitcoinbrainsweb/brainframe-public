@@ -244,3 +244,10 @@ Nightwatch DAI — confirm which of the above are already in place and which nee
 - RLS off until NE-024 public launch
 **Applies to:** mamba
 **Status:** CONFIRMED
+---
+
+## 2026-04-09 | cross-project | skill-design | db-engineer skill — critique workflow
+**Decision:** When building a new skill, run critique through multiple AI sources (Claude Opus architectural + Perplexity design critic + Perplexity practitioner) before writing. Consolidate findings into a single critique doc. Close all open questions before writing begins.
+**Key verdicts locked in:** (1) SKILL.md capped at ~200 lines — routing + decision rules only, all depth in references/. (2) Destructive DDL gate required for DROP/TRUNCATE/CASCADE. (3) CREATE INDEX CONCURRENTLY hard rule. (4) Postgres version default PG16, ask before version-sensitive features. (5) pg_stat_* query library always included in monitoring reference.
+**Applies to:** all projects
+**Status:** CONFIRMED
