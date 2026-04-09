@@ -212,3 +212,10 @@ Nightwatch DAI — confirm which of the above are already in place and which nee
 
 — Admin DAI, 2026-04-07
 
+---
+
+## 2026-04-08 | mamba | Research data storage architecture
+**Decision:** Supabase (free tier, Postgres) selected as the analytics data layer for Mamba Mode research datasets. GitHub repo stores small reference CSVs (player births, Kp index, ref assignments) and build scripts. Large enriched datasets (~15MB+) regenerated on demand via script. Supabase will hold historical game logs, enriched signals, odds history, and backtest results when built.
+**Rationale:** GitHub repos aren't databases. Base44 entities aren't designed for bulk analytics queries (21K+ rows and growing). Future needs (historical odds, backtest suite NE-018, player props) will require millions of rows. Supabase free tier = 500MB Postgres, REST API, Python client, zero cost until scale. Deferred: actual Supabase provisioning — decision logged now, implementation when NE-008 or NE-018 is built.
+**Applies to:** mamba
+**Status:** CONFIRMED
