@@ -157,5 +157,16 @@ Tags: #prompts #agents #competitive-intel #nightwatch #coinbeast
 Context At Time: Nightwatch AML SaaS in active Cursor development. Coinbeast knowledge graph in early design. No agent system prompts written yet for either. Brainframe on v2.1.
 Key Tools To Re-Evaluate: github.com/x1xhlol/system-prompts-and-models-of-ai-tools, github.com/elder-plinius/CL4R1T4S, github.com/asgeirtj/system_prompts_leaks
 
+---## Personalized Cold Outreach Landing Page Tools — 2026-04-09
+
+Source: Instagram reel analysis
+Summary: A category of tools generates unique per-prospect landing pages from cold email URLs, dynamically rendering name, company, industry, and competitor intel per visitor. GenPage is the leading purpose-built tool; Personyze and Instapage/Unbounce offer broader platform approaches. Documented results include 3x meeting bookings and 22-28% reply rates.
+Why Interesting: Coinbeast will need a go-to-market and outreach strategy when it launches. Personalized landing pages are a proven B2B conversion lever for cold outreach to Bitcoin product companies, exchanges, and hardware vendors.
+Revisit Trigger: When Coinbeast reaches GTM/outreach planning phase, or when planning any Bitcoin Rodeo sponsor outreach campaign.
+Status: WATCHING
+Tags: #coinbeast #gtm #cold-outreach #landing-pages #bitcoin-rodeo
+Context At Time: Coinbeast in early design/knowledge graph architecture phase. No GTM planning underway. Bitcoin Rodeo 2026 planning ongoing. No cold outreach tooling in stack.
+Key Tools To Re-Evaluate: genpage.ai, personyze.com, instapage.com, unbounce.com
+
 ---
 
