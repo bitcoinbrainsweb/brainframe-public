@@ -256,3 +256,29 @@ Context At Time: No active AEO strategy on any Dave property. LLMs (ChatGPT, Per
 Key Tools To Re-Evaluate: Revisit full reel transcript. Also research: whitespark.ca (review acquisition), reddit.com/r/Bitcoin and /r/CryptoCurrency for authentic participation playbook, Medium Partner Program for legitimate parasite SEO, HARO/Connectively for earned press mentions.
 
 ---
+
+## Nightwatch — Black Hat AEO Detection as AML Signal — 2026-04-10
+
+Source: Admin DAI session — AEO black hat analysis
+Summary: Online reputation manipulation (fake reviews, seeded Reddit, wire-only press, parasite SEO) maps to the shell operation credibility facade typology in AML. Nightwatch can run a cross-signal credibility audit at onboarding and periodically: (1) review anomaly detection via Trustpilot/Google APIs — volume spikes, clustering, low reviewer history; (2) Reddit mention analysis — new accounts, low karma, single-subreddit promotion; (3) press release vs editorial distinction — brandvoice/wire URLs vs earned editorial; (4) parasite SEO detection — Medium/Substack articles with no organic engagement linking to client domain. Positive flags don't auto-reject — they elevate to EDD tier and trigger source-of-funds scrutiny.
+Why Interesting: Novel AML signal not yet in mainstream compliance tooling. A business with manufactured online credibility but no genuine editorial footprint is exhibiting the same pattern as a shell operation building a legitimacy facade. Nightwatch could be first-to-market on this detection layer.
+Revisit Trigger: When Nightwatch compliance feature roadmap is next reviewed OR when Amanda is consulted on EDD trigger criteria.
+Status: WATCHING
+Tags: #nightwatch #aml #edd #aeo #credibility-detection #fintrac #onboarding #risk-signals
+Context At Time: Nightwatch pre-launch, building onboarding and EDD flows. No credibility audit layer currently specced. FINTRAC guidance supports online presence as a risk indicator for MSB/VASP onboarding. Detection APIs exist for Trustpilot, Reddit, and press release vs editorial distinction is a parseable URL pattern problem.
+Key Tools To Re-Evaluate: Trustpilot public review API, Reddit search API, Moz/Ahrefs for backlink origin classification, press release URL pattern library (businesswire.com, prnewswire.com, einpresswire.com domains).
+
+---
+
+## Human Media Layer — White Hat AEO Moat for Bitcoin Brains + Coinbeast — 2026-04-10
+
+Source: Admin DAI session — strategic insight from black hat AEO analysis
+Summary: The human media layer being built around Bitcoin Brains and Coinbeast (genuine community participation, real editorial coverage, authentic reviews, real Reddit presence, real YouTube/podcast appearances) is the structurally identical white hat version of every black hat AEO technique in the reel. As LLMs get better at detecting manufactured vs earned authority, this moat deepens over time. Black hat operators will get penalized; genuine media presence compounds. This is a durable competitive advantage that needs to be (1) maximized operationally and (2) explicitly sold in the deck as a defensible moat.
+Why Interesting: Three simultaneous applications: (A) Coinbeast — genuine product reviews, real community discussion, earned press = LLM citation magnet at launch; (B) Bitcoin Brains — existing brand presence, real customer base, real reviews = foundation that black hat competitors cannot replicate authentically; (C) Bitcoin Brains fundraising deck — human media layer as a moat narrative directly addresses the AEO arms race and positions Bitcoin Brains as the brand that wins when AI search matures and filters out fake signals.
+Revisit Trigger: When Coinbeast GTM strategy is being written OR when Bitcoin Brains investor deck is next revised OR when AEO strategy session is scheduled.
+Status: WATCHING
+Tags: #coinbeast #bitcoin-brains #aeo #deck #fundraising #moat #human-media #llm-visibility #white-hat
+Context At Time: Bitcoin Brains fundraising raise active. Coinbeast pre-build. No formal AEO strategy documented for either property. Human media layer exists in concept but not yet operationalized or articulated as a competitive moat. LLMs penalizing manufactured signals is directional but not yet fully enforced — first-mover advantage for genuine presence is real and closing window.
+Key To Articulate In Deck: The AEO arms race is real. Black hat operators are winning short-term via fake reviews, seeded Reddit, wire press releases. Bitcoin Brains has built a genuine human media layer — real community, real reviews, real editorial — that will compound as AI search matures and penalizes manufactured signals. This is not just a marketing asset; it is a defensible infrastructure moat.
+
+---
