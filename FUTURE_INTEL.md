@@ -192,3 +192,15 @@ Key Tools To Re-Evaluate: Mailtrack (email open/click tracking), HubSpot free ti
 
 ---
 
+## MemPalace — Local Verbatim AI Memory (MCP) — 2026-04-10
+
+Source: Instagram reel (Type B — Straight Info) + web research
+Summary: MemPalace (github.com/milla-jovovich/mempalace) is a free, open-source local AI memory system. Stores all conversations verbatim in ChromaDB + SQLite. 170-token startup cost, 96.6% LongMemEval recall, 19 MCP tools, zero API cost. Key design: Obsidian = knowledge base (static docs), MemPalace = conversation memory (all sessions verbatim). Do not point both at same source.
+Why Interesting: Directly parallels Brainframe memory architecture. Current approach (ADMIN_STATE.md, DECISIONS.md, session files) is the Obsidian layer. MemPalace could replace or augment userMemories for Cursor sessions — storing all Cursor conversation history and retrieving only what is needed per session. Solves the CLAUDE.md bloat problem. 34% retrieval improvement over flat vector search via palace structure (wings/rooms/halls). Supports importing Claude, ChatGPT, and Slack exports.
+Revisit Trigger: When Claude Desktop MCP stdout bug is patched (tracks in GitHub issues at milla-jovovich/mempalace) OR when Cursor session context loss becomes a recurring friction point.
+Status: WATCHING
+Tags: #memory #mcp #cursor #brainframe-architecture #claude-desktop #vector-db #local-first
+Context At Time: Brainframe v2.1. Memory handled via userMemories + session state files in GitHub. No MCP memory server in stack. Claude Code not in use (Cursor only). Known bug: MemPalace stdout corrupts JSON stream on Claude Desktop MCP launch as of 2026-04-09 — no issue with Claude Code CLI. Benchmark controversy noted (100% claim revised to 96.6% after community pushback — still best free tool). Co-created by Milla Jovovich + Ben Sigman. 23K+ GitHub stars in 48 hours.
+Key Tools To Re-Evaluate: github.com/milla-jovovich/mempalace (pip install mempalace), mempalace.tech, check GitHub issues for stdout MCP fix status.
+
+---
