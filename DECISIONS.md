@@ -257,3 +257,11 @@ Nightwatch DAI — confirm which of the above are already in place and which nee
 **Rationale:** 43 signals tested across Layer 1 strategies and market microstructure. Zero spread-based signals actionable. 4 totals signals confirmed (Fast Pace Over 60.2%, Slow Pace Under 63.3%, FTA×PF Over 63.4%, Fast Pace + Low Total Over 73.1% — all OOS consistent). Market microstructure (Pinnacle vs soft book gaps, vig compression, price shading) produces no spread edge.
 **Applies to:** mamba
 **Status:** CONFIRMED
+
+
+## 2026-04-10 — Mamba Mode: Product Pivot to Live Totals
+- **DECIDED**: Mamba Mode's primary value is live totals betting signals, not pregame spread predictions
+- **DECIDED**: Q1 Foul Tracker (fouls ≥6 + pts ≥58 → OVER) is the flagship signal — 63.2% win rate this season
+- **DECIDED**: ESPN summary API is the sole live data source — no paid providers needed
+- **DECIDED**: All pregame totals strategies are informational context only, not bet recommendations
+- **DECIDED**: Supabase service role JWT stored in Claude memory for direct DDL access
