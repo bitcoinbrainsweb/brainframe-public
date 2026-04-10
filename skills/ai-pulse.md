@@ -136,3 +136,28 @@ In addition to the standard AI news sweep, always check the following on weekly 
 - Next week priority: [what to dig into]
 
 Flag any new model releases immediately — these trigger a prompt audit (OI-006).
+
+---
+
+## Standing: LLM Stats Deprecation + Release Watch
+
+Run on every AI Pulse. Check https://llm-stats.com/llm-updates for:
+
+**Auto-flag immediately if:**
+1. Any new Anthropic model release (any tier)
+2. Deprecation notice on any model in active use:  (Mambamode, Nightwatch), any model string in REGISTRY.md
+3. Any Anthropic API pricing change
+
+**Do not flag:**
+- Third-party model releases unless frontier-tier (OpenAI, Google, Meta)
+- Benchmark updates with no corresponding release
+- Open-source model releases unless directly relevant to a Brainframe project
+
+**Report format — add to every AI Pulse output:**
+
+**📊 LLM Stats Watch — [DATE]**
+- Active model status: [claude-sonnet-4-6 — OK / DEPRECATION NOTICE / PRICE CHANGE]
+- New Anthropic releases: [none / name + summary]
+- Action required: [none / prompt audit / migration plan]
+
+If deprecation notice detected: immediately flag with estimated sunset date and trigger prompt audit per OI-006.
