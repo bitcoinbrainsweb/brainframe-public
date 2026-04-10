@@ -89,3 +89,15 @@ When any project adds direct Claude API calls, prompt caching must be implemente
 **Status:** No projects currently make server-side Claude API calls (confirmed 2026-04-10). Document and implement at first API integration point.
 **Reference:** Anthropic prompt caching docs — verify exact syntax before implementing.
 **Source:** GPT Deep Research sweep, 2026-04-10.
+
+---
+
+## MEMORY ARCHITECTURE NOTE
+
+### Documentation Storage is Architecture-Dependent
+The current documentation pattern (decisions split across ADMIN_CONFIG.md, DECISIONS.md, project CLAUDE.md files) is a workaround for the absence of a unified memory system.
+
+If Brainframe migrates to a queryable knowledge store (Obsidian, Mem, Notion, or a custom graph), the documentation rule stays the same — *what* to document does not change. *Where* it lands changes entirely: a single store replaces the current scatter pattern, and cross-project decisions become queryable rather than manually synced.
+
+**Flag:** Evaluate memory system architecture before scaling to more than 6 projects. Current pattern has high maintenance cost.
+See: FUTURE_INTEL.md — memory system candidates.
