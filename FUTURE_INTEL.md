@@ -282,3 +282,16 @@ Context At Time: Bitcoin Brains fundraising raise active. Coinbeast pre-build. N
 Key To Articulate In Deck: The AEO arms race is real. Black hat operators are winning short-term via fake reviews, seeded Reddit, wire press releases. Bitcoin Brains has built a genuine human media layer — real community, real reviews, real editorial — that will compound as AI search matures and penalizes manufactured signals. This is not just a marketing asset; it is a defensible infrastructure moat.
 
 ---
+
+## Transcript Service — Instagram Auth via Dummy Account — 2026-04-10
+
+Source: Admin DAI session
+Summary: Transcript service blocks ~20% of Instagram reels due to auth requirements. Fix: create a throwaway Instagram account, extract sessionid cookie, add to Render as INSTAGRAM_SESSION_ID env var, wire into yt-dlp call via TRANSCRIPT-BUILD-004. Dummy account will eventually get flagged — replace with new one in ~5 minutes when that happens. Do NOT use Dave real Instagram account.
+Why Interesting: Video-intel skill fires on every Instagram reel URL. Auth failures break the workflow silently. Fix is low effort, high value.
+Revisit Trigger: Next time an Instagram reel returns auth error and Dave has 5 minutes to create a dummy account.
+Status: WATCHING
+Tags: #transcript-service #instagram #video-intel #render #build-ticket
+Context At Time: Transcript service live on Render. X/Twitter already uses session cookie pattern (auth_token + ct0 in REGISTRY.md). Instagram needs same pattern with sessionid cookie. Build ticket TRANSCRIPT-BUILD-004 not yet written. Requires: (1) Dave creates dummy Instagram account, (2) grabs sessionid from browser DevTools → Application → Cookies → instagram.com, (3) pastes here so it can be added to REGISTRY.md and Render env vars.
+Key Tools To Re-Evaluate: Render dashboard env vars (INSTAGRAM_SESSION_ID), yt-dlp --cookies or --cookies-from-browser flag, transcript-service repo for implementation.
+
+---
