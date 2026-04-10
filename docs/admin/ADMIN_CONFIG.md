@@ -56,8 +56,8 @@ At session boot, after fetching STATE, run SYNC_CONTAMINATION_CHECK:
 
 ## STANDING RULES
 
-### Always Document Everything
-Every decision, capability, tool, pattern, or infra standard discovered or implemented must be documented immediately — in ADMIN_CONFIG.md, DECISIONS.md, or the relevant project file. No silent knowledge. If it was worth doing, it is worth writing down.
+### Document Decisions, Not Activity
+Document: what was decided, what standard was set, what capability was confirmed, and why. Do NOT document: that something happened, status updates, or activity logs (those belong in ADMIN_LOG.md). Rule: if a future Claude session would need to know it to make a correct decision, write it down. If it is just a record of work done, log it — do not embed it in config files.
 
 ---
 
