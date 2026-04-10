@@ -217,3 +217,16 @@ Context At Time: Dev stack is Cursor-only — Claude Code not in use. Claude Man
 Key Tools To Re-Evaluate: github.com/ruvnet/ruflo (npx ruflo@latest init), Claude Managed Agents (platform.claude.com/docs/en/managed-agents/overview — check waitlist status), CrewAI and LangGraph as alternative orchestration layers.
 
 ---
+
+## Model-Layer AML/Compliance Controls — 2026-04-10
+
+Source: AI Pulse scan / Anthropic Claude Mythos + Project Glasswing announcement
+Summary: Anthropic withheld Claude Mythos from public release due to offensive cybersecurity risk, deploying it only to select organizations via Project Glasswing. This is the first time a frontier lab explicitly gated a model by institutional access tier rather than subscription level. The implication: future frontier models may require operator-level attestation or regulatory standing before accessing certain capabilities — document analysis, entity screening, risk scoring are the exact use cases most likely to be gated first.
+Why Interesting: Nightwatch sits directly in the target profile. AML/compliance SaaS processing regulated financial data via LLM API is the kind of operator category that could require pre-credentialing. Being unregistered when gating lands = forced downtime and scramble. Being pre-credentialed = competitive moat (smaller AML tools won't have the paper trail).
+Revisit Trigger: When Anthropic announces any operator tier, capability gating, or API access verification program — OR when Nightwatch approaches first paying client onboarding (whichever comes first).
+Status: WATCHING
+Tags: #nightwatch #anthropic #model-layer #compliance #aml #api-access #operator-credentialing #regulatory #fintrac
+Context At Time: Nightwatch pre-revenue, pre-client. Anthropic API access currently ungated beyond standard ToS. Claude Mythos restricted to ~12 orgs via Project Glasswing (Apr 7, 2026). OpenAI/Anthropic/Google now sharing threat intel via Frontier Model Forum. API access tightening expected across all three platforms following 24K fraudulent account purge. EU AI Act full obligations effective Aug 2, 2026 — high-risk AI systems (which may include AML tooling) will face additional requirements.
+Key Tools To Re-Evaluate: Anthropic operator policy (anthropic.com/policies), Frontier Model Forum announcements, EU AI Act high-risk classification list, Nightwatch compliance narrative doc (does not yet exist — create before revisit trigger fires).
+
+---
