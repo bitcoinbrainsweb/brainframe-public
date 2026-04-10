@@ -296,3 +296,6 @@ Status transitions must always be explicitly stated. Decisions may not silently 
 138. Priority order: Quality first. Speed second. Token cost third. Never sacrifice quality for cost.
 139. Model routing — Default Sonnet 4.6. Escalate to Opus 4.6 only for architecture, deep compliance reasoning, or long-horizon planning where the quality gap is real. Downgrade to Haiku 4.5 for classification, data parsing, formatting, and batch/async jobs.
 140. Full standard: `brainframe-public/docs/TOKEN_OPTIMIZATION.md`. Load on demand — not every session.
+
+## Cost/Scale Anchoring
+When explaining cost, scale, or impact in any form, always anchor to a concrete observable reference — today's usage count, a real file size, a number from the current session. Never use abstract units ("a few hundred tokens", "small overhead") without grounding them in something Dave can verify.
