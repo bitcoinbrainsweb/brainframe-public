@@ -51,3 +51,41 @@ At session boot, after fetching STATE, run SYNC_CONTAMINATION_CHECK:
 - Flag immediately if docs/admin/ content found outside brainframe-public
 - Known risk: GitHub Actions sync pushes brainframe-public content into all project repos
 
+
+---
+
+## STANDING RULES
+
+### Always Document Everything
+Every decision, capability, tool, pattern, or infra standard discovered or implemented must be documented immediately — in ADMIN_CONFIG.md, DECISIONS.md, or the relevant project file. No silent knowledge. If it was worth doing, it is worth writing down.
+
+---
+
+## LOCAL TOOLCHAIN SETTINGS
+
+### ENABLE_TOOL_SEARCH (Claude Code CLI)
+Setting that lazy-loads MCP tool definitions — tools are only fetched when Claude actually needs them, saving thousands of prompt tokens per session.
+
+**How to enable (one-time, per machine):**
+Add to :
+```json
+{
+  "ENABLE_TOOL_SEARCH": true
+}
+```
+Must be set manually on every machine running Claude Code CLI. Applies globally across all projects.
+**Source:** Validated by multiple practitioners (GPT Deep Research sweep, 2026-04-10). Confirmed no downside risk.
+
+---
+
+## CLAUDE API INFRA STANDARDS
+
+### Prompt Caching
+When any project adds direct Claude API calls, prompt caching must be implemented from day one — not retrofitted.
+
+**Standard:** Set  on static prompt blocks (system prompt, document context, tool definitions). Claimed benefit: up to 90% cost reduction and 50% latency reduction on repetitive calls.
+
+**Applies to:** Any project making Claude API calls server-side (Nightwatch, Mambamode backend, Winston, Coinbeast — when applicable).
+**Status:** No projects currently make server-side Claude API calls (confirmed 2026-04-10). Document and implement at first API integration point.
+**Reference:** Anthropic prompt caching docs — verify exact syntax before implementing.
+**Source:** GPT Deep Research sweep, 2026-04-10.
