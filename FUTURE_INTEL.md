@@ -204,3 +204,16 @@ Context At Time: Brainframe v2.1. Memory handled via userMemories + session stat
 Key Tools To Re-Evaluate: github.com/milla-jovovich/mempalace (pip install mempalace), mempalace.tech, check GitHub issues for stdout MCP fix status.
 
 ---
+
+## Ruflo / Claude-Flow — Multi-Agent Orchestration for Claude Code — 2026-04-10
+
+Source: Instagram reel (Type C — Mixed) + GitHub research
+Summary: Ruflo (aka claude-flow, github.com/ruvnet/ruflo) is a multi-agent orchestration layer on top of Claude Code. 28.9K stars, 500K downloads, 100K MAU. Spawns hierarchical or mesh agent swarms (54+ specialized agents), shared HNSW-indexed memory, model cost routing. Install: npx ruflo@latest init. Architecture note: Ruflo is the ledger/coordinator — it does NOT execute code. Claude Code (or Codex) is the actual executor. The 75% cost savings claim is unverified but model routing is real.
+Why Interesting: If Claude Managed Agents (waitlisted 2026-04-08) is approved, Ruflo and CMA overlap significantly — one may supersede the other. Ruflo is Claude Code-native and currently irrelevant since dev stack is Cursor-only. But directly relevant if Claude Code is ever adopted for Nightwatch agentic compliance scans or Coinbeast knowledge graph agent workflows.
+Revisit Trigger: When Claude Managed Agents waitlist is approved OR when evaluating agentic workflows for Nightwatch or Coinbeast that would benefit from parallelized agent swarms.
+Status: WATCHING
+Tags: #ruflo #claude-flow #multi-agent #claude-code #nightwatch #coinbeast #agentic #orchestration #claude-managed-agents
+Context At Time: Dev stack is Cursor-only — Claude Code not in use. Claude Managed Agents waitlisted 2026-04-08 (Outcomes + Multiagent Orchestration + Memory, TypeScript SDK). Nightwatch pre-launch, Coinbeast concept stage. Ruflo v3.5.x actively maintained, high bug velocity noted in changelog. Known past bugs: cleanup wiped entire .claude/ dir, multiple CLI commands crashed with require errors — both patched.
+Key Tools To Re-Evaluate: github.com/ruvnet/ruflo (npx ruflo@latest init), Claude Managed Agents (platform.claude.com/docs/en/managed-agents/overview — check waitlist status), CrewAI and LangGraph as alternative orchestration layers.
+
+---
