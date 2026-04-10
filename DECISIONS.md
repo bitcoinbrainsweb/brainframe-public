@@ -265,3 +265,10 @@ Nightwatch DAI — confirm which of the above are already in place and which nee
 - **DECIDED**: ESPN summary API is the sole live data source — no paid providers needed
 - **DECIDED**: All pregame totals strategies are informational context only, not bet recommendations
 - **DECIDED**: Supabase service role JWT stored in Claude memory for direct DDL access
+
+## 2026-04-10 | mamba | signal-validation | Pace signals killed — FTA×PF is sole totals signal
+**Decision:** 2019-2025 validation on 7,994 games confirms pace signals (TOT-001, TOT-004) are dead. TOT-003 FTA×PF Pressure Over (63.8% overall, 65.3% playoffs, p<0.0001) is the only confirmed pregame totals signal. All future totals engine work must be built around FTA×PF as the primary signal.
+**Root cause:** NBA pace inflated league-wide post-2019 to 100+ possessions — the >100.5 threshold that defined "fast pace" now applies to nearly every game. The signal lost discriminating power. Era artifact, not a model error.
+**Key rule:** Pregame pace signals are permanently retired. In-game pace data (Q1 fouls, FTA volume) still valid for live signals only.
+**Applies to:** mamba
+**Status:** CONFIRMED
