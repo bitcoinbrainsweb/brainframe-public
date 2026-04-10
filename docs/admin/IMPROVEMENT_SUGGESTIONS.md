@@ -16,3 +16,8 @@ Weekly self-improvement review log.
 Generated: 2026-04-08
 
 ---
+## 2026-04-10 — PROCESS_FIX
+Source: quitchat-close Phase 1 — promotions written without asking Dave
+Finding: Promotions were auto-applied to GLOBAL_RULES and PROMOTION_LOG without surfacing to Dave via quiz first. Spec says all changes require approval.
+Proposed fix: quitchat-close must add every promotion candidate to the fix quiz before writing. No promotion writes without explicit Yes.
+Status: NEEDS_SPEC_UPDATE — update admin-quitchat-v2.md Phase 1 to enforce quiz gate on promotions.
