@@ -295,3 +295,16 @@ Context At Time: Transcript service live on Render. X/Twitter already uses sessi
 Key Tools To Re-Evaluate: Render dashboard env vars (INSTAGRAM_SESSION_ID), yt-dlp --cookies or --cookies-from-browser flag, transcript-service repo for implementation.
 
 ---
+## Transcript Service: X Broadcast Support + Render Upgrade — 2026-04-10
+
+Source: conversation / build session
+Summary: X broadcast URLs (x.com/i/broadcasts/...) require yt-dlp + OpenAI Whisper to transcribe. The blocking constraint is Render free tier (30s request timeout) — a 40-min broadcast would never complete. Upgrading to Render Starter ($7/mo) + routing broadcasts through OpenAI Whisper (same as tweet video path, ~$0.24/40min) would unblock this.
+Why Interesting: Broadcast transcription would extend reel-intel and video-intel skills to cover Bitcoin Twitter spaces and long-form live recordings.
+Revisit Trigger: When there is another reason to upgrade Render to Starter, or when broadcast transcription becomes a regular use case.
+Status: WATCHING
+Tags: #transcript-service #render #whisper #broadcast #twitter
+Context At Time: Transcript service on Render free tier. Tweet video transcription (TRANSCRIPT-BUILD-003/004) working via fxtwitter + OpenAI Whisper. Broadcast path code written (TRANSCRIPT-BUILD-005) but untested due to timeout constraint. faster_whisper used for non-X platforms.
+Key Tools To Re-Evaluate: Render Starter plan pricing, transcript-service TRANSCRIPT-BUILD-005 branch, OpenAI Whisper API pricing.
+
+---
+
