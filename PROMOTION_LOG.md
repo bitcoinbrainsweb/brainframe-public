@@ -137,3 +137,4 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 
 2026-04-10 | admin | research/base44-master-report.md | Base44 master research report (Claude + Perplexity merged)
 2026-04-10 | admin | project-instructions (admin) | BASE44 RULES section added — MCP boundaries, entity safety, preview gate
+2026-04-10 | admin | GLOBAL_RULES | Rule: read-before-write — fetch adjacent state files (ADMIN_STATE, NEXT_ACTION, DECISIONS last 10) before any handoff GitHub write. Prevents state conflicts across all projects.
