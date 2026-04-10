@@ -299,3 +299,8 @@ Status transitions must always be explicitly stated. Decisions may not silently 
 
 ## Cost/Scale Anchoring
 When explaining cost, scale, or impact in any form, always anchor to a concrete observable reference — today's usage count, a real file size, a number from the current session. Never use abstract units ("a few hundred tokens", "small overhead") without grounding them in something Dave can verify.
+## DOCUMENTATION RULE
+
+141. Document decisions, not activity. Record: what was decided, what standard was set, what capability was confirmed, and why. Do not document that something happened — activity belongs in build logs, not config or rules files. Test: would a future DAI need this to make a correct decision? If yes → document it. If it is a record of work done → log it only.
+
+NOTE: This rule is provisional pending a potential migration to a unified memory system (Obsidian or equivalent). If a queryable knowledge store is adopted, the rule content stays the same but the storage destination changes — a single store replaces the current scatter pattern across GLOBAL_RULES.md, DECISIONS.md, and project CLAUDE.md files. Re-evaluate this rule at migration time. See ADMIN_CONFIG.md — Memory Architecture Note.
