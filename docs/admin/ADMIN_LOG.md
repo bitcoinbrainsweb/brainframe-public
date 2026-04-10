@@ -156,3 +156,37 @@ AI intelligence + tooling evaluation session. No code shipped.
 
 ---
 
+
+
+---
+
+## Session: 2026-04-10 (Session 3 — Base44 Research + Hardening)
+
+### Completed
+- Deep research on Base44: capabilities, MCP boundaries, failure modes, pricing, security history
+- Perplexity research prompt written and Claude ran parallel research
+- Merged both research outputs into master report → `brainframe-public/research/base44-master-report.md`
+- Identified 3 critical MCP misunderstandings previously held by Claude (schema DDL, async builds, read-only query)
+- Wrote and pushed ADR-001 to Nightwatch: `docs/decisions/ADR-001-base44-usage-constraints.md`
+- Pushed 4 Base44 decisions to brainframe-comms DECISIONS.md (D-BASE44-001 through 004, applies to all projects)
+- Patched Nightwatch CLAUDE.md: added Base44 rules section + preview gate to upgrade workflow
+- Updated Admin project instructions with full BASE44 RULES section
+- Produced base44-briefing-prompt.md for onboarding other chats
+
+### Decisions Made
+- D-BASE44-001: MCP capability boundaries (CONFIRMED)
+- D-BASE44-002: Prompt discipline rules (CONFIRMED)
+- D-BASE44-003: Entity safety rules (CONFIRMED)
+- D-BASE44-004: Preview environment as test gate (CONFIRMED)
+- ADR-001: Stay on Base44 for Nightwatch with binding constraints (CONFIRMED)
+
+### Open Items Carried Forward
+- Nightwatch CLAUDE.md patched — Axiom and Mambamode CLAUDE.md not yet audited for Base44 sections
+- base44-entity-design skill not yet audited against new research findings
+- Block Rewards DocuSign board resolution (Travis MacDonald) — still unsigned
+- Transcript service Cursor prompt not yet written
+- Perplexity API key still needs top-up
+- Stripe payout pause on Bitcoin Brains — unresolved
+- Gemini CLI not yet installed
+- Claude Managed Agents waitlist pending
+
