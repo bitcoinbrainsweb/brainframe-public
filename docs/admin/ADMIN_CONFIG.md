@@ -101,3 +101,8 @@ If Brainframe migrates to a queryable knowledge store (Obsidian, Mem, Notion, or
 
 **Flag:** Evaluate memory system architecture before scaling to more than 6 projects. Current pattern has high maintenance cost.
 See: FUTURE_INTEL.md — memory system candidates.
+
+---
+
+## OPUS ADVISOR
+When Dave says "check with Opus" — call Anthropic API (model: claude-opus-4-5) inline. No widget, no new chat. Pass the relevant snippet and context directly. Return Opus's response in chat.
