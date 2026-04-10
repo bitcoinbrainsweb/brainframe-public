@@ -230,3 +230,29 @@ Context At Time: Nightwatch pre-revenue, pre-client. Anthropic API access curren
 Key Tools To Re-Evaluate: Anthropic operator policy (anthropic.com/policies), Frontier Model Forum announcements, EU AI Act high-risk classification list, Nightwatch compliance narrative doc (does not yet exist — create before revisit trigger fires).
 
 ---
+
+## Coinbeast GTM — Paid Press Release Syndication for AEO/LLM Visibility — 2026-04-10
+
+Source: Instagram reel analysis (black hat AEO techniques)
+Summary: Paid press release syndication via EIN Presswire, Business Wire, PRWeb places content on high-DA publications (Forbes, Yahoo Finance, Entrepreneur, Reuters-level). LLMs heavily weight these sources in citation and recommendation. Cost range: 50–,000 for wire distribution. This is a legitimate grey-hat AEO tactic — not fake reviews or spam, just paid distribution to authoritative domains that LLMs trust.
+Why Interesting: Coinbeast needs LLM visibility at launch — when users ask ChatGPT or Perplexity "what's the best tool for X Bitcoin use case," Coinbeast needs to be in the answer set. Press release syndication on launch is a credible, scalable way to seed that. Bitcoin Rodeo could also benefit for event discovery via AI search.
+Revisit Trigger: When Coinbeast GTM planning begins OR when Bitcoin Rodeo 2027 launch planning starts.
+Status: WATCHING
+Tags: #coinbeast #gtm #aeo #llm-visibility #press-release #bitcoin-rodeo #launch
+Context At Time: Coinbeast is pre-build, knowledge graph in early design. No GTM plan exists. AEO (Answer Engine Optimization) is an emerging channel — LLMs are eating organic search traffic for product discovery queries. EIN Presswire (~9–99/release), Business Wire (50–,000+), PRWeb (~9–69) are the main distribution options. Reuters/Fortune editorial placement is far more expensive and relationship-driven.
+Key Tools To Re-Evaluate: einpresswire.com, businesswire.com, prweb.com, globenewswire.com. Also evaluate: newswire.com for Bitcoin/crypto niche distribution.
+
+---
+
+## Black Hat AEO Techniques — Ethical White Hat Extractions — 2026-04-10
+
+Source: Instagram reel (Type C — straight info + minor bait)
+Summary: Reel covered 4 black hat AEO/LLM ranking techniques: (1) fake reviews on Trustpilot/Google/Glassdoor, (2) Reddit seeding/comment buying, (3) paid press release syndication, (4) parasite SEO on Medium/Substack. Dave wants to revisit these and extract ethical/white hat equivalents for Coinbeast and Bitcoin Brains properties.
+Why Interesting: Each black hat technique has a legitimate structural analog. Fake reviews → genuine review acquisition program. Reddit seeding → authentic community participation + AMA strategy. Paid syndication → legitimate wire distribution. Parasite SEO → strategic guest posting and content syndication on high-DA platforms. Understanding the mechanism tells you the white hat lever to pull.
+Revisit Trigger: When Coinbeast content/AEO strategy is being designed OR when Bitcoin Brains is planning a marketing push.
+Status: WATCHING
+Tags: #aeo #seo #coinbeast #bitcoin-brains #content-strategy #llm-visibility #white-hat
+Context At Time: No active AEO strategy on any Dave property. LLMs (ChatGPT, Perplexity, Claude) are increasingly the first-touch for product discovery. White hat AEO is an emerging, under-competed channel. Coinbeast knowledge graph architecture is being designed — AEO strategy should be baked into launch plan, not retrofitted.
+Key Tools To Re-Evaluate: Revisit full reel transcript. Also research: whitespark.ca (review acquisition), reddit.com/r/Bitcoin and /r/CryptoCurrency for authentic participation playbook, Medium Partner Program for legitimate parasite SEO, HARO/Connectively for earned press mentions.
+
+---
