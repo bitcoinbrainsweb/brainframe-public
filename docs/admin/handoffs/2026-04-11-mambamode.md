@@ -60,3 +60,25 @@ Run NE-017 Playoff Mode Cursor prompt — playoffs start in ~2 weeks. URGENT.
 - Bitquery ad-hoc wallet query → Credit exhaustion risk, abandoned for data API
 - Gamma API with tag_slug=nba → returned non-NBA markets (tag not working)
 - NE-030B → main merge → 409 conflict (98 commits behind); resolved via file-by-file port
+
+
+---
+
+# SESSION HANDOFF — Mamba Mode — 2026-04-11 (Signal Challenge)
+
+## Summary
+Full adversarial signal challenge. TOT-003 (63.8%) proven tautological (same-game stats). LIV-002 (75.3%) killed as pace arithmetic. Zodiac + eclipse killed. 70 new hypotheses tested — zero actionable. Zero confirmed pregame signals remain.
+
+## Decisions
+1. TOT-003 INVALIDATED — tautological backtest
+2. LIV-002 KILLED — pace arithmetic vs pregame line
+3. ENV-004 zodiac + ENV-003 eclipse KILLED
+4. LIV-001 DEMOTED to UNVALIDATED
+5. 70 new hypotheses dead — market efficient vs public stats
+
+## Unresolved
+- Cursor prompt to fix Pregame.jsx (remove false 63.8%) — NOT YET RUN
+- NE-017 Playoff Mode still queued
+
+## Next Session
+Run TOT-003 UI fix prompt, then NE-017 Playoff Mode.
