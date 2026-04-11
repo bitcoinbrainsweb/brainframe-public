@@ -22,3 +22,10 @@
 2026-04-11 | Mambamode | Novig API | All endpoints blocked (403/tunnel failure). No usable API. Skipped.
 2026-04-11 | Mambamode | Kalshi NBA market data via api.elections.kalshi.com with NBA filter | Returns 0 markets — NBA ticker filter not working as expected. Workaround: use OddsPapi which wraps Kalshi.
 2026-04-11 | Mambamode | [UNCERTAIN] Goldsky demo API key from docs | Key 5fa709a5-0634... returned 401 — key may be expired/demo only. Need own account signup.
+
+2026-04-11 | Mambamode | git pull origin main to fetch updated script | Merge conflict — branch NE-UPGRADE-032C had diverged 18 commits behind main, conflicts in build-log.md and seed_polymarket_wallets.py
+2026-04-11 | Mambamode | Invoke-WebRequest to fetch script from private repo | 404 — raw.githubusercontent.com requires auth token, PowerShell Invoke-WebRequest cannot pass PAT easily
+2026-04-11 | Mambamode | python -c one-liner to overwrite script | PowerShell single-quote handling caused stdin hang (>> prompt appeared)
+2026-04-11 | Mambamode | fix_seed.py helper script write with default encoding | UnicodeEncodeError on Windows cp1252 — fixed by adding encoding="utf-8" to open()
+2026-04-11 | Mambamode | fetch_nba_markets() via /events endpoint | Slow pagination through 5,100 events caused timeout — fixed to /markets endpoint
+2026-04-11 | Mambamode | Running seed script via bash_tool | bash_tool timeout — 30s+ processes can't run here; requires local execution
