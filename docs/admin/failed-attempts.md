@@ -11,3 +11,6 @@
 2026-04-11 | Mambamode | Gamma API tag_slug=nba | Returned non-NBA markets; switched to keyword filtering on question field
 2026-04-11 | Mambamode | NE-030B merge to main | 409 conflict (98 commits behind); resolved via file-by-file port to main
 2026-04-11 | Mambamode | Bitquery ory_at_ token | Initially rejected as non-API key; confirmed it IS the Bitquery API v2 token
+
+2026-04-11 | mambamode | signal_hunt.py join failed (0 enriched games) | Season format mismatch: odds uses int (2019), tgs uses string ('2018-19'). Fixed with odds_season_to_tgs() mapping.
+2026-04-11 | mambamode | scipy.stats.binom_test removed | Upgraded to binomtest().pvalue in newer scipy.
