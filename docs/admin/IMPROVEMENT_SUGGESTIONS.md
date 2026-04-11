@@ -39,3 +39,9 @@ Source: [Exchange ~90]: Dave said "I don't want this kind of micro lesson. not t
 Finding: Claude appended a technical micro-lesson after delivering a Cursor prompt
 Proposed fix: Suppress micro-lesson skill for Mamba Mode — micro-lessons apply to learning contexts, not to sessions where Claude is the implementer and Dave is the decision-maker.
 Status: DEFERRED
+
+## 2026-04-11 — INSTRUCTION_FIX
+Source: [Exchange ~18]: Dave said "no I don't want my lessons. I want the absolute state of the art best data scientist in the god damn world"
+Finding: Claude defaulted to embedding project-specific lessons into a knowledge skill instead of universal domain expertise.
+Proposed fix: When building knowledge skills, ask Dave whether to prioritize universal domain expertise, project-specific lessons, or both. Don't assume one over the other.
+Status: APPLIED — behavioral note, no skill file change needed
