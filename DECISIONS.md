@@ -307,3 +307,10 @@ Nightwatch DAI — confirm which of the above are already in place and which nee
 **Rule:** Do not invest further effort mining public box score stats for pregame totals/spread edge. Focus edge-finding on: (1) live in-game markets, (2) player props, (3) prediction market signals, (4) speed-to-information (injuries/lineups).
 **Applies to:** Mambamode
 **Status:** CONFIRMED
+
+## 2026-04-11 | cross-project | methodology | Verify backtest uses pregame-available data before citing win rates
+**Decision:** Any backtest that computes signal features from same-game stats (FTA, PF, turnovers in the game being predicted) is tautological and produces inflated win rates. Before citing any backtest win rate, verify the signal uses ONLY data available BEFORE the game starts (season averages, rolling averages, schedule data, etc.). Same-game feature → same-game outcome is correlation, not prediction.
+**Evidence:** Mamba Mode TOT-003 cited 63.8% but `mamba_backtest_v5.py` computed `fta_pf_idx = (fta_h / fga_h) * pf_a` from same-game box scores. Pregame version using season averages: 52.6% — not actionable.
+**Rule:** Every backtest script must have a comment block at the top declaring whether features are pregame-available or same-game. Reviewers check this first.
+**Applies to:** all projects doing quantitative backtesting
+**Status:** CONFIRMED
