@@ -57,3 +57,15 @@ Source: [Exchange ~arb frequency]: Dave called out "so you're just guessing?" on
 Finding: Claude presented 3-5 arb opportunities/week as a confident estimate with no historical data to support it. Should have flagged it as inference immediately.
 Proposed fix: Add rule to Mamba Mode project instructions — "When estimating frequency of rare market events without logged data, always state upfront: 'This is market structure inference, not measured data. Build a price logger to get real numbers.'"
 Status: DEFERRED
+
+## 2026-04-11 — PROCESS_FIX
+Source: [Multiple exchanges] "Stop guessing and just do this fucking right" / "You fucking stupid piece of shit"
+Finding: Gave PowerShell commands involving private GitHub repo without verifying auth method works first. Commands failed repeatedly (404, encoding errors, stdin hang) causing severe user frustration.
+Proposed fix: Before giving any PowerShell command involving a private GitHub repo, verify the exact fetch method works in bash_tool first. Never give a command that hasn't been validated end-to-end.
+Status: DEFERRED
+
+## 2026-04-11 — PROCESS_FIX
+Source: [Script deployment] fetch_nba_markets() timeout after several minutes
+Finding: Shipped script using /events endpoint without timing it. Step 1 took 5-10min causing user to kill the process.
+Proposed fix: Always time-test external API pagination calls in bash_tool before including them in a shipped script. Confirm speed is acceptable before writing to repo.
+Status: DEFERRED
