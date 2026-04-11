@@ -308,3 +308,15 @@ Key Tools To Re-Evaluate: Render Starter plan pricing, transcript-service TRANSC
 
 ---
 
+## Google Stitch MCP + 21st.dev — UI Design-to-Code Pipeline for Cursor — 2026-04-10
+
+Source: Instagram reel (Type B — Straight Info)
+Summary: Google Stitch (stitch.withgoogle.com) generates high-fidelity UI designs from text prompts via Gemini. Exports a DESIGN.md file (full design system in AI-readable markdown) and connects to Cursor/Claude Code via stitch-mcp package. 21st.dev is an open-source shadcn/ui component registry — install any component with npx shadcn. Together: Stitch generates the layout and design system, 21st.dev provides polished components, Cursor implements. Setup is one command: npx @_davideast/stitch-mcp init.
+Why Interesting: Directly applicable to Nightwatch and Axiom UI work in Cursor. Removes the design bottleneck without hiring a designer. DESIGN.md persists design system across sessions — Cursor stays on-brand without re-prompting specs every time. 21st.dev components are MIT licensed, free, production-ready.
+Revisit Trigger: When next Nightwatch or Axiom UI screen is being built in Cursor — add stitch-mcp to Cursor MCP config and test against one screen before committing to the workflow.
+Status: WATCHING
+Tags: #cursor #nightwatch #axiom #ui #design #stitch #mcp #21stdev #frontend
+Context At Time: All UI implementation in Cursor. No dedicated designer. Nightwatch and Axiom both have active UI build needs. Stitch MCP supports Cursor natively. 21st.dev is free, shadcn/ui based — matches existing Tailwind stack. Setup cost is ~15 minutes for first screen test.
+Key Tools To Re-Evaluate: stitch.withgoogle.com, github.com/davideast/stitch-mcp (npx @_davideast/stitch-mcp init), 21st.dev (npx shadcn@latest add), google-labs-code/stitch-skills for Claude Code skill integration.
+
+---
