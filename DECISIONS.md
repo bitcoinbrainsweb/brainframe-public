@@ -287,3 +287,10 @@ Nightwatch DAI — confirm which of the above are already in place and which nee
 **Rule:** Any script that bulk-inserts into a table must call ANALYZE on that table at completion. Add to session close checklist for any DB-touching session.
 **Applies to:** all projects
 **Status:** CONFIRMED
+
+## 2026-04-11 | cross-project | data | Dune free tier cannot access curated spellbook tables
+**Decision:** Dune Analytics free tier cannot query curated protocol spellbook schemas (e.g., `polymarket.*`, `dex.*`, `nft.*`). Ad-hoc SQL execute endpoint works but only against raw chain data. For protocol-specific analytics, use the protocol's own API first, then Allium or Goldsky as alternatives. Dune Analyst plan ($50/mo) unlocks spellbook access.
+**Evidence:** Mamba Mode NE-004A — attempted `polymarket.trades`, `polymarket_polygon.trades`, and `dune.polymarket` — all returned "Table does not exist" on free tier. Workaround: used Polymarket's own gamma-api and data-api to seed wallet table.
+**Rule:** Before building a Dune-dependent workflow, confirm table availability by testing a `SELECT * FROM {schema}.{table} LIMIT 1` via the ad-hoc endpoint. If it fails, use the protocol's own API.
+**Applies to:** all projects using Dune Analytics
+**Status:** CONFIRMED
