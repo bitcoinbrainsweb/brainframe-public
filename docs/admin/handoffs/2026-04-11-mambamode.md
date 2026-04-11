@@ -106,3 +106,43 @@ Run NE-017 Playoff Mode Cursor prompt. Then run NE-WALLET-001 Goldsky pipeline s
 - OQ: Does Mamba Mode have a PWA service worker? (Required for push alerts)
 - OQ: Bet365 account limits — does arbing totals trigger soft limits?
 - OQ: SX.bet write API — Polygon wallet signing, same wallet as Polymarket CLOB?
+
+
+---
+
+# Handoff — Mambamode — 2026-04-11
+
+## Session Summary
+Specced, critiqued, and built NE-WALLET-001 Polymarket NBA Wallet Seeder. Ran GPT-4o critique (Perplexity quota exhausted), resolved DECIDE items: per-market exponential decay weighting (λ=0.005, half-life ~140 days) and updated success criteria (3-metric standard). Wrote seed_polymarket_wallets.py with 20 parallel workers and combined GraphQL queries — tested Goldsky at 20 concurrent workers with zero rate limit errors, projected runtime ~30s for 959 markets. Discovered fetch_nba_markets() used slow /events endpoint (5-10min timeout) — fixed to /markets endpoint this session. Researched Polymarket ecosystem: PolyVision and Polyguana have no public APIs; SimpleFunctions MCP has 15M free tokens/month. Wrote 4 Perplexity research prompts for full ecosystem deep-dive.
+
+## Decisions Made
+- **Recency weighting:** Per-market exponential decay λ=0.005 (half-life ~140 days) applied at market level, not season level. Rejected: 2x season weighting (too blunt).
+- **Success criteria:** ≥30 wallets with ≥10 markets + ≥$500 wagered; median weighted ROI > 0%; median weighted win rate > 52%. Rejected: single "top wallet ≥60%" threshold.
+- **Ranking signal:** weighted_roi only — no composite formula. Rejected: composite score (0.5*win_rate + 0.3*roi + 0.2*log(games)).
+- **Gamma API endpoint:** /markets not /events for fetch_nba_markets(). Rejected: /events (slow pagination through 5,100 events).
+- **Goldsky concurrency:** 20 workers, no rate limit detected. Rejected: 50 req/10s rate-limited sequential approach from original spec.
+
+## Last Completed Action
+Deleted temp fix_seed.py helper from repo (SHA: 8925fffd16). Script fully fixed and on main (SHA: 08bc8b5e14).
+
+## Unresolved Items
+- Perplexity quota exhausted — run PLEX_01–04 prompts next session (files in outputs/)
+- SimpleFunctions MCP auth key not yet obtained — sign up at simplefunctions.dev/dashboard/keys
+- seed_polymarket_wallets.py not yet run successfully end-to-end (Windows encoding + events endpoint issues blocked it this session)
+- NE-017 Playoff Mode Cursor prompt ready — time-sensitive given playoff timing
+- NE-031 Q1 Foul Tracker spec written, not yet built
+
+## First Action Next Session
+Run the seeder:
+```powershell
+cd C:\Users\Dave\mamba-mode
+git pull origin main
+$env:SUPABASE_SERVICE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZjZXNzcWxzb2t1Y3FsemJkdWZ2Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTY5OTU4NiwiZXhwIjoyMDkxMjc1NTg2fQ.iPW8AinmQ6WyEs-aGq1YJRwhiqLio_-4g-MOiIlUnFM"
+python scripts/seed_polymarket_wallets.py
+```
+
+## Last Commit SHAs
+- mamba-mode seed script fix: 08bc8b5e14
+- mamba-mode fix_seed.py deleted: 8925fffd16
+- brainframe-comms NE-WALLET-001 spec v2: saved this session
+- brainframe-comms GPT critique artifact: saved this session
