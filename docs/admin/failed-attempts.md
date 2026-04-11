@@ -14,3 +14,11 @@
 
 2026-04-11 | mambamode | signal_hunt.py join failed (0 enriched games) | Season format mismatch: odds uses int (2019), tgs uses string ('2018-19'). Fixed with odds_season_to_tgs() mapping.
 2026-04-11 | mambamode | scipy.stats.binom_test removed | Upgraded to binomtest().pvalue in newer scipy.
+
+2026-04-11 | Mambamode | Goldsky tokenId_in query for NBA wallet PnL | Timeout — large numeric token IDs cause statement timeout in Goldsky PNL subgraph. Fix: use conditionId with splits+redemptions on activity-subgraph instead.
+2026-04-11 | Mambamode | series_id=10345 Gamma API filter for NBA markets | Returns 51K contaminated markets (non-NBA content dominates top volume). Fix: use tag=NBA parameter instead.
+2026-04-11 | Mambamode | PolyRouter API signup via API endpoint | 404 — signup is web-only at polyrouter.io. Skipped based on Opus analysis (rate limits insufficient, OddsPapi already covers same data).
+2026-04-11 | Mambamode | ProphetX API | Returns 403 on all tested endpoints — no public API access. Blocked.
+2026-04-11 | Mambamode | Novig API | All endpoints blocked (403/tunnel failure). No usable API. Skipped.
+2026-04-11 | Mambamode | Kalshi NBA market data via api.elections.kalshi.com with NBA filter | Returns 0 markets — NBA ticker filter not working as expected. Workaround: use OddsPapi which wraps Kalshi.
+2026-04-11 | Mambamode | [UNCERTAIN] Goldsky demo API key from docs | Key 5fa709a5-0634... returned 401 — key may be expired/demo only. Need own account signup.
