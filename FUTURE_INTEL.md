@@ -320,3 +320,16 @@ Context At Time: All UI implementation in Cursor. No dedicated designer. Nightwa
 Key Tools To Re-Evaluate: stitch.withgoogle.com, github.com/davideast/stitch-mcp (npx @_davideast/stitch-mcp init), 21st.dev (npx shadcn@latest add), google-labs-code/stitch-skills for Claude Code skill integration.
 
 ---
+
+## SimpleFunctions MCP — Prediction Market Data Layer for Mambamode — 2026-04-11
+
+Source: Instagram reel + web research
+Summary: SimpleFunctions MCP (simplefunctions.dev) exposes 29 tools covering 9,706+ active Kalshi and Polymarket contracts via Claude Code or Cursor MCP. Supports read (odds, volume, spreads) and act (order execution with trading credentials). A zero-config open-source alternative exists: `npx -y prediction-mcp` (Polymarket/PredictIt/Kalshi, no API key for reads). Both can be added to Cursor MCP config and queried in natural language.
+Why Interesting: Mambamode is an NBA betting intelligence dashboard. Prediction market data (Kalshi NBA playoff odds, Polymarket game contracts) is a distinct signal source from traditional sportsbook odds. Could surface market inefficiencies between bookmaker lines and prediction market consensus — the core Mambamode edge signal.
+Revisit Trigger: When Mambamode next adds a new data source OR when building the edge/signal layer that compares sportsbook odds to prediction market implied probabilities.
+Status: WATCHING
+Tags: #mambamode #prediction-markets #kalshi #polymarket #mcp #odds #nba #edge-signals
+Context At Time: Mambamode stack is React + Vite + Tailwind + Claude API + the-odds-api.com + balldontlie.io. Critical path: 017→008→(009D,029,022)→023→018. Supabase live (21 tables). Prediction market NBA contracts exist on Kalshi and Polymarket — volume and liquidity are lower than sportsbooks but the market structure (binary contracts) creates exploitable pricing differentials vs traditional lines.
+Key Tools To Re-Evaluate: simplefunctions.dev (SimpleFunctions MCP, 29 tools), github.com/jamesanz/prediction-mcp (npx -y prediction-mcp, no API key for Polymarket reads), kalshi.com/account/profile (API key + PEM for trading credentials), polymarket.com CLOB API.
+
+---
