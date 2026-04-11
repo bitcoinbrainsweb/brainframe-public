@@ -314,3 +314,16 @@ Nightwatch DAI — confirm which of the above are already in place and which nee
 **Rule:** Every backtest script must have a comment block at the top declaring whether features are pregame-available or same-game. Reviewers check this first.
 **Applies to:** all projects doing quantitative backtesting
 **Status:** CONFIRMED
+
+## 2026-04-11 | mamba | signal-betting | LIV-001 standalone not actionable
+**Decision:** LIV-001 (Q1 fouls >=6 + FTs >=8) is tracked but not bet standalone. Only bet when LIV-002 (Q1 fouls >=6 + pts >=58) fires. Live validation 2026-04-11: LIV-001-only games went 0-3; LIV-002 went 4-1.
+**Rationale:** LIV-001 without pts threshold catches slow foul-heavy games that don't score. The pts condition in LIV-002 acts as a pace filter. Tonight's losses (PHX@LAL 174, LAC@POR 213, ORL@CHI 230) all had Q1 pts right at threshold edge.
+**Rejected alternatives:** Raise LIV-001 FT threshold (insufficient data), combine both signals only (limits volume)
+**Applies to:** mamba
+**Status:** CONFIRMED
+
+## 2026-04-11 | mamba | architecture | App restructured around live totals only
+**Decision:** Deleted all spread signal pages (Tonight, Games, Research, Backtest), strategyEngine.js, dead hooks. New nav: Live (primary) / Pregame / Track Record / Bankroll / Players. Live page is the app.
+**Rationale:** All spread signals killed in backtesting. App was showing dead signals to users. Clean break required.
+**Applies to:** mamba
+**Status:** CONFIRMED
