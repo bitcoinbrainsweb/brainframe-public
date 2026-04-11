@@ -300,3 +300,10 @@ Nightwatch DAI — confirm which of the above are already in place and which nee
 **Prerequisite:** Kalshi account with $50K+ monthly volume. Not actionable until Mamba Mode is generating significant prediction market signal trades.
 **Status:** FLAGGED — revisit when Mamba Mode has 90 days of Kalshi trading history
 **Applies to:** Mambamode only
+
+
+## 2026-04-11 | cross-project | signals | Public box score pregame signals are dead
+**Decision:** Season-average team stats (pace, FTA, PF, off/def rating, net rating, turnovers, OREBs) cannot beat closing lines on NBA totals or spreads. 70 hypotheses tested across 8,909 modern-era games — zero cross 52.4% break-even with significance. Additionally, the FTA×PF "63.8%" signal was proven tautological (used same-game stats in backtest). The pregame totals/spread market is efficiently priced against public information.
+**Rule:** Do not invest further effort mining public box score stats for pregame totals/spread edge. Focus edge-finding on: (1) live in-game markets, (2) player props, (3) prediction market signals, (4) speed-to-information (injuries/lineups).
+**Applies to:** Mambamode
+**Status:** CONFIRMED
