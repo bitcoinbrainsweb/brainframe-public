@@ -272,3 +272,18 @@ Nightwatch DAI — confirm which of the above are already in place and which nee
 **Key rule:** Pregame pace signals are permanently retired. In-game pace data (Q1 fouls, FTA volume) still valid for live signals only.
 **Applies to:** mamba
 **Status:** CONFIRMED
+## 2026-04-10 | cross-project | supabase | Supabase MCP tool routing — apply_migration vs execute_sql
+**Decision:** When Supabase MCP is connected, use two tools with strict separation:
+- `apply_migration(name, query)` — ALL DDL (CREATE, ALTER, DROP, INDEX, CONSTRAINT). Named, tracked in migration history. Never use for SELECT.
+- `execute_sql(query)` — ALL queries (SELECT, DML, ANALYZE, pg_catalog introspection). Returns data directly. Never use for DDL.
+- `CREATE INDEX CONCURRENTLY` and `ALTER TYPE` cannot run in a transaction — submit as single-statement `apply_migration` with no BEGIN/COMMIT wrapper.
+**Rationale:** Discovered during Mamba Mode DB audit. The exec_sql RPC available via REST API returns 204 (void) for SELECT — useless for introspection. Supabase MCP execute_sql returns full results. PostgREST schema cache lags new DDL by minutes — never trust /rest/v1/ responses for schema state after DDL.
+**Applies to:** all projects using Supabase
+**Status:** CONFIRMED
+
+## 2026-04-10 | cross-project | db | ANALYZE after bulk ingestion — mandatory
+**Decision:** Always run ANALYZE on tables after bulk data loads. Postgres planner uses stale statistics when ANALYZE has never been run — row estimates are wrong, index usage is suboptimal, sequential scans occur on large tables that have correct indexes.
+**Evidence:** Mamba Mode DB audit found 13 tables with last_analyze = NULL, including tables with 100K+ rows. All large-table queries were potentially doing full sequential scans despite correct indexes existing.
+**Rule:** Any script that bulk-inserts into a table must call ANALYZE on that table at completion. Add to session close checklist for any DB-touching session.
+**Applies to:** all projects
+**Status:** CONFIRMED
