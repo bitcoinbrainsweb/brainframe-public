@@ -294,3 +294,9 @@ Nightwatch DAI — confirm which of the above are already in place and which nee
 **Rule:** Before building a Dune-dependent workflow, confirm table availability by testing a `SELECT * FROM {schema}.{table} LIMIT 1` via the ad-hoc endpoint. If it fails, use the protocol's own API.
 **Applies to:** all projects using Dune Analytics
 **Status:** CONFIRMED
+
+## 2026-04-11 | Mambamode | future-intel | Kalshi DMM program — future opportunity
+**Flag:** Kalshi pays ~$35K/day in Designated Market Maker incentives. NBA sports markets are lower-tier allocation. Small operators (<$500K) cannot profit from pure NBA market making — adverse selection costs exceed incentive capture. The viable path is: (1) build 2-3 months of directional trading volume on Kalshi NBA markets, (2) apply narrowly for player prop market making with cross-venue hedging on Pinnacle as the backstop, (3) target playoff-specific elevated incentive periods.
+**Prerequisite:** Kalshi account with $50K+ monthly volume. Not actionable until Mamba Mode is generating significant prediction market signal trades.
+**Status:** FLAGGED — revisit when Mamba Mode has 90 days of Kalshi trading history
+**Applies to:** Mambamode only
