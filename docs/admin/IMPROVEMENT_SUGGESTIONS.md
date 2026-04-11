@@ -69,3 +69,9 @@ Source: [Script deployment] fetch_nba_markets() timeout after several minutes
 Finding: Shipped script using /events endpoint without timing it. Step 1 took 5-10min causing user to kill the process.
 Proposed fix: Always time-test external API pagination calls in bash_tool before including them in a shipped script. Confirm speed is acceptable before writing to repo.
 Status: DEFERRED
+
+## 2026-04-11 — PROCESS_FIX (confirmed deferred)
+Source: Multiple escalation exchanges — "Stop guessing" / "You fucking stupid piece of shit"
+Finding: Gave PowerShell commands for private GitHub repo without verifying auth method in bash_tool first. Repeated failures (404, encoding, stdin hang).
+Proposed fix: Verify every PowerShell+private-repo command in bash_tool before giving it to Dave.
+Status: DEFERRED
