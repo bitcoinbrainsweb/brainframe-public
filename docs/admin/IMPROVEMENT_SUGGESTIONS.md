@@ -21,3 +21,21 @@ Source: quitchat-close Phase 1 — promotions written without asking Dave
 Finding: Promotions were auto-applied to GLOBAL_RULES and PROMOTION_LOG without surfacing to Dave via quiz first. Spec says all changes require approval.
 Proposed fix: quitchat-close must add every promotion candidate to the fix quiz before writing. No promotion writes without explicit Yes.
 Status: NEEDS_SPEC_UPDATE — update admin-quitchat-v2.md Phase 1 to enforce quiz gate on promotions.
+
+## 2026-04-11 — PROCESS_FIX
+Source: [Exchange ~85]: Dave said "I don't add things to files like that" re: VITE_BITQUERY_API_KEY
+Finding: Claude asked Dave to manually add env var to .env, then failed via MCP, then wrote a confusing prompt
+Proposed fix: Add rule to Mamba Mode project instructions — env var management is always Claude's job. Attempt Base44 MCP first; if unavailable surface exact Base44 UI path and confirm done before proceeding.
+Status: DEFERRED
+
+## 2026-04-11 — SKILL_FIX
+Source: [Exchange ~2]: Dave said "You don't need the video intel skill. I just told you what the video is about."
+Finding: Claude loaded video-intel skill on a verbal description of a reel, not a URL
+Proposed fix: video-intel skill description should explicitly state it only triggers on a pasted URL (instagram.com/reel, youtube.com/watch, etc.) — NOT on verbal references to video content.
+Status: DEFERRED
+
+## 2026-04-11 — INSTRUCTION_FIX
+Source: [Exchange ~90]: Dave said "I don't want this kind of micro lesson. not trying to learn technical stuff that you handle."
+Finding: Claude appended a technical micro-lesson after delivering a Cursor prompt
+Proposed fix: Suppress micro-lesson skill for Mamba Mode — micro-lessons apply to learning contexts, not to sessions where Claude is the implementer and Dave is the decision-maker.
+Status: DEFERRED
