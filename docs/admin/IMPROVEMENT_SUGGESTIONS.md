@@ -45,3 +45,15 @@ Source: [Exchange ~18]: Dave said "no I don't want my lessons. I want the absolu
 Finding: Claude defaulted to embedding project-specific lessons into a knowledge skill instead of universal domain expertise.
 Proposed fix: When building knowledge skills, ask Dave whether to prioritize universal domain expertise, project-specific lessons, or both. Don't assume one over the other.
 Status: APPLIED — behavioral note, no skill file change needed
+
+## 2026-04-11 — SKILL_FIX
+Source: [Exchange ~bet sizing]: Dave corrected Kelly sizing ("isn't $30 the max?")
+Finding: Opus returned Kelly = $120/bet for $1K float. Claude presented it without sanity checking against bankroll size. Kelly > 5% of small bankroll is impractical.
+Proposed fix: Add rule to nba-data-scientist skill — "Always sanity-check Kelly sizing: if Kelly bet > 5% of bankroll at stakes below $5K, flag as impractical and recommend fixed fractional (2-3%) instead."
+Status: DEFERRED
+
+## 2026-04-11 — INSTRUCTION_FIX
+Source: [Exchange ~arb frequency]: Dave called out "so you're just guessing?" on arb frequency estimate
+Finding: Claude presented 3-5 arb opportunities/week as a confident estimate with no historical data to support it. Should have flagged it as inference immediately.
+Proposed fix: Add rule to Mamba Mode project instructions — "When estimating frequency of rare market events without logged data, always state upfront: 'This is market structure inference, not measured data. Build a price logger to get real numbers.'"
+Status: DEFERRED
