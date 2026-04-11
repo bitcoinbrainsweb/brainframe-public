@@ -139,3 +139,4 @@ Format: `YYYY-MM-DD HH:MM UTC | [project] | [file] | [description]`
 2026-04-10 | admin | project-instructions (admin) | BASE44 RULES section added — MCP boundaries, entity safety, preview gate
 2026-04-10 | admin | GLOBAL_RULES | Rule: read-before-write — fetch adjacent state files (ADMIN_STATE, NEXT_ACTION, DECISIONS last 10) before any handoff GitHub write. Prevents state conflicts across all projects.
 2026-04-09 | Mamba Mode | DECISIONS.md | Product pivot to live totals — Q1 Foul Tracker as flagship signal
+2026-04-11 | mambamode | DECISIONS.md | Verify backtest uses pregame-available data before citing win rates
