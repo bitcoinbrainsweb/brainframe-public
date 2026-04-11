@@ -12,3 +12,4 @@
 
 2026-04-11 | mambamode | tools: 7 | adherence: 7 | completion: 9 | composite: 8 | Built data-scientist skill v3 + NE-035 spec; Perplexity API failed twice; initial skill scope misread
 2026-04-11 | Mambamode | tools: 6 | adherence: 7 | completion: 9 | composite: 7 | Prediction market research + 10 specs. Tool failures: Novig/ProphetX blocked, Goldsky tokenId timeout. Dave corrected bet sizing (Kelly→flat $30) and called out guessing on arb frequency.
+2026-04-11 | Mambamode | tools: 4 | adherence: 5 | completion: 6 | composite: 5 | NE-WALLET-001 spec+script shipped but seeder not run successfully; multiple Windows/auth command failures caused escalation
