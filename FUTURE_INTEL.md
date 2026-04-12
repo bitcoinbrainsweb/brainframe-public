@@ -333,3 +333,16 @@ Context At Time: Mambamode stack is React + Vite + Tailwind + Claude API + the-o
 Key Tools To Re-Evaluate: simplefunctions.dev (SimpleFunctions MCP, 29 tools), github.com/jamesanz/prediction-mcp (npx -y prediction-mcp, no API key for Polymarket reads), kalshi.com/account/profile (API key + PEM for trading credentials), polymarket.com CLOB API.
 
 ---
+
+## Claw Cash — Bitcoin Wallet for AI Agents — 2026-04-12
+
+Source: Instagram reel analysis (auth-blocked) + web research
+Summary: Claw Cash (npx clw-cash init) is an open-source Bitcoin wallet stack for autonomous AI agents. Humans pay in stablecoins; the agent converts to BTC as treasury and swaps back to stablecoins to pay for services. Private keys live in hardware enclaves (AWS Nitro via Evervault) to prevent prompt-injection wallet drains. Compatible with OpenClaw, Claude Code, and other agent harnesses. Separate from CashClaw (HYRVE freelance marketplace tool).
+Why Interesting: Coinbeast is structured as a knowledge graph platform for Bitcoin tools. Agent-native Bitcoin payments via Claw Cash could be the payment/monetization layer for Coinbeast data APIs — agents querying the knowledge graph pay per-call in BTC. Also relevant for any Brainframe project evaluating autonomous agent payment rails. Bitcoin-native, hardware-secured, open source.
+Revisit Trigger: When Coinbeast monetization model or data API design is being defined, or when any Brainframe project evaluates autonomous agent payment rails.
+Status: WATCHING
+Tags: #coinbeast #claw-cash #bitcoin #agent-payments #ark-labs #knowledge-graph #monetization #lightning
+Context At Time: Coinbeast is pre-build, knowledge graph architecture not defined. No monetization model decided. No agent payment layer in any project stack. Claw Cash launched Feb 2026 by Ark Labs CEO Marco Argentieri. Uses Arkade protocol for agent-to-agent payments without on-chain confirmation delays. Open source. Risk: stablecoin-to-BTC swap adds complexity per transaction.
+Key Tools To Re-Evaluate: clw-cash (npx clw-cash init), aiagentstore.ai/ai-agent/claw-cash, Arkade protocol, CashClaw (github.com/ertugrulakben/cashclaw) as separate freelance marketplace layer.
+
+---
