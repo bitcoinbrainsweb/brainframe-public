@@ -358,3 +358,15 @@ Context At Time: Nightwatch and Axiom both active in Cursor. TypeScript stack co
 Key Tools To Re-Evaluate: github.com/justrach/codedb (installer on GitHub Releases), compare vs DeusData/codebase-memory-mcp entry already in this file.
 
 ---
+## Free-for-Dev — Free Tier Reference for Stack Gaps — 2026-04-12
+
+Source: Instagram carousel (coding_cosmos) + manual scan
+Summary: github.com/ripienaar/free-for-dev is a maintained list of 1600+ free-tier SaaS/PaaS/IaaS services. Scanned against current Brainframe stack. Three gaps identified worth acting on: (1) Svix — webhooks-as-a-service, 50k messages/month free, handles retries/delivery tracking — relevant for Nightwatch client alert delivery; (2) BetterStack Uptime or UptimeRobot — free uptime monitoring, currently no visibility when transcript service or Nightwatch go down; (3) Tavily AI — 1000 req/month free AI search API, better signal than raw search for AI Pulse and Coinbeast freshness.
+Why Interesting: Svix and uptime monitoring are pre-launch gaps for Nightwatch. Tavily is a low-effort enhancement to AI Pulse. Prefect Cloud (5 free workflows) flagged for Coinbeast pipeline when that build begins.
+Revisit Trigger: Before Nightwatch first client onboarding (Svix + uptime monitoring). When Coinbeast pipeline design begins (Prefect Cloud).
+Status: WATCHING
+Tags: #nightwatch #coinbeast #free-tools #svix #webhooks #uptime-monitoring #tavily #ai-pulse
+Context At Time: Nightwatch pre-launch. Transcript service on Render free tier with no uptime monitoring. AI Pulse running manually. Coinbeast pre-build. No webhook delivery layer exists in any project.
+Key Tools To Re-Evaluate: svix.com (webhooks, 50k/month free), uptimerobot.com or betterstack.com/uptime (free uptime monitoring), tavily.com (1000 req/month free AI search), prefect.io/cloud (5 workflows free, for Coinbeast pipeline), github.com/ripienaar/free-for-dev (canonical reference — check annually for new additions).
+
+---
