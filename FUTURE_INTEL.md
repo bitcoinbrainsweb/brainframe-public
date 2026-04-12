@@ -346,3 +346,15 @@ Context At Time: Coinbeast is pre-build, knowledge graph architecture not define
 Key Tools To Re-Evaluate: clw-cash (npx clw-cash init), aiagentstore.ai/ai-agent/claw-cash, Arkade protocol, CashClaw (github.com/ertugrulakben/cashclaw) as separate freelance marketplace layer.
 
 ---
+## CodeDB — Codebase Intelligence MCP for Cursor — 2026-04-12
+
+Source: Instagram reel + web research
+Summary: CodeDB (github.com/justrach/codedb) is a single Zig binary MCP server that indexes your codebase on startup and serves structural queries at sub-millisecond latency. 16 tools: file tree, symbol search, dependency graph, remote repo queries without cloning. Auto-registers in Cursor, Claude Code, Codex, Gemini CLI. TypeScript/JavaScript supported. Telemetry on by default — disable with CODEDB_NO_TELEMETRY=1.
+Why Interesting: Directly applicable to Nightwatch and Axiom Cursor workflows. Token reduction vs file-by-file grep is the core value — competing tool benchmarked 99% fewer tokens per structural query. Remote repo query tool (codedb_remote) is a novel capability for Coinbeast knowledge graph research workflows.
+Revisit Trigger: 2026-04-13 — review and decide whether to install on Nightwatch or Axiom Cursor project.
+Status: WATCHING
+Tags: #cursor #nightwatch #axiom #mcp #codebase-intelligence #token-reduction #typescript
+Context At Time: Nightwatch and Axiom both active in Cursor. TypeScript stack confirmed supported. Alpha software — API stabilizing but used in production workflows. Competing tools: codebase-memory-mcp (already in FUTURE_INTEL, WSL2-only on Windows), codedb is Windows-native binary. Telemetry risk: syncs aggregate stats to codedb.codegraff.com — set CODEDB_NO_TELEMETRY=1 before installing on compliance codebase.
+Key Tools To Re-Evaluate: github.com/justrach/codedb (installer on GitHub Releases), compare vs DeusData/codebase-memory-mcp entry already in this file.
+
+---
