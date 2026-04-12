@@ -75,3 +75,17 @@ Source: Multiple escalation exchanges — "Stop guessing" / "You fucking stupid 
 Finding: Gave PowerShell commands for private GitHub repo without verifying auth method in bash_tool first. Repeated failures (404, encoding, stdin hang).
 Proposed fix: Verify every PowerShell+private-repo command in bash_tool before giving it to Dave.
 Status: DEFERRED
+
+## Week of 2026-04-12 -- Sunday Review
+
+| # | Pattern Observed | Proposed Change | Effort |
+|---|-----------------|-----------------|--------|
+| 1 | Block Rewards DocuSign flagged as "IMMEDIATE" across 4+ sessions (2026-04-08 onwards) but never escalated to Dave | Add ESCALATION_TRIGGER rule: items flagged IMMEDIATE for 3+ sessions automatically become first agenda item with explicit Dave confirmation required | Low |
+| 2 | Base44 research (2026-04-10) revealed "3 critical MCP misunderstandings previously held by Claude" - knowledge gaps discovered reactively | Create quarterly ASSUMPTION_AUDIT skill that systematically reviews and validates core technical assumptions across all active projects | Medium |
+| 3 | Multiple open items carried forward unchanged across sessions (Gemini CLI, Stripe payout, Perplexity API) with no progress tracking | Enhance ADMIN_STATE.md with "Days Open" counter and auto-flag items >14 days for explicit review/close decision | Low |
+| 4 | Sync contamination cleanup required across coinbeast/nightwatch (2026-04-08) - architectural drift detected post-facto | Add SYNC_AUDIT gate to skill-installer and major deployment workflows that validates sync boundaries before promotion | Medium |
+| 5 | Admin sessions show pattern of research → decisions → hardening but no completion celebration or success metrics | Add SESSION_CLOSURE skill that quantifies decisions made, specs promoted, and blockers resolved with explicit "wins" summary | Low |
+
+Generated: 2026-04-12
+
+---
