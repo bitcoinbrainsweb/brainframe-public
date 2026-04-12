@@ -177,7 +177,7 @@ Revisit Trigger: When Coinbeast reaches content/marketing phase, or when first t
 Status: WATCHING
 Tags: #coinbeast #video #tutorials #content-marketing #ai-video
 Context At Time: Coinbeast in early knowledge graph design. No content production underway. No video tooling in stack.
-Key Tools To Re-Evaluate: higgsfield.ai, github.com/Anil-matcha/Open-Higgsfield-AI, runwayml.com, kling.ai
+Key Tools To Re-Evaluate: higgsfield.ai (paid, Cinema Studio 3.0 + Seedance 2.0 now live), github.com/Anil-matcha/Open-Higgsfield-AI (self-hosted MIT alternative, Muapi.ai backend, npm install && npm run dev), runwayml.com, kling.ai. Note: Cinema Studio now on v3.0 — joint audio-video generation, cinematic reasoning, Seedance 2.0 integration.
 
 ---## Fundraising Deck Visitor Tracking — Bitcoin Brains — 2026-04-09
 
