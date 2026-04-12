@@ -23,3 +23,14 @@ Run Nightwatch logger Cursor prompt — in brainframe-comms DECISIONS.md dated 2
 - [x] Mamba test table dropped
 - [x] 9 FUTURE_INTEL entries written (MemPalace, Ruflo, Coinbeast AEO, black hat white hat, Nightwatch AML credibility, human media moat, Instagram auth, Stitch MCP + 21st.dev)
 - [x] Coinbeast founder network AEO spec v1 written + mirrored + DECISIONS.md message sent to Coinbeast DAI
+
+## FLAGGED 2026-04-12 — ACTION TOMORROW
+
+- [ ] **Credential storage upgrade** — migrate REGISTRY.md from GitHub to GitHub Secrets + 1Password. REGISTRY.md becomes hashed refs only. (Plex critique: PAT compromise = all keys exposed)
+- [ ] **Nightwatch sync scope** — decision needed: does Nightwatch prod repo need access to brainframe-public admin/ content? Current GitHub Actions sync copies everything including docs/admin/*. Likely answer: NO. Fix: exclude admin/ from sync workflow.
+- [ ] **Unified admin dashboard** — design session needed. Visibility across Supabase/Stripe/Sentry/Render/GitHub Actions all projects. Flag for design.
+- [ ] **quitchat failure runbook** — write QUITCHAT_RUNBOOK.md. Distraction = unsaved ADMIN_STATE across 6 repos. Fix path needed.
+- [ ] **DECISIONS.md sharding** — cross-project decisions must double-store: in `brainframe-comms/_decisions/DECISIONS.md` AND in each affected project's status/decisions file. Single-project decisions stay local. Prevents 5000-word cap choke at 8+ projects.
+
+## NOTE — NOT ACTING ON
+- PAT rotation policy — Dave decision: no forced rotation policy at this time.
